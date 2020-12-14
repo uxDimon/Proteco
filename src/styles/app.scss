@@ -1,0 +1,34 @@
+:root {
+	--content-p-r: 0;
+}
+
+// Размеры
+$content-max-weight: 1240px;
+
+@import "./common/fonts.scss";
+
+* {
+	box-sizing: border-box;
+	outline-offset: 4px;
+}
+
+// https://github.com/WICG/focus-visible
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+
+@import "./common/header.scss";
+@import "./pages/index.scss";
+@import "./common/footer.scss";
+
+// @media screen and (max-width: 1274px) {
+
+// }
+
+// @media screen and (max-width: 960px) {
+
+// }
+
+// @media screen and (max-width: 768px) {
+
+// }
