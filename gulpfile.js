@@ -152,6 +152,21 @@ function svgSprite() {
 		.pipe(gulp.dest("./src/images/"));
 }
 
+function libsCSS() {
+	return gulp.src(["./node_modules/accordion-js/dist/accordion.min.css", "./node_modules/swiper/swiper-bundle.min.css"]).pipe(gulp.dest("src/styles/"));
+}
+function libsJS() {
+	return gulp
+		.src([
+			"./node_modules/imask/dist/imask.min.js",
+			"./node_modules/accordion-js/dist/accordion.min.js",
+			"./node_modules/swiper/swiper-bundle.min.js",
+			"./node_modules/medium-zoom/dist/medium-zoom.min.js",
+			"./node_modules/focus-visible/dist/focus-visible.min.js",
+		])
+		.pipe(gulp.dest("src/scripts/"));
+}
+
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
@@ -160,6 +175,10 @@ exports.scripts = scripts;
 exports.fonts = fonts;
 exports.css = css;
 exports.svgSprite = svgSprite;
+exports.libsCSS = libsCSS;
+exports.libsJS = libsJS;
+
+gulp.task("up-lb", gulp.series(gulp.parallel(libsCSS, libsJS)));
 
 // просто работаем
 gulp.task("default", gulp.series(gulp.parallel(styles, templates, images, scripts, fonts, css), gulp.parallel(watch, server)));

@@ -20,6 +20,12 @@ gulp
 gulp prod
 ```
 
+Обновить библиотеки
+
+```
+gulp up-lb
+```
+
 ## Используемые библиотеки
 
 https://imask.js.org
