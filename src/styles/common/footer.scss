@@ -1,0 +1,152 @@
+// Цвета
+$color-Black: #333333;
+$color-Wheat: #ffffff;
+$color-Blue: #0fa9da;
+$color-Blue2: #6aafc6;
+$color-Blue3: #00769c;
+$color-Blue4: #9ddff4;
+$color-Dark-blue: #006484;
+$color-Grey: #c4c4c4;
+$color-Grey-2: #a1a1a1;
+$color-Grey-3: #efefef;
+$color-Grey-4: #727272;
+$color-Orange: #f87803;
+// Шрифт
+$font-primary: "Montserrat", sans-serif;
+
+.footer__wrap {
+	background-color: $color-Dark-blue;
+}
+
+.footer__body {
+	padding: 50px 0;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-column-gap: 40px;
+	grid-row-gap: 30px;
+}
+
+.footer__logo {
+	display: block;
+
+	svg {
+		--icon-color: #{$color-Wheat};
+	}
+}
+
+.footer__menu {
+	justify-self: center;
+}
+
+.footer-menu__list {
+	column-count: 3;
+	column-gap: 20px;
+	column-width: auto;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-menu__item {
+	break-inside: avoid-column;
+	margin-bottom: 10px;
+}
+
+.footer-menu__linc {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	color: $color-Wheat;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-Blue4;
+	}
+}
+
+.footer__contact-tell {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-column-gap: 12px;
+	margin-bottom: 10px;
+	text-align: right;
+
+	a {
+		display: block;
+		font-weight: bold;
+		font-size: 16px;
+		color: $color-Wheat;
+		text-decoration: $color-Wheat;
+
+		&:hover {
+			color: $color-Blue4;
+		}
+	}
+}
+
+.footer__contact-adre {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: right;
+	color: $color-Wheat;
+}
+
+.footer__social {
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.footer__social-linc {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: $color-Wheat;
+	transition: background-color 150ms ease-in-out 0ms;
+
+	&:hover {
+		background-color: $color-Blue4;
+	}
+}
+
+.footer__bot {
+	padding: 15px 0 17px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: calc((100vw - 100%) / -2);
+		height: 1px;
+		width: 100vw;
+		background-color: #458ea6;
+	}
+}
+
+.footer__bot-linc {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 17px;
+	color: $color-Blue2;
+}
+
+.footer__bot-linc-ra {
+	color: $color-Wheat;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-Blue4;
+	}
+}
