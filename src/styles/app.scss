@@ -1,3 +1,5 @@
+@import "./common/fonts.scss";
+
 // Цвета
 $color-Black: #333333;
 $color-Wheat: #ffffff;
@@ -11,10 +13,9 @@ $color-Grey-2: #a1a1a1;
 $color-Grey-3: #efefef;
 $color-Grey-4: #727272;
 $color-Orange: #f87803;
+
 // Шрифт
 $font-primary: "Montserrat", sans-serif;
-
-@import "./common/fonts.scss";
 
 * {
 	box-sizing: border-box;
@@ -24,6 +25,13 @@ $font-primary: "Montserrat", sans-serif;
 // https://github.com/WICG/focus-visible
 .js-focus-visible :focus:not(.focus-visible) {
 	outline: none;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+	appearance: none;
+	font-family: $font-primary;
 }
 
 body {
@@ -41,28 +49,72 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-
-.container-item {
-	width: 100%;
-	max-width: 1200px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
+.container-item {
+	width: 100%;
+	max-width: 1170px;
+}
+
 .button {
 	margin: 0;
-	padding: 6px 34px;
+	padding: 6px 26px;
 	border: 2px solid $color-Blue;
+	border-radius: 50px;
 	background-color: $color-Blue;
 	font-family: $font-primary;
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 17px;
+	text-decoration: none;
 	color: $color-Wheat;
-	box-shadow: 0px 0px 7px rgba(15, 169, 218, 0.3);
-	border-radius: 50px;
-	display: flex;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 45px;
+	box-shadow: 0 0 7px rgba(15, 169, 218, 0.3);
+	transition: 150ms ease-in-out 0ms;
+	transition-property: background-color, border-color;
+	cursor: pointer;
+
+	svg {
+		margin-right: 8px;
+	}
+
+	&:hover {
+		background-color: #0d93bd;
+		border-color: #0d93bd;
+	}
+}
+
+.button_wheat {
+	color: $color-Blue;
+	background-color: $color-Wheat;
+	border-color: $color-Wheat;
+	box-shadow: 0 0 7px rgba(255, 255, 255, 0.3);
+
+	&:hover {
+		color: $color-Wheat;
+		border-color: $color-Wheat;
+		background-color: transparent;
+
+		svg {
+			--icon-color: #{$color-Wheat};
+		}
+	}
+}
+
+.button_ghost {
+	background-color: transparent;
+	color: $color-Blue;
+
+	&:hover {
+		color: $color-Wheat;
+		background-color: $color-Blue;
+		border-color: $color-Blue;
+	}
 }
 
 @import "./common/header.scss";

@@ -1,7 +1,170 @@
 .container-wrap.header-event__wrap
     .container-item.header-event
-        .header-event__heading 
-        .header-event__text 
-        a(href="#").button.header-event__button Присоединиться
+        .header-event__text-wrap
+            .header-event__heading Началась трансляция вебинара
+            .header-event__text Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
 
-header.header
+        a(href="#").button.button_wheat.header-event__button 
+            svg(width="10", height="10")
+                use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+            span Присоединиться
+
+header.container-wrap.header__wrap
+    .container-item.header
+        a(href="#").header__logo
+            svg(width="205", height="40")
+                use(xlink:href="./assets/images/sprite.svg#main-logo")
+        
+        nav.header__main-menu
+            ul.main-menu
+                li.main-menu__item-button
+                    button(data-active-control="burger1").header__burger-button
+                        .header__burger-button-icon
+                        span.main-menu__linc Меню
+                li.main-menu__item
+                    a(href="#").main-menu__linc Мероприятия
+                li.main-menu__item
+                    a(href="#").main-menu__linc Спикеры
+                li.main-menu__item
+                    a(href="#").main-menu__linc Курсы
+                li.main-menu__item
+                    a(href="#").main-menu__linc Видео
+
+        button.button.button_ghost.header_button Прислать свой кейс
+
+        form.header__search
+            label.header__search-wrap
+                svg(width="20", height="20").header__search-icon
+                    use(xlink:href="./assets/images/sprite.svg#icon-search")
+                input(type="search", name="", placeholder="Найти").header__search-input
+
+        button.header__login
+            svg(width="20", height="20").header__login-icon
+                use(xlink:href="./assets/images/sprite.svg#icon-login")
+
+            span.header__login-text Регистрация / Вход
+
+        div(data-active-block="burger1").header__burger-menu.burger-menu
+            a(href="#").burger-menu__logo
+                svg(width="205", height="40")
+                    use(xlink:href="./assets/images/sprite.svg#main-logo")
+            .burger-menu__tell
+                a(href="tel:+78126358890") +7 (812) 635-88-90
+                a(href="tel:+79217618890") +7 (921) 761-88-90
+
+            nav.burger-menu-nav
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc Клуб Tokuyama Dental
+                        button.burger-menu-nav__head-button
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    ul.burger-menu-nav__list
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc О клубе
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Стать участником
+                
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc Мероприятия
+                        button.burger-menu-nav__head-button
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    ul.burger-menu-nav__list
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Вебинары
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Мастер-классы
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Лекции
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Семинары
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc НМО
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Конгрессы
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Выставки
+                
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc Спикеры
+                        button.burger-menu-nav__head-button
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    ul.burger-menu-nav__list
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Русскоговорящие
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Зарубежные
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Стать спикером
+                
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc Стать спикером
+                
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc Статьи
+                
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc Галерея
+                        button.burger-menu-nav__head-button
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    ul.burger-menu-nav__list
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Отчеты с мероприятий
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Итоги конкурсов
+                
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc Видео
+                        button.burger-menu-nav__head-button
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    ul.burger-menu-nav__list
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Вебинары
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Backstage
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Кейсы
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Прямые эфиры
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Обзоры продукции
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Аудиоподкасты
+                
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc Наши учебные центры
+                        button.burger-menu-nav__head-button
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    ul.burger-menu-nav__list
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Москва
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Санкт-Петербург
+                        li.burger-menu-nav__list-item
+                            a(href="#").burger-menu-nav__list-linc Онлайн
+                
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc FAQ
+                
+                .burger-menu-nav__item
+                    .burger-menu-nav__head
+                        a(href="#").burger-menu-nav__head-linc Архив мероприятий
+
+            button.button.button_ghost.burger-menu_button Прислать свой кейс
+
+        
+
+
