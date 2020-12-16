@@ -13,3 +13,13 @@ if (dataActiveControl) {
 		});
 	}
 }
+
+// Слайдер
+// https://swiperjs.com/api
+
+if (document.querySelectorAll(".main-slider .swiper-slide").length > 1) {
+	let reviews = new Swiper(".main-slider", {
+		speed: 500,
+		loop: true,
+	});
+}

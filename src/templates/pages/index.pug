@@ -6,4 +6,11 @@ block variables
 
 block content
     main
-        h1 sborkaOtVasyana
+        .swiper-container.main-slider
+            .swiper-wrapper
+                <!-- Если добавить ещё элементов с классом "swiper-slide" то включится слайдер -->
+                .swiper-slide.container-wrap.main-slider__item-wrap
+                    .container-item.main-slider__item
+                        h1.h1.main-slider__h Пройди курс обучения по сниженой цене
+                        a(href="#").button.button_wheat.main-slider__button Подробнее
+                        img(src="./assets/images/logo-min.svg", width="648", height="648", alt="Логотип").main-slider__logo
