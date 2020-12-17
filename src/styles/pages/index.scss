@@ -203,3 +203,89 @@ $font-primary: "Montserrat", sans-serif;
 	margin-top: 60px;
 	align-self: center;
 }
+
+// training-centers
+.training-centers__wrap {
+	background-color: #ebebf4;
+}
+
+.training-centers {
+	margin: 70px 0 90px 0;
+}
+
+.training-centers__h {
+	margin-bottom: 50px;
+}
+
+.train-linc {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(250px, auto);
+	grid-gap: 30px;
+}
+
+.train-linc__item {
+	border-radius: 10px;
+	background: linear-gradient(105.98deg, #0e90cd 0%, #22b4d4 61.13%);
+	padding: 35px 25px 25px 25px;
+	color: $color-Wheat;
+	display: flex;
+	flex-direction: column;
+}
+
+.train-linc__item_purple {
+	background: linear-gradient(105.98deg, #4047d2 0%, #8d67dd 61.13%);
+}
+
+.train-linc__head {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 7px;
+	margin-bottom: 20px;
+}
+
+.train-linc__h {
+	font-size: 24px;
+	line-height: 29px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.train-linc__adres {
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+
+	svg {
+		margin-right: 10px;
+	}
+}
+
+.train-linc__text {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	margin:0 0 10px 0;
+}
+
+.train-linc__linc {
+	display: inline-flex;
+	align-items: center;
+	margin-top: auto;
+	font-weight: 600;
+	font-size: 16px;
+	color: $color-Wheat;
+	text-decoration: none;
+
+	svg {
+		margin-left: 8px;
+		--icon-color: #{$color-Wheat};
+		--icon-stroke-width: 2;
+		transform: rotate(-90deg);
+	}
+}
