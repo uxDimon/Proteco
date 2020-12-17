@@ -187,3 +187,19 @@ $font-primary: "Montserrat", sans-serif;
 .video-main__button {
 	align-self: center;
 }
+
+// articles-main
+.articles-main {
+	margin-bottom: 75px;
+	display: flex;
+	flex-direction: column;
+}
+
+.articles-main__h {
+	margin-bottom: 55px;
+}
+
+.articles-main__button {
+	margin-top: 60px;
+	align-self: center;
+}
