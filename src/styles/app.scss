@@ -49,6 +49,8 @@ body {
 	font-size: 44px;
 	line-height: 54px;
 	letter-spacing: -0.05em;
+	margin: 0;
+	color: $color-Dark-blue;
 }
 
 .container-wrap {
@@ -75,6 +77,7 @@ body {
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 17px;
+	text-align: center;
 	text-decoration: none;
 	color: $color-Wheat;
 	display: inline-flex;
@@ -121,6 +124,37 @@ body {
 		color: $color-Wheat;
 		background-color: $color-Blue;
 		border-color: $color-Blue;
+	}
+}
+
+// radio-button
+.radio-button {
+	display: inline-block;
+}
+
+.radio-button__button {
+	min-height: 40px;
+	padding: 5px 20px;
+	border: 2px solid $color-Blue;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	color: $color-Blue;
+	background-color: transparent;
+	cursor: pointer;
+	transition: background-color 150ms ease-in-out 0ms;
+}
+
+.radio-button__input {
+	display: none;
+
+	&:checked ~ .radio-button__button {
+		color: $color-Wheat;
+		background-color: $color-Blue;
 	}
 }
 

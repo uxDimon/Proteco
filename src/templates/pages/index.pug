@@ -6,11 +6,110 @@ block variables
 
 block content
     main
-        .swiper-container.main-slider
+        section.swiper-container.main-slider
             .swiper-wrapper
                 <!-- Если добавить ещё элементов с классом "swiper-slide" то включится слайдер -->
                 .swiper-slide.container-wrap.main-slider__item-wrap
                     .container-item.main-slider__item
                         h1.h1.main-slider__h Пройди курс обучения по сниженой цене
                         a(href="#").button.button_wheat.main-slider__button Подробнее
-                        img(src="./assets/images/logo-min.svg", width="648", height="648", alt="Логотип").main-slider__logo
+                        svg(width="648", height="648").main-slider__logo
+                            use(xlink:href="./assets/images/sprite.svg#logo-min")
+
+        section.container-wrap.video-main__wrap
+            .container-item.video-main
+                .video-main__head
+                    h2.h1.video-main__h Видео
+                    .video-main__filter
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Вебинары
+                        label.radio-button
+                            input(type="radio", name="video").radio-button__input
+                            .radio-button__button Backstage
+                        label.radio-button
+                            input(type="radio", name="video").radio-button__input
+                            .radio-button__button Кейсы
+
+                ul.video-main__body
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+
+
+                a(href="").button.button_ghost.video-main__button Смотреть все
+        
+        
+        //- section.container-wrap
+            .container-item
+
+

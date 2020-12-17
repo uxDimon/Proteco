@@ -43,3 +43,147 @@ $font-primary: "Montserrat", sans-serif;
 	top: 66px;
 	left: 551px;
 }
+
+// video-main
+.video-main__wrap {
+	background-color: #ebebf4;
+}
+
+.video-main {
+	display: flex;
+	flex-direction: column;
+	padding: 70px 0 80px 0;
+}
+
+.video-main__head {
+	display: flex;
+	margin-bottom: 50px;
+	align-items: center;
+}
+
+.video-main__filter {
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 30px;
+	margin-left: 40px;
+}
+
+.video-main__body {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: 180px;
+	grid-gap: 30px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin-bottom: 50px;
+}
+
+.video-main__item {
+	z-index: 1;
+	transition: z-index 500ms ease 0ms;
+
+	&:hover {
+		z-index: 2;
+
+		.video-main__linc-bot {
+			top: 100%;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.video-main__linc-img {
+			border-radius: 10px 10px 0 0;
+		}
+	}
+
+	&:first-child {
+		grid-column: 1 / 3;
+		grid-row: 1 / 3;
+
+		.video-main__linc-bot {
+			height: calc(50% + 15px);
+			top: 50%;
+		}
+
+		&:hover .video-main__linc-bot {
+			top: 100%;
+		}
+	}
+}
+
+.video-main__linc {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: 10px;
+	filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+	background-color: $color-Wheat;
+	text-decoration: none;
+	color: $color-Black;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.video-main__linc-body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.video-main__linc-play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	background-color: $color-Wheat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.video-main__linc-img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+
+	transition: border-radius 200ms ease 0ms;
+}
+
+.video-main__linc-bot {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: calc(100% + 30px);
+	border-radius: 0 0 10px 10px;
+	background-color: $color-Wheat;
+	padding: 20px 15px;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+
+	transition: 300ms ease-in-out 0ms;
+	transition-property: top, visibility, opacity;
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.video-main__linc-text {
+	margin: 0;
+}
+
+.video-main__linc-button {
+	align-self: center;
+	margin-top: auto;
+}
+
+.video-main__button {
+	align-self: center;
+}
