@@ -1,0 +1,83 @@
+// Цвета
+$color-Black: #333333;
+$color-Wheat: #ffffff;
+$color-Blue: #0fa9da;
+$color-Blue2: #6aafc6;
+$color-Blue3: #00769c;
+$color-Blue4: #9ddff4;
+$color-Dark-blue: #006484;
+$color-Grey: #c4c4c4;
+$color-Grey-2: #a1a1a1;
+$color-Grey-3: #efefef;
+$color-Grey-4: #727272;
+$color-Orange: #f87803;
+// Шрифт
+$font-primary: "Montserrat", sans-serif;
+
+// mailing
+.mailing {
+	margin: 80px 0;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	background-color: $color-Wheat;
+	padding: 40px 30px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 30px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mailing__h {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 34px;
+	margin: 0 0 40px 0;
+}
+
+.mailing__advantages {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-gap: 30px;
+}
+
+.mailing__advantages-item {
+	display: flex;
+}
+
+.mailing__advantages-icon {
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	border: 2px solid $color-Blue;
+	background-color: $color-Wheat;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.mailing__advantages-text {
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.mailing__form-input {
+	margin-bottom: 24px;
+}
+
+.mailing__form-text {
+	display: block;
+	font-size: 12px;
+	line-height: 15px;
+	color: $color-Grey-2;
+	margin-bottom: 14px;
+
+	a {
+		color: inherit;
+	}
+}

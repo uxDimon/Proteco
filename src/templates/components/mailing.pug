@@ -1,0 +1,26 @@
+section.container-wrap
+    .container-item.mailing
+        .mailing__text-wrrap
+            h2.mailing__h Подпишитесь на нашу рассылку, чтобы получить:
+            ul.mailing__advantages
+                li.mailing__advantages-item
+                    .mailing__advantages-icon
+                        svg(width="16", height="13")
+                            use(xlink:href="./assets/images/sprite.svg#icon-ok")
+                    span.mailing__advantages-text Уведомления о мероприятиях
+                li.mailing__advantages-item
+                    .mailing__advantages-icon
+                        svg(width="16", height="13")
+                            use(xlink:href="./assets/images/sprite.svg#icon-ok")
+                    span.mailing__advantages-text Полезные статьи
+                li.mailing__advantages-item 
+                    .mailing__advantages-icon
+                        svg(width="16", height="13")
+                            use(xlink:href="./assets/images/sprite.svg#icon-ok")
+                    span.mailing__advantages-text Ссылки на трансляции
+        
+        form.mailing__form 
+            input(type="email", name="", placeholder="Ваш E-mail").input.mailing__form-input
+            span.mailing__form-text Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с 
+                a(href="#") Пользовательским соглашением
+            button(type="submit").button Подписаться
