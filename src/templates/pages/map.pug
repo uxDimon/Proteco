@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+        link(rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon")
+        link(rel="apple-touch-icon" href="assets/images/fav.png")
+
+        link(rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css")
+        link(rel="stylesheet" type="text/css" href="assets/styles/accordion.min.css")
+        link(rel="stylesheet" type="text/css" href="assets/styles/app.css")
+        
+    body
+        svg(width="205", height="40")
+            use(xlink:href="./assets/images/sprite.svg#main-logo")
+        
+        ul.map
+            li
+                a(href="index.html") Главная
+            li
+                a(href="events.html") Мероприятия
+            li
+                a(href="speakers.html") Спикеры
+
