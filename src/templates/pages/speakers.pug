@@ -1,0 +1,119 @@
+extends ../template
+
+block variables
+    - var title = 'Спикеры'
+    - var contactForm = true
+
+block content
+    main
+        section.container-wrap.speakers-page__wrap
+            .container-item.speakers-page
+                .breadcrumbs
+                    .breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Спикеры
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                h1.h1.speakers-page__h Спикеры
+
+                .speakers-page__filter
+                    label.radio-button
+                        input(type="radio", name="video", checked).radio-button__input
+                        .radio-button__button Все
+                    label.radio-button
+                        input(type="radio", name="video").radio-button__input
+                        .radio-button__button Русскоязычные
+                    label.radio-button
+                        input(type="radio", name="video").radio-button__input
+                        .radio-button__button Зарубежные
+
+                ul.speakers-page__list
+                    li.speakers-page__item
+                        img(width="160", height="230", src="./assets/images/img1.jpg", alt="Вишнякова Марина Александровна (Москва)").speakers-page__item-img
+                        .speakers-page__item-text-wrap 
+                            h4.speakers-page__item-name Вишнякова Марина Александровна (Москва)
+                            p.speakers-page__item-text Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                            a(href="#").speakers-page__item-linc Мероприятия спикера
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    
+                    li.speakers-page__item
+                        img(width="160", height="230", src="./assets/images/img1.jpg", alt="Таиров Валерий Владиславович").speakers-page__item-img
+                        .speakers-page__item-text-wrap
+                            h4.speakers-page__item-name Таиров Валерий Владиславович
+                            p.speakers-page__item-text к.м.н., врач-стоматолог высшей квалификационной категории
+                            a(href="#").speakers-page__item-linc Мероприятия спикера
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    
+                    li.speakers-page__item
+                        img(width="160", height="230", src="./assets/images/img1.jpg", alt="Пургина Светлана").speakers-page__item-img
+                        .speakers-page__item-text-wrap
+                            h4.speakers-page__item-name Пургина Светлана
+                            p.speakers-page__item-text Ведущий продакт-менеджер направления "Дезинфицирующие средства", врач-эпидемиолог
+                            a(href="#").speakers-page__item-linc Мероприятия спикера
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                    li.speakers-page__item
+                        img(width="160", height="230", src="./assets/images/img1.jpg", alt="Вишнякова Марина Александровна (Москва)").speakers-page__item-img
+                        .speakers-page__item-text-wrap 
+                            h4.speakers-page__item-name Вишнякова Марина Александровна (Москва)
+                            p.speakers-page__item-text Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                            a(href="#").speakers-page__item-linc Мероприятия спикера
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    
+                    li.speakers-page__item
+                        img(width="160", height="230", src="./assets/images/img1.jpg", alt="Таиров Валерий Владиславович").speakers-page__item-img
+                        .speakers-page__item-text-wrap
+                            h4.speakers-page__item-name Таиров Валерий Владиславович
+                            p.speakers-page__item-text к.м.н., врач-стоматолог высшей квалификационной категории
+                            a(href="#").speakers-page__item-linc Мероприятия спикера
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    
+                    li.speakers-page__item
+                        img(width="160", height="230", src="./assets/images/img1.jpg", alt="Пургина Светлана").speakers-page__item-img
+                        .speakers-page__item-text-wrap
+                            h4.speakers-page__item-name Пургина Светлана
+                            p.speakers-page__item-text Ведущий продакт-менеджер направления "Дезинфицирующие средства", врач-эпидемиолог
+                            a(href="#").speakers-page__item-linc Мероприятия спикера
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                    li.speakers-page__item
+                        img(width="160", height="230", src="./assets/images/img1.jpg", alt="Вишнякова Марина Александровна (Москва)").speakers-page__item-img
+                        .speakers-page__item-text-wrap 
+                            h4.speakers-page__item-name Вишнякова Марина Александровна (Москва)
+                            p.speakers-page__item-text Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                            a(href="#").speakers-page__item-linc Мероприятия спикера
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    
+                    li.speakers-page__item
+                        img(width="160", height="230", src="./assets/images/img1.jpg", alt="Таиров Валерий Владиславович").speakers-page__item-img
+                        .speakers-page__item-text-wrap
+                            h4.speakers-page__item-name Таиров Валерий Владиславович
+                            p.speakers-page__item-text к.м.н., врач-стоматолог высшей квалификационной категории
+                            a(href="#").speakers-page__item-linc Мероприятия спикера
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                .speakers-page__pagination.pagination
+                    .pagination__prev
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    .pagination__number 1
+                    a(href="#").pagination__number 2
+                    a(href="#").pagination__number 3
+                    a(href="#").pagination__number 4
+                    a(href="#").pagination__number ...
+                    a(href="#").pagination__next
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+        //- Наши учебные центры
+        include ../components/training-centers.pug 
