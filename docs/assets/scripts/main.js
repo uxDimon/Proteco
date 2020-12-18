@@ -18,13 +18,13 @@ if (dataActiveControl) {
 // https://swiperjs.com/api
 
 if (document.querySelectorAll(".main-slider .swiper-slide").length > 1) {
-	let reviews = new Swiper(".main-slider", {
+	let mainSlider = new Swiper(".main-slider", {
 		speed: 500,
 		loop: true,
 	});
 }
 
-let reviews = new Swiper(".reviews-slider", {
+let reviewsSlider = new Swiper(".reviews-slider", {
 	speed: 400,
 	loop: true,
 	slidesPerView: 3,
@@ -32,6 +32,20 @@ let reviews = new Swiper(".reviews-slider", {
 	pagination: {
 		el: ".reviews-slider__pagination",
 		clickable: true,
+	},
+	navigation: {
+		nextEl: ".reviews-slider__next",
+		prevEl: ".reviews-slider__prev",
+	},
+});
+
+let articlePageSlider = new Swiper(".article-page__slider", {
+	speed: 300,
+	loop: true,
+	slidesPerView: 1,
+	pagination: {
+		el: ".article-page__slider-pagination ",
+		type: "fraction",
 	},
 	navigation: {
 		nextEl: ".reviews-slider__next",
