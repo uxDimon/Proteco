@@ -195,6 +195,84 @@ main {
 	}
 }
 
+// breadcrumbs
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	margin: 15px 0 40px;
+}
+
+.breadcrumbs__item {
+	color: #717171;
+	font-size: 14px;
+	line-height: 17px;
+	display: flex;
+	align-items: center;
+
+	svg {
+		margin-left: 15px;
+		transform: rotate(-90deg);
+		--icon-color: #717171;
+	}
+
+	&:last-child svg {
+		display: none;
+	}
+}
+
+// pagination
+// fix: добавить ховер
+.pagination {
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 20px;
+	align-items: center;
+}
+
+.pagination__prev,
+.pagination__next {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-Blue;
+
+	svg {
+		width: 17px;
+		height: auto;
+		--icon-color: #{$color-Wheat};
+	}
+
+	&:not([href]) {
+		background-color: #e4e4e4;
+	}
+}
+
+.pagination__prev svg {
+	transform: rotate(90deg);
+}
+.pagination__next svg {
+	transform: rotate(-90deg);
+}
+
+.pagination__number {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	color: $color-Black;
+	text-decoration: none;
+
+	&:not([href]) {
+		color: $color-Blue;
+	}
+}
+
+.udoli99 {
+	margin: 0;
+}
+
 @import "./common/header.scss";
 @import "./pages/index.scss";
 @import "./pages/pages.scss";
