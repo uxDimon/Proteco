@@ -1,0 +1,70 @@
+extends ../template
+
+block variables
+    - var title = 'Коротко о прошедшем международном стоматологическом форуме и выставке «Дентал Экспо 2020»'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    .breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Статьи
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Коротко о прошедшем международном стоматологическом форуме и выставке «Дентал Экспо 2020»
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+        section.container-wrap
+            .container-item.container-item_article.article-page
+                h1.article-page__h Коротко о прошедшем международном стоматологическом форуме и выставке «Дентал Экспо 2020»
+                .article-page__data
+                    span.articles__date 01 января 2021
+                    .articles__views
+                        svg(width="18", height="11")
+                            use(xlink:href="./assets/images/sprite.svg#icon-eye")
+                        span 1254
+                .article-page__content
+                    img(src="./assets/images/img1.jpg", alt="Выставка Дентал Экспо 2020")
+                    h2 Выставка Дентал Экспо 2020
+                    p 21-24 сентября в Москве состоялся международный стоматологический форум и выставка «Дентал Экспо 2020». Компания PROTECO, постоянный участник ключевых стоматологических мероприятий, представила на стенде свою продукцию:  композиты и адгезивы Tokuyama Dental, инструменты Aesculap,  расходные материалы Clean+Safe и дезинфицирующие средства Dezaurum.
+
+                    h3 Как все проходит
+                    p Ежедневно в формате нон-стоп проходили консультации врачей-стоматологов по продуктам компании. Особый интерес  вызвали три готовящихся к появлению на российском рынке продукта Tokuyama Dental - низкомодульный композит с 3 степенями текучести Estelite Universal Flow, композит Omnichroma, один оттенок которого подстраивается под любой оттенок зуба и Estelite Bulk Fill Flow, позволяющий проводить эстетическую реставрацию в 1 слой глубиной до 4 мм. Все новинки появятся в продаже в конце 2020-начале 2021 года.
+
+                    h4 Что нового?
+                    p Нововведением  этой выставки стало то, что все обучающие мероприятия были переведены в онлайн-режим. В дни работы выставки состоялось 7 вебинаров, а в конце каждого дня мы проводили розыгрыши призов продукции, представленной на стенде. Получить доступы к обучению можно было прямо на стенде компании.
+                    p Рады поделиться с вами фотоотчетом и до встречи на Дентал Салон 2021!
+
+                    .article-page__slider-wrap
+                        .swiper-container.article-page__slider
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img(src="./assets/images/img1.jpg", alt="")
+                                .swiper-slide
+                                    img(src="./assets/images/img1.jpg", alt="")
+                                .swiper-slide
+                                    img(src="./assets/images/img1.jpg", alt="")
+                                .swiper-slide
+                                    img(src="./assets/images/img1.jpg", alt="")
+
+                        .article-page__slider-pagination    
+
+                        .reviews-slider__prev
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                        .reviews-slider__next
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                a(href="#").article-page__linc-back 
+                    svg(width="14", height="8")
+                        use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    span Вернуться назад
+
+        include ../components/mailing.pug
