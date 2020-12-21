@@ -352,3 +352,22 @@ $font-primary: "Montserrat", sans-serif;
 .burger-menu_button {
 	display: none;
 }
+
+@media screen and (max-width: 768px) {
+	.header-event {
+		grid-template-columns: 1fr;
+		row-gap: 30px;
+		justify-items: flex-start;
+		padding-top: 30px;
+		padding-bottom: 35px;
+	}
+	.header-event__heading {
+		font-size: 14px;
+		line-height: 17px;
+		margin-bottom: 10px;
+	}
+	.header-event__text {
+		font-size: 14px;
+		line-height: 17px;
+	}
+}

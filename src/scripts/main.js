@@ -27,8 +27,6 @@ if (document.querySelectorAll(".main-slider .swiper-slide").length > 1) {
 let reviewsSlider = new Swiper(".reviews-slider", {
 	speed: 400,
 	loop: true,
-	slidesPerView: 3,
-	spaceBetween: 22,
 	pagination: {
 		el: ".reviews-slider__pagination",
 		clickable: true,
@@ -37,12 +35,26 @@ let reviewsSlider = new Swiper(".reviews-slider", {
 		nextEl: ".reviews-slider__next",
 		prevEl: ".reviews-slider__prev",
 	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 22,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		280: {
+			slidesPerView: 1.15,
+			spaceBetween: 20,
+		},
+	},
 });
 
 let articlePageSlider = new Swiper(".article-page__slider", {
 	speed: 300,
 	loop: true,
 	slidesPerView: 1,
+	spaceBetween: 30,
 	pagination: {
 		el: ".article-page__slider-pagination ",
 		type: "fraction",

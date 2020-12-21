@@ -34,6 +34,11 @@ select {
 	font-family: $font-primary;
 }
 
+//временно
+html {
+	overflow-x: hidden;
+}
+
 body {
 	font-family: $font-primary;
 	font-style: normal;
@@ -42,6 +47,7 @@ body {
 	line-height: 1.62;
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
 
 main {
@@ -324,9 +330,23 @@ main {
 
 // }
 
-// @media screen and (max-width: 768px) {
-
-// }
+@media screen and (max-width: 768px) {
+	.h1 {
+		font-size: 24px;
+		line-height: 29px;
+	}
+	.button {
+		min-height: 40px;
+	}
+	.radio-button__button {
+		min-height: 30px;
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.breadcrumbs {
+		display: none;
+	}
+}
 
 .map {
 	a {
