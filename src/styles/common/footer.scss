@@ -151,3 +151,63 @@ $font-primary: "Montserrat", sans-serif;
 		color: $color-Blue4;
 	}
 }
+
+@media screen and (max-width: 960px) {
+	.footer__logo {
+		svg {
+			width: 154px;
+			height: 31px;
+		}
+	}
+	.footer-menu__list {
+		column-count: 2;
+	}
+}
+@media screen and (max-width: 768px) {
+	.footer__body {
+		grid-template-columns: 1fr;
+		row-gap: 25px;
+		padding: 20px 0 25px;
+	}
+	.footer__menu {
+		justify-self: start;
+	}
+	.footer-menu__list {
+		column-count: 1;
+	}
+	.footer-menu__linc {
+		font-weight: 500;
+	}
+	.footer__contact {
+		position: relative;
+		padding-top: 25px;
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: -15px;
+			width: 105%;
+			height: 1px;
+			background: #458EA6;
+		}
+	}
+	.footer__contact-tell {
+		text-align: left;
+	}
+	.footer__contact-adre {
+		text-align: left;
+	}
+	.footer__social {
+		grid-auto-columns: max-content;
+	}
+	.footer__bot {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 20px 0 25px;
+	}
+	.footer__bot-linc {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
