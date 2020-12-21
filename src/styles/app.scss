@@ -75,6 +75,7 @@ main {
 	max-width: 770px;
 }
 
+// button
 .button {
 	margin: 0;
 	padding: 6px 26px;
@@ -124,6 +125,18 @@ main {
 	}
 }
 
+.button_green {
+	background-color: #62b766;
+	border-color: #62b766;
+	box-shadow: 0px 0px 7px #62b766;
+
+	&:hover {
+		background-color: #4e9752;
+		border-color: #4e9752;
+	}
+}
+
+.button_ghost-double,
 .button_ghost {
 	background-color: transparent;
 	color: $color-Blue;
@@ -133,6 +146,24 @@ main {
 		background-color: $color-Blue;
 		border-color: $color-Blue;
 	}
+}
+
+.button_ghost-double {
+	flex-direction: column;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.button_ghost__top {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.button_ghost__bot {
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 15px;
 }
 
 // radio-button
@@ -281,6 +312,7 @@ main {
 @import "./common/header.scss";
 @import "./pages/index.scss";
 @import "./pages/pages.scss";
+@import "./pages/pages2.scss";
 @import "./common/component.scss";
 @import "./common/footer.scss";
 
