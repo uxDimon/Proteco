@@ -130,6 +130,7 @@ h3.event-page__block-h {
 	object-fit: cover;
 	width: 150px;
 	height: 220px;
+	border-radius: 10px;
 }
 
 .event-page__spicer-h {
@@ -240,9 +241,141 @@ a.event-page__contact:hover {
 	line-height: 20px;
 }
 
+@media screen and (max-width: 1023px) {
+	.event-page__head-title {
+		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: row;
+		row-gap: 10px;
+	}
+	.event-page__head-name {
+		grid-column: 1 / -1;
+	}
+	.event-page__info-wrap {
+		grid-template-columns: 1fr;
+		row-gap: 25px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.event-page {
 		margin-top: 20px;
 		margin-bottom: 60px;
+	}
+	.event-page__head-name {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.event-page__head {
+		grid-template-columns: 100%;
+		row-gap: 35px;
+		margin-bottom: 20px;
+	}
+	.event-page__head-time {
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.event-page__head-h {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.event-page__head-pay {
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.event-page__head-button-wrap {
+		grid-auto-flow: row;
+		row-gap: 15px;
+	}
+	.button_ghost__top {
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.event-page__spicer {
+		grid-template-columns: max-content 1fr;
+		column-gap: 15px;
+	}
+	.event-page__spicer-image {
+		width: 65px;
+		height: 93px;
+	}
+	.event-page__body {
+		column-count: 1;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+	.event-page__block {
+		margin-bottom: 20px;
+		padding: 20px 15px;
+
+		&:first-of-type {
+			order: 1;
+		}
+		&:nth-of-type(5) {
+			order: 2;
+		}
+		&:last-of-type {
+			order: 3;
+		}
+		&:nth-of-type(2) {
+			order: 4;
+		}
+		&:nth-of-type(3) {
+			order: 6;
+		}
+	}
+	h3.event-page__block-h {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.event-page__spicer-h {
+		font-size: 14px;
+		line-height: 17px;
+		margin-bottom: 10px;
+	}
+	.event-page__spicer-text {
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.event-page__block-list {
+		padding-left: 14px;
+	}
+	.event-page__block-list-item {
+		font-size: 12px;
+		line-height: 15px;
+
+		&::before {
+			width: 7px;
+			height: 7px;
+			left: -14px;
+		}
+	}
+	.event-page__info-head {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.event-page__info-text {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.event-page__bali {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.event-page__block-pay {
+		font-size: 12px;
+		line-height: 15px;
+		margin-bottom: 15px;
+	}
+	.event-page__contact {
+		font-size: 14px;
+		line-height: 17px;
+		margin-bottom: 8px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.event-page__video {
+		height: 173px;
 	}
 }
