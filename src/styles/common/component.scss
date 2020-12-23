@@ -81,3 +81,48 @@ $font-primary: "Montserrat", sans-serif;
 		color: inherit;
 	}
 }
+
+@media screen and (max-width: 1050px) {
+	.mailing__advantages {
+		grid-template-columns: 100%;
+		row-gap: 15px;
+	}
+	.mailing__advantages-item {
+		align-items: center;
+	}
+	.mailing__h {
+		margin-bottom: 20px;
+	}
+}
+
+@media  screen and (max-width: 768px) {
+	.mailing {
+		grid-template-columns: 100%;
+		row-gap: 30px;
+		margin: 30px 0 45px;
+		padding: 25px 15px 30px;
+	}
+	.mailing__h {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.mailing__advantages-icon {
+		width: 25px;
+		height: 25px;
+	}
+	.mailing__advantages-text {
+		font-size: 12px;
+		line-height: 15px;
+	}
+	.mailing__form-input {
+		margin-bottom: 20px;
+	}
+	.mailing__form {
+		display: flex;
+		flex-direction: column;
+
+		.button {
+			align-self: center;
+		}
+	}
+}
