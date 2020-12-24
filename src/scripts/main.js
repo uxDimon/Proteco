@@ -2,14 +2,43 @@ const activeClass = "active";
 
 // data-active
 const dataActiveControl = document.querySelectorAll("[data-active-control]");
-
 if (dataActiveControl) {
 	for (const activeControl of dataActiveControl) {
 		const activeBlock = document.querySelector(`[data-active-block="${activeControl.dataset.activeControl}"]`);
+		const activeControlList = document.querySelectorAll(`[data-active-control="${activeControl.dataset.activeControl}"]`);
 
 		activeControl.addEventListener("click", () => {
-			activeControl.classList.toggle(activeClass);
+			for (const activeControlItem of activeControlList) {
+				activeControlItem.classList.toggle(activeClass);
+			}
 			activeBlock.classList.toggle(activeClass);
+		});
+	}
+}
+
+// collapse-control
+const collapseControlAll = document.querySelectorAll("[data-collapse-control]");
+if (collapseControlAll) {
+	for (const collapseControl of collapseControlAll) {
+		const collapseBlock = document.querySelector(`[data-collapse-block="${collapseControl.dataset.collapseControl}"]`);
+		function collapse() {
+			if (collapseControl.dataset.collapse === "true") {
+				collapseBlock.style.height = collapseBlock.scrollHeight + "px";
+				collapseBlock.classList.add(activeClass);
+				collapseControl.classList.add(activeClass);
+				collapseControl.dataset.collapse = "false";
+			} else if (collapseControl.dataset.collapse === "false") {
+				collapseBlock.style.height = 0;
+				collapseBlock.classList.remove(activeClass);
+				collapseControl.classList.remove(activeClass);
+				collapseControl.dataset.collapse = "true";
+			}
+		}
+
+		collapse();
+
+		collapseControl.addEventListener("click", () => {
+			collapse();
 		});
 	}
 }
