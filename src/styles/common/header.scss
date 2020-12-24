@@ -353,7 +353,6 @@ $font-primary: "Montserrat", sans-serif;
 	padding: 0;
 	border: none;
 	background: transparent;
-	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	flex-basis: 100%;
@@ -378,6 +377,13 @@ $font-primary: "Montserrat", sans-serif;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-row-gap: 5px;
+	height: auto;
+}
+
+@media screen and (min-width: 710px) {
+	.burger-menu-nav__list {
+		height: auto !important;
+	}
 }
 
 .burger-menu-nav__list-linc {
@@ -398,6 +404,7 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 .burger-menu__close {
+	display: none;
 	position: absolute;
 	top: 25px;
 	right: 10px;
@@ -514,6 +521,7 @@ $font-primary: "Montserrat", sans-serif;
 	}
 
 	.burger-menu-nav__list {
+		height: auto;
 		overflow: hidden;
 		padding: 0 15px;
 		margin: 0;
@@ -525,7 +533,6 @@ $font-primary: "Montserrat", sans-serif;
 		&.active {
 			opacity: 1;
 			margin: 10px 0;
-			height: auto;
 		}
 	}
 
