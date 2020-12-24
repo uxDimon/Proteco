@@ -331,6 +331,7 @@ $font-primary: "Montserrat", sans-serif;
 	line-height: 22px;
 	align-items: center;
 	margin: 0 0 25px;
+	text-align: center;
 }
 
 .reviews-slider__text {
@@ -454,12 +455,54 @@ $font-primary: "Montserrat", sans-serif;
 	margin-bottom: 40px;
 }
 
+.events__filter-button-active {
+	display: none;
+	margin-bottom: 30px;
+	width: max-content;
+
+	svg {
+		--icon-color: #{$color-Wheat};
+	}
+}
+
 .events__filter {
 	margin-bottom: 30px;
 	display: grid;
 	grid-auto-flow: column;
 	grid-auto-columns: minmax(auto, 270px);
 	grid-column-gap: 30px;
+}
+
+.events__filter-h {
+	display: none;
+	// display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+
+	svg {
+		margin-right: 14px;
+	}
+
+	h4 {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 29px;
+		letter-spacing: -0.05em;
+		margin: 0;
+		color: #006484;
+	}
+}
+
+.events__filter-datepicker {
+	// display: none;
+}
+
+.events__filter-button {
+	display: none;
+	margin-top: 10px;
+	width: max-content;
+	justify-self: center;
 }
 
 .events__list {
@@ -478,7 +521,8 @@ $font-primary: "Montserrat", sans-serif;
 .datepicker-main__wrap {
 	padding: 30px 20px;
 }
-.datepicker-main {
+.datepicker-main,
+.flatpickr-wrapper {
 	position: relative;
 	width: 100%;
 	z-index: 10;
@@ -808,18 +852,20 @@ $font-primary: "Montserrat", sans-serif;
 	.video-main__head {
 		flex-direction: column;
 		align-items: flex-start;
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 	}
+
 	.video-main__filter {
 		width: 100%;
 		padding-bottom: 10px;
-		margin-top: 5px;
+		margin-top: 15px;
 		margin-left: 0;
 		column-gap: 15px;
 		overflow-x: scroll;
 	}
+
 	.video-main__body {
-		grid-template-columns: 100%;
+		grid-template-columns: 1fr 1fr;
 		row-gap: 20px;
 		margin-bottom: 30px;
 	}
@@ -920,6 +966,66 @@ $font-primary: "Montserrat", sans-serif;
 		font-size: 14px;
 		line-height: 17px;
 	}
+
+	.events__h {
+		margin-bottom: 15px;
+	}
+
+	.events__filter-button-active {
+		display: inline-flex;
+	}
+
+	.events__filter {
+		position: fixed;
+		overflow-y: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 110;
+		background-color: #f8f8fd;
+		padding: 30px 15px;
+		grid-template-columns: 1fr;
+		grid-auto-flow: row;
+		align-content: start;
+		grid-row-gap: 10px;
+		margin: 0;
+
+		transition: 250ms ease-in-out 0ms;
+		transition-property: visibility, opacity;
+		visibility: hidden;
+		opacity: 0;
+
+		&.active {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&::after {
+			content: "";
+			width: 1px;
+			height: 1px;
+			margin-top: -10px;
+			padding-bottom: inherit;
+		}
+	}
+
+	.events__filter-h {
+		display: flex;
+	}
+
+	.flatpickr-wrapper {
+		margin-top: 20px;
+	}
+
+	.events__filter-button {
+		display: flex;
+	}
+
+	.mark-date,
+	.datepicker-main__wrap {
+		display: none;
+	}
 }
 @media screen and (max-width: 500px) {
 	.video-main__button {
@@ -927,5 +1033,11 @@ $font-primary: "Montserrat", sans-serif;
 	}
 	.articles-main__button {
 		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.video-main__body {
+		grid-template-columns: 1fr;
 	}
 }

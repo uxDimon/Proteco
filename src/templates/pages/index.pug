@@ -20,7 +20,22 @@ block content
         section.container-wrap.events__wrap
             .container-item.events
                 h2.h1.events__h Мероприятия
-                .events__filter
+
+                button(data-active-control="filter1").button.events__filter-button-active
+                    svg(width="24", height="16")
+                        use(xlink:href="./assets/images/sprite.svg#icon-filter")
+                    span Фильтры
+
+                .events__filter(data-active-block="filter1")
+                    button(data-active-control="filter1").events__filter-close.close-button
+                        svg(width="20", height="20")
+                            use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
+
+                    .events__filter-h
+                        svg(width="24", height="16")
+                            use(xlink:href="./assets/images/sprite.svg#icon-filter")
+                        h4 Фильтры
+
                     select(name="").event-select
                         option(value="1").event-select__first Все мероприятия
                         option(value="2") Мероприятия 2
@@ -33,13 +48,15 @@ block content
                         option(value="1").event-select__first Все спикеры
                         option(value="2") Спикеры 2
                         option(value="3") Спикеры 3
+                    
                     input(type="text")#date-range.events__data-range
+
+                    button(data-active-control="filter1").button.events__filter-button Применить фильтрацию
                 
                 ul.events__list
                     li.event-card.datepicker-main__wrap
-                        .datepicker-main            
+                        .datepicker-main
             
-
                     li.event-card
                         .event-card__head
                             svg(width="45", height="45").event-card__head-icon

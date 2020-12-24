@@ -311,8 +311,18 @@ main {
 	}
 }
 
-.udoli99 {
+.close-button {
+	position: absolute;
+	top: 25px;
+	right: 10px;
 	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+
+	svg {
+		display: block;
+	}
 }
 
 @import "./common/header.scss";

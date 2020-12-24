@@ -405,17 +405,6 @@ $font-primary: "Montserrat", sans-serif;
 
 .burger-menu__close {
 	display: none;
-	position: absolute;
-	top: 25px;
-	right: 10px;
-	margin: 0;
-	padding: 0;
-	border: none;
-	background: transparent;
-
-	svg {
-		display: block;
-	}
 }
 
 @media screen and (max-width: 1200px) {
@@ -540,5 +529,11 @@ $font-primary: "Montserrat", sans-serif;
 		display: flex;
 		margin-left: 15px;
 		margin-top: 30px;
+	}
+}
+
+@media screen and (max-width: 710px) {
+	.header__burger-button .main-menu__linc {
+		display: none;
 	}
 }

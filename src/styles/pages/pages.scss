@@ -611,6 +611,10 @@ h3.article-page__h {
 	.event-page__list {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.events__list .event-card:nth-of-type(2) .event-card__person-text {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 960px) {
@@ -803,7 +807,8 @@ h3.article-page__h {
 	.article-page__slider-wrap {
 		margin-top: 30px;
 
-		.reviews-slider__prev, .reviews-slider__next {
+		.reviews-slider__prev,
+		.reviews-slider__next {
 			top: 40%;
 			width: 30px;
 			height: 30px;

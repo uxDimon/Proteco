@@ -72,8 +72,8 @@ let reviewsSlider = new Swiper(".reviews-slider", {
 			slidesPerView: 2,
 		},
 		280: {
-			slidesPerView: 1.15,
-			spaceBetween: 20,
+			slidesPerView: 1.1,
+			spaceBetween: 15,
 		},
 	},
 });
@@ -170,10 +170,11 @@ const markDateHtml = function (itemList) {
 	`;
 };
 
-flatpickr("#date-range", {
+let calendarConf = {
 	mode: "range",
-	inline: true,
-	appendTo: datepickerCont,
+	// static: true,
+	// inline: true,
+	// appendTo: null,
 	locale: "ru",
 	onDayCreate: function (dObj, dStr, fp, dayElem) {
 		const itemDate = flatpickr.formatDate(dayElem.dateObj, "Y-m-d");
@@ -182,4 +183,26 @@ flatpickr("#date-range", {
 			dayElem.insertAdjacentHTML("beforeend", markDateHtml(markDate[itemDate]));
 		}
 	},
-});
+};
+
+let calendar;
+
+function initCalendar() {
+	if (document.body.clientWidth >= 768) {
+		calendarConf.static = false;
+		calendarConf.inline = false;
+		calendarConf.appendTo = datepickerCont;
+	}
+	if (document.body.clientWidth < 768) {
+		calendarConf.static = true;
+		calendarConf.inline = true;
+		calendarConf.appendTo = false;
+	}
+	calendar = flatpickr("#date-range", calendarConf);
+}
+
+window.onresize = function () {
+	initCalendar();
+};
+
+initCalendar();
