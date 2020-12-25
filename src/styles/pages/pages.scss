@@ -428,11 +428,6 @@ $font-primary: "Montserrat", sans-serif;
 	grid-gap: 30px;
 }
 
-.event-page__pagination {
-	align-self: center;
-	margin-bottom: 90px;
-}
-
 // speakers-page
 .speakers-page {
 	margin-top: 40px;
@@ -678,9 +673,7 @@ h3.article-page__h {
 		grid-template-columns: 1fr;
 		margin-bottom: 40px;
 	}
-	.event-page__pagination {
-		margin-bottom: 0;
-	}
+
 	.events__list .event-card:nth-of-type(2) .event-card__head-label {
 		right: 20px;
 	}

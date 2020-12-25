@@ -466,11 +466,12 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 .events__filter {
+	margin-top: -30px;
 	margin-bottom: 30px;
 	display: grid;
-	grid-auto-flow: column;
-	grid-auto-columns: minmax(auto, 270px);
+	grid-template-columns: repeat(4, minmax(auto, 270px));
 	grid-column-gap: 30px;
+	grid-row-gap: 20px;
 }
 
 .events__filter-close {
@@ -498,8 +499,11 @@ $font-primary: "Montserrat", sans-serif;
 	}
 }
 
-.events__filter-datepicker {
-	// display: none;
+.events__filter-switch {
+	grid-column: 1 / -1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 .events__filter-button {
@@ -1051,6 +1055,10 @@ $font-primary: "Montserrat", sans-serif;
 
 	.events__filter-h {
 		display: flex;
+	}
+
+	.events__filter-switch {
+		justify-self: flex-start;
 	}
 
 	.flatpickr-wrapper {
