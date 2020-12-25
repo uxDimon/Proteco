@@ -211,7 +211,7 @@ main {
 .breadcrumbs {
   display: flex;
   align-items: center;
-  margin: 15px 0 40px; }
+  margin: 15px 0 0; }
 
 .breadcrumbs__item {
   color: #717171;
@@ -1957,6 +1957,9 @@ main {
   align-self: center;
   margin-bottom: 90px; }
 
+.speakers-page {
+  margin-top: 40px; }
+
 .speakers-page__h {
   margin-bottom: 30px; }
 
@@ -2019,6 +2022,9 @@ main {
 .speakers-page__pagination {
   justify-content: center;
   margin-bottom: 80px; }
+
+.article-page {
+  margin-top: 40px; }
 
 .article-page__content > img {
   width: 100%;
@@ -2272,7 +2278,7 @@ h3.article-page__h {
   background-color: #edf5f8; }
 
 .event-page {
-  margin: 50px 0; }
+  margin: 40px 0 50px; }
 
 .event-page__head {
   display: grid;
