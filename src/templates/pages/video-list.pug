@@ -1,0 +1,270 @@
+extends ../template
+
+block variables
+    - var title = 'Видео'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    .breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Видео
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+        
+        section.container-wrap.video-list__wrap
+            .container-item.video-list                
+                h1.h1.video-list__h Видео
+
+                .video-list__filter
+                    .video-list__filter-head
+                        label.switch
+                            input(type="checkbox", name="").switch__input
+                            .switch__item
+                            span.switch__text Скрыть посмотренные
+                            
+                    .video-list__filter-bot
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Вебинары
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Backstage
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Кейсы
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Прямые эфиры
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Обзоры продукции
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Аудиоподкасты
+
+                ul.video-main__body.video-list__body
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+
+
+                .pagination.pagination_ctnter
+                    .pagination__prev
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    .pagination__number 1
+                    a(href="#").pagination__number 2
+                    a(href="#").pagination__number 3
+                    a(href="#").pagination__number 4
+                    a(href="#").pagination__number ...
+                    a(href="#").pagination__next
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+        include ../components/mailing.pug

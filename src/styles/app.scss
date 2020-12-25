@@ -193,6 +193,7 @@ main {
 	cursor: pointer;
 	transition: 100ms ease-in-out 0ms;
 	transition-property: background-color, border-color, color;
+	white-space: nowrap;
 
 	&:hover {
 		color: $color-Blue3;
