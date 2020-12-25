@@ -186,23 +186,43 @@ let calendarConf = {
 };
 
 let calendar;
-
+const calendarWrap = document.querySelector("#date-range");
 function initCalendar() {
-	if (document.body.clientWidth >= 768) {
-		calendarConf.static = false;
-		calendarConf.inline = false;
-		calendarConf.appendTo = datepickerCont;
+	if (calendarWrap) {
+		if (document.body.clientWidth >= 768) {
+			calendarConf.static = false;
+			calendarConf.inline = false;
+			calendarConf.appendTo = datepickerCont;
+		}
+		if (document.body.clientWidth < 768) {
+			calendarConf.static = true;
+			calendarConf.inline = true;
+			calendarConf.appendTo = false;
+		}
+		calendar = flatpickr(calendarWrap, calendarConf);
 	}
-	if (document.body.clientWidth < 768) {
-		calendarConf.static = true;
-		calendarConf.inline = true;
-		calendarConf.appendTo = false;
+}
+
+let calendarPage;
+const calendarPageWrap = document.querySelector("#date-range-page");
+function initCalendarPage() {
+	if (calendarPageWrap) {
+		if (document.body.clientWidth >= 768) {
+			calendarConf.static = false;
+			calendarConf.inline = false;
+		}
+		if (document.body.clientWidth < 768) {
+			calendarConf.static = true;
+			calendarConf.inline = true;
+		}
+		calendarPage = flatpickr(calendarPageWrap, calendarConf);
 	}
-	calendar = flatpickr("#date-range", calendarConf);
 }
 
 window.onresize = function () {
 	initCalendar();
+	initCalendarPage();
 };
 
 initCalendar();
+initCalendarPage();

@@ -18,7 +18,50 @@ block content
 
                 h1.h1.event-page__h Мероприятия
                 
-                .event-page__filter
+                button(data-active-control="filter1").button.events__filter-button-active
+                    svg(width="24", height="16")
+                        use(xlink:href="./assets/images/sprite.svg#icon-filter")
+                    span Фильтры
+
+                .events__filter(data-active-block="filter1")
+                    button(data-active-control="filter1").events__filter-close.close-button
+                        svg(width="20", height="20")
+                            use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
+
+                    .events__filter-h
+                        svg(width="24", height="16")
+                            use(xlink:href="./assets/images/sprite.svg#icon-filter")
+                        h4 Фильтры
+
+                    label.event-page__filter-item
+                        .event-page__filter-name Категория мероприятий
+                        select(name="").event-select
+                            option(value="1").event-select__first Все мероприятия
+                            option(value="2") Мероприятия 2
+                            option(value="3") Мероприятия 3
+                    
+                    label.event-page__filter-item
+                        .event-page__filter-name Продукты
+                        select(name="").event-select
+                            option(value="1").event-select__first Все продукты
+                            option(value="2") Продукты 2
+                            option(value="3") Продукты 3
+
+                    label.event-page__filter-item
+                        .event-page__filter-name Спикеры
+                        select(name="").event-select
+                            option(value="1").event-select__first Все спикеры
+                            option(value="2") Спикеры 2
+                            option(value="3") Спикеры 3
+                    
+                    label.event-page__filter-item
+                        .event-page__filter-name Календарь
+                        input(type="text")#date-range-page.event-select
+
+                    button(data-active-control="filter1").button.events__filter-button Применить фильтрацию
+
+
+                //- .event-page__filter
                     label.event-page__filter-item
                         .event-page__filter-name Категория мероприятий
                         select(name="").event-select

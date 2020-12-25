@@ -473,6 +473,10 @@ $font-primary: "Montserrat", sans-serif;
 	grid-column-gap: 30px;
 }
 
+.events__filter-close {
+	display: none;
+}
+
 .events__filter-h {
 	display: none;
 	// display: flex;
@@ -521,12 +525,43 @@ $font-primary: "Montserrat", sans-serif;
 .datepicker-main__wrap {
 	padding: 30px 20px;
 }
+
 .datepicker-main,
 .flatpickr-wrapper {
 	position: relative;
 	width: 100%;
 	z-index: 10;
+}
 
+.flatpickr-calendar {
+	display: none;
+	position: absolute;
+	padding: 20px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	background-color: $color-Wheat;
+	z-index: 110;
+
+	&.open {
+		display: block;
+	}
+}
+
+.flatpickr-wrapper .flatpickr-calendar {
+	display: block;
+	position: static;
+}
+
+.datepicker-main > .flatpickr-calendar {
+	display: block;
+	position: static;
+	padding: 0;
+	box-shadow: none;
+}
+
+.datepicker-main,
+.flatpickr-wrapper,
+.flatpickr-calendar {
 	.flatpickr-months {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -1010,12 +1045,16 @@ $font-primary: "Montserrat", sans-serif;
 		}
 	}
 
+	.events__filter-close {
+		display: block;
+	}
+
 	.events__filter-h {
 		display: flex;
 	}
 
 	.flatpickr-wrapper {
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 
 	.events__filter-button {
@@ -1025,6 +1064,24 @@ $font-primary: "Montserrat", sans-serif;
 	.mark-date,
 	.datepicker-main__wrap {
 		display: none;
+	}
+
+	.flatpickr-wrapper > .event-select,
+	.event-page__filter-name {
+		display: none;
+	}
+
+	.flatpickr-wrapper > .flatpickr-calendar {
+		padding: 20px 8px 10px 8px;
+	}
+
+	.datepicker-main .flatpickr-monthDropdown-months,
+	.flatpickr-wrapper .flatpickr-monthDropdown-months,
+	.flatpickr-calendar .flatpickr-monthDropdown-months,
+	.datepicker-main .numInputWrapper input.cur-year,
+	.flatpickr-wrapper .numInputWrapper input.cur-year,
+	.flatpickr-calendar .numInputWrapper input.cur-year {
+		font-size: 22px;
 	}
 }
 @media screen and (max-width: 500px) {
