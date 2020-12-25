@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Спикеры</title>
+    <title>Аудиоподкасты</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -177,106 +177,157 @@
     <main>
       <div class="container-wrap">
         <div class="container-item">
-          <div class="breadcrumbs">
-            <div class="breadcrumbs__item">Главная
+          <div class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная
               <svg width="14" height="8">
                 <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-              </svg>
-            </div><a class="breadcrumbs__item" href="#">Спикеры
+              </svg></a><a class="breadcrumbs__item" href="#">Видео
               <svg width="14" height="8">
                 <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
               </svg></a>
+            <div class="breadcrumbs__item">Аудиоподкасты
+              <svg width="14" height="8">
+                <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-      <section class="container-wrap speakers-page__wrap">
-        <div class="container-item speakers-page">
-          <h1 class="h1 speakers-page__h">Спикеры</h1>
-          <div class="speakers-page__filter">
-            <label class="radio-button">
-              <input class="radio-button__input" type="radio" name="video" checked>
-              <div class="radio-button__button">Все</div>
-            </label>
-            <label class="radio-button">
-              <input class="radio-button__input" type="radio" name="video">
-              <div class="radio-button__button">Русскоязычные</div>
-            </label>
-            <label class="radio-button">
-              <input class="radio-button__input" type="radio" name="video">
-              <div class="radio-button__button">Зарубежные</div>
-            </label>
+      <section class="container-wrap podcast-list__wrap">
+        <div class="container-item podcast-list">               
+          <h1 class="h1 podcast-list__h">Аудиоподкасты</h1>
+          <div class="video-list__filter">
+            <div class="video-list__filter-head">
+              <label class="switch">
+                <input class="switch__input" type="checkbox" name="">
+                <div class="switch__item"></div><span class="switch__text">Скрыть посмотренные</span>
+              </label>
+            </div>
+            <div class="video-list__filter-bot">
+              <label class="radio-button">
+                <input class="radio-button__input" type="radio" name="video" checked>
+                <div class="radio-button__button">Вебинары</div>
+              </label>
+              <label class="radio-button">
+                <input class="radio-button__input" type="radio" name="video" checked>
+                <div class="radio-button__button">Backstage</div>
+              </label>
+              <label class="radio-button">
+                <input class="radio-button__input" type="radio" name="video" checked>
+                <div class="radio-button__button">Кейсы</div>
+              </label>
+              <label class="radio-button">
+                <input class="radio-button__input" type="radio" name="video" checked>
+                <div class="radio-button__button">Прямые эфиры</div>
+              </label>
+              <label class="radio-button">
+                <input class="radio-button__input" type="radio" name="video" checked>
+                <div class="radio-button__button">Обзоры продукции</div>
+              </label>
+              <label class="radio-button">
+                <input class="radio-button__input" type="radio" name="video" checked>
+                <div class="radio-button__button">Аудиоподкасты</div>
+              </label>
+            </div>
           </div>
-          <ul class="speakers-page__list">
-            <li class="speakers-page__item"><img class="speakers-page__item-img" width="160" height="230" src="./assets/images/img1.jpg" alt="Вишнякова Марина Александровна (Москва)">
-              <div class="speakers-page__item-text-wrap"> 
-                <h4 class="speakers-page__item-name">Вишнякова Марина Александровна (Москва)</h4>
-                <p class="speakers-page__item-text">Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС</p><a class="speakers-page__item-linc" href="#">Мероприятия спикера
-                  <svg width="14" height="8">
-                    <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg></a>
+          <ul class="podcast-list__list">
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
               </div>
             </li>
-            <li class="speakers-page__item"><img class="speakers-page__item-img" width="160" height="230" src="./assets/images/img1.jpg" alt="Таиров Валерий Владиславович">
-              <div class="speakers-page__item-text-wrap">
-                <h4 class="speakers-page__item-name">Таиров Валерий Владиславович</h4>
-                <p class="speakers-page__item-text">к.м.н., врач-стоматолог высшей квалификационной категории</p><a class="speakers-page__item-linc" href="#">Мероприятия спикера
-                  <svg width="14" height="8">
-                    <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg></a>
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
               </div>
             </li>
-            <li class="speakers-page__item"><img class="speakers-page__item-img" width="160" height="230" src="./assets/images/img1.jpg" alt="Пургина Светлана">
-              <div class="speakers-page__item-text-wrap">
-                <h4 class="speakers-page__item-name">Пургина Светлана</h4>
-                <p class="speakers-page__item-text">Ведущий продакт-менеджер направления "Дезинфицирующие средства", врач-эпидемиолог</p><a class="speakers-page__item-linc" href="#">Мероприятия спикера
-                  <svg width="14" height="8">
-                    <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg></a>
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
               </div>
             </li>
-            <li class="speakers-page__item"><img class="speakers-page__item-img" width="160" height="230" src="./assets/images/img1.jpg" alt="Вишнякова Марина Александровна (Москва)">
-              <div class="speakers-page__item-text-wrap"> 
-                <h4 class="speakers-page__item-name">Вишнякова Марина Александровна (Москва)</h4>
-                <p class="speakers-page__item-text">Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС</p><a class="speakers-page__item-linc" href="#">Мероприятия спикера
-                  <svg width="14" height="8">
-                    <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg></a>
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
               </div>
             </li>
-            <li class="speakers-page__item"><img class="speakers-page__item-img" width="160" height="230" src="./assets/images/img1.jpg" alt="Таиров Валерий Владиславович">
-              <div class="speakers-page__item-text-wrap">
-                <h4 class="speakers-page__item-name">Таиров Валерий Владиславович</h4>
-                <p class="speakers-page__item-text">к.м.н., врач-стоматолог высшей квалификационной категории</p><a class="speakers-page__item-linc" href="#">Мероприятия спикера
-                  <svg width="14" height="8">
-                    <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg></a>
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
               </div>
             </li>
-            <li class="speakers-page__item"><img class="speakers-page__item-img" width="160" height="230" src="./assets/images/img1.jpg" alt="Пургина Светлана">
-              <div class="speakers-page__item-text-wrap">
-                <h4 class="speakers-page__item-name">Пургина Светлана</h4>
-                <p class="speakers-page__item-text">Ведущий продакт-менеджер направления "Дезинфицирующие средства", врач-эпидемиолог</p><a class="speakers-page__item-linc" href="#">Мероприятия спикера
-                  <svg width="14" height="8">
-                    <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg></a>
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
               </div>
             </li>
-            <li class="speakers-page__item"><img class="speakers-page__item-img" width="160" height="230" src="./assets/images/img1.jpg" alt="Вишнякова Марина Александровна (Москва)">
-              <div class="speakers-page__item-text-wrap"> 
-                <h4 class="speakers-page__item-name">Вишнякова Марина Александровна (Москва)</h4>
-                <p class="speakers-page__item-text">Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС</p><a class="speakers-page__item-linc" href="#">Мероприятия спикера
-                  <svg width="14" height="8">
-                    <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg></a>
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
               </div>
             </li>
-            <li class="speakers-page__item"><img class="speakers-page__item-img" width="160" height="230" src="./assets/images/img1.jpg" alt="Таиров Валерий Владиславович">
-              <div class="speakers-page__item-text-wrap">
-                <h4 class="speakers-page__item-name">Таиров Валерий Владиславович</h4>
-                <p class="speakers-page__item-text">к.м.н., врач-стоматолог высшей квалификационной категории</p><a class="speakers-page__item-linc" href="#">Мероприятия спикера
-                  <svg width="14" height="8">
-                    <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                  </svg></a>
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
+              </div>
+            </li>
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
+              </div>
+            </li>
+            <li class="podcast-list__list-item">
+              <h4 class="podcast-list__list-h">Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»</h4>
+              <div class="podcast-list__list-body"><img class="podcast-list__list-img" src="./assets/images/img1.jpg" alt="" width="125" height="175">
+                <div class="podcast-list__list-info">
+                  <div class="podcast-list__list-name">Вишнякова Марина Александровна (Москва)</div>
+                  <div class="podcast-list__list-description">Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.</div>
+                  <div class="podcast-list__list-button-wrap"><a class="button podcast-list__list-button" href="#">Слушать</a><span class="podcast-list__list-time">Длительность: 32 минуты</span></div>
+                </div>
               </div>
             </li>
           </ul>
@@ -293,48 +344,38 @@
           </div>
         </div>
       </section>
-      <section class="container-wrap training-centers__wrap">
-        <div class="container-item training-centers">
-          <h2 class="h1 training-centers__h">Наши учебные центры</h2>
-          <ul class="training-centers__train-linc train-linc">
-            <li class="train-linc__item">
-              <div class="train-linc__head">
-                <h3 class="train-linc__h">Москва</h3>
-                <div class="train-linc__adres">
-                  <svg width="14" height="20">
-                    <use xlink:href="./assets/images/sprite.svg#icon-point"></use>
-                  </svg><span>ул. Варшавская, д.5, корп. 2, офис 401</span>
-                </div>
-              </div>
-              <p class="train-linc__text">В центре проводятся мастер-классы, вебинары, лекции самыми лучшими специалистами в своей области. </p><a class="train-linc__linc" href="#">Подробнее
-                <svg width="14" height="8">
-                  <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                </svg></a>
-            </li>
-            <li class="train-linc__item">
-              <div class="train-linc__head">
-                <h3 class="train-linc__h">Санкт-Петербург</h3>
-                <div class="train-linc__adres">
-                  <svg width="14" height="20">
-                    <use xlink:href="./assets/images/sprite.svg#icon-point"></use>
-                  </svg><span>Проспект Андропова 18, к.1</span>
-                </div>
-              </div>
-              <p class="train-linc__text">В центре проводятся мастер-классы, вебинары, лекции самыми лучшими специалистами в своей области. </p><a class="train-linc__linc" href="#">Подробнее
-                <svg width="14" height="8">
-                  <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                </svg></a>
-            </li>
-            <li class="train-linc__item train-linc__item_purple">
-              <div class="train-linc__head">
-                <h3 class="train-linc__h">Заказать обучение в своей клинике</h3>
-              </div>
-              <p class="train-linc__text">В центре проводятся мастер-классы, вебинары, лекции самыми лучшими специалистами в своей области. </p><a class="train-linc__linc" href="#">Подробнее
-                <svg width="14" height="8">
-                  <use xlink:href="./assets/images/sprite.svg#icon-arrow"></use>
-                </svg></a>
-            </li>
-          </ul>
+      <section class="container-wrap">
+        <div class="container-item mailing">
+          <div class="mailing__text-wrrap">
+            <h2 class="mailing__h">Подпишитесь на нашу рассылку, чтобы получить:</h2>
+            <ul class="mailing__advantages">
+              <li class="mailing__advantages-item">
+                <div class="mailing__advantages-icon">
+                  <svg width="16" height="13">
+                    <use xlink:href="./assets/images/sprite.svg#icon-ok"></use>
+                  </svg>
+                </div><span class="mailing__advantages-text">Уведомления о мероприятиях</span>
+              </li>
+              <li class="mailing__advantages-item">
+                <div class="mailing__advantages-icon">
+                  <svg width="16" height="13">
+                    <use xlink:href="./assets/images/sprite.svg#icon-ok"></use>
+                  </svg>
+                </div><span class="mailing__advantages-text">Полезные статьи</span>
+              </li>
+              <li class="mailing__advantages-item"> 
+                <div class="mailing__advantages-icon">
+                  <svg width="16" height="13">
+                    <use xlink:href="./assets/images/sprite.svg#icon-ok"></use>
+                  </svg>
+                </div><span class="mailing__advantages-text">Ссылки на трансляции</span>
+              </li>
+            </ul>
+          </div>
+          <form class="mailing__form"> 
+            <input class="input mailing__form-input" type="email" name="" placeholder="Ваш E-mail"><span class="mailing__form-text">Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с <a href="#">Пользовательским соглашением</a></span>
+            <button class="button" type="submit">Подписаться</button>
+          </form>
         </div>
       </section>
     </main>
