@@ -240,7 +240,7 @@ main {
 .breadcrumbs {
 	display: flex;
 	align-items: center;
-	margin: 15px 0 40px;
+	margin: 15px 0 0;
 }
 
 .breadcrumbs__item {
@@ -263,7 +263,6 @@ main {
 }
 
 // pagination
-// fix: добавить ховер
 .pagination {
 	display: grid;
 	grid-auto-flow: column;

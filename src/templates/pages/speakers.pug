@@ -6,8 +6,8 @@ block variables
 
 block content
     main
-        section.container-wrap.speakers-page__wrap
-            .container-item.speakers-page
+        .container-wrap
+            .container-item
                 .breadcrumbs
                     .breadcrumbs__item Главная
                         svg(width="14", height="8")
@@ -15,7 +15,9 @@ block content
                     a(href="#").breadcrumbs__item Спикеры
                         svg(width="14", height="8")
                             use(xlink:href="./assets/images/sprite.svg#icon-arrow")
-
+        
+        section.container-wrap.speakers-page__wrap
+            .container-item.speakers-page
                 h1.h1.speakers-page__h Спикеры
 
                 .speakers-page__filter

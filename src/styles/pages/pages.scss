@@ -434,6 +434,9 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 // speakers-page
+.speakers-page {
+	margin-top: 40px;
+}
 .speakers-page__h {
 	margin-bottom: 30px;
 }
@@ -508,6 +511,10 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 // article-page
+.article-page {
+	margin-top: 40px;
+}
+
 .article-page__content {
 	> img {
 		width: 100%;

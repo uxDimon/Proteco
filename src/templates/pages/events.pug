@@ -6,8 +6,8 @@ block variables
 
 block content
     main
-        section.container-wrap.event-page__wrap
-            .container-item.event-page
+        .container-wrap
+            .container-item
                 .breadcrumbs
                     .breadcrumbs__item Главная
                         svg(width="14", height="8")
@@ -15,8 +15,14 @@ block content
                     a(href="#").breadcrumbs__item Мероприятия
                         svg(width="14", height="8")
                             use(xlink:href="./assets/images/sprite.svg#icon-arrow")
-
-                h1.h1.event-page__h Мероприятия
+        
+        section.container-wrap.event-page__wrap
+            .container-item.event-page                
+                .event-page__h-wrap
+                    h1.h1.event-page__h Мероприятия
+                    //- lable.
+                        input(type="checkbox", name="")
+                        span
                 
                 button(data-active-control="filter1").button.events__filter-button-active
                     svg(width="24", height="16")
@@ -56,39 +62,9 @@ block content
                     
                     label.event-page__filter-item
                         .event-page__filter-name Календарь
-                        input(type="text")#date-range-page.event-select
+                        input(type="text", placeholder="Все время")#date-range-page.event-select
 
                     button(data-active-control="filter1").button.events__filter-button Применить фильтрацию
-
-
-                //- .event-page__filter
-                    label.event-page__filter-item
-                        .event-page__filter-name Категория мероприятий
-                        select(name="").event-select
-                            option(value="1").event-select__first Все мероприятия
-                            option(value="2") Мероприятия 2
-                            option(value="3") Мероприятия 3
-                    
-                    label.event-page__filter-item
-                        .event-page__filter-name Продукты
-                        select(name="").event-select
-                            option(value="1").event-select__first Все продукты
-                            option(value="2") Продукты 2
-                            option(value="3") Продукты 3
-
-                    label.event-page__filter-item
-                        .event-page__filter-name Спикеры
-                        select(name="").event-select
-                            option(value="1").event-select__first Все спикеры
-                            option(value="2") Спикеры 2
-                            option(value="3") Спикеры 3
-                    
-                    label.event-page__filter-item
-                        .event-page__filter-name Календарь
-                        select(name="").event-select
-                            option(value="1").event-select__first Все даты
-                            option(value="2") Календарь 2
-                            option(value="3") Календарь 3
 
                 ul.event-page__list
                     li.event-card
