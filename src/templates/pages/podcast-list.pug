@@ -1,0 +1,178 @@
+extends ../template
+
+block variables
+    - var title = 'Аудиоподкасты'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    a(href="#").breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Видео
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    .breadcrumbs__item Аудиоподкасты
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+        
+        section.container-wrap.podcast-list__wrap
+            .container-item.podcast-list                
+                h1.h1.podcast-list__h Аудиоподкасты
+                
+                .video-list__filter
+                    .video-list__filter-head
+                        label.switch
+                            input(type="checkbox", name="").switch__input
+                            .switch__item
+                            span.switch__text Скрыть посмотренные
+                            
+                    .video-list__filter-bot
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Вебинары
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Backstage
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Кейсы
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Прямые эфиры
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Обзоры продукции
+                        label.radio-button
+                            input(type="radio", name="video", checked).radio-button__input
+                            .radio-button__button Аудиоподкасты
+
+                ul.podcast-list__list
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+
+                .pagination.pagination_ctnter
+                    .pagination__prev
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    .pagination__number 1
+                    a(href="#").pagination__number 2
+                    a(href="#").pagination__number 3
+                    a(href="#").pagination__number 4
+                    a(href="#").pagination__number ...
+                    a(href="#").pagination__next
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+        include ../components/mailing.pug                    

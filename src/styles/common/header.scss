@@ -453,6 +453,9 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 @media screen and (max-width: 710px) {
+	.burger-menu__close {
+		display: block;
+	}
 	.header {
 		min-height: 40px;
 	}

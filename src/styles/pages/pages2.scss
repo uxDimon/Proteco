@@ -264,7 +264,7 @@ a.event-page__contact:hover {
 }
 
 .video-list__filter {
-	margin: 0 -15px 30px -15px;
+	margin: 0 -15px 20px -15px;
 }
 
 .video-list__filter-head {
@@ -284,7 +284,7 @@ a.event-page__contact:hover {
 	align-items: center;
 	justify-content: start;
 	grid-column-gap: 30px;
-	padding: 0 15px;
+	padding: 0 15px 10px;
 
 	&::after {
 		content: "";
@@ -292,6 +292,82 @@ a.event-page__contact:hover {
 		width: 1px;
 		height: 1px;
 	}
+}
+
+.podcast-list {
+	margin-top: 40px;
+}
+
+.podcast-list__list {
+	margin: 0 0 60px;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+}
+
+.podcast-list__list-item {
+	background-color: $color-Wheat;
+	box-shadow: 0px 4px 10px rgba(0, 118, 201, 0.1);
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.podcast-list__list-h {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0 0 20px;
+}
+
+.podcast-list__list-body {
+	display: flex;
+}
+
+.podcast-list__list-img {
+	width: 125px;
+	height: 175px;
+	object-fit: cover;
+	margin-right: 20px;
+	border-radius: 10px;
+	display: block;
+}
+
+.podcast-list__list-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.podcast-list__list-name {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	margin: 0 0 15px;
+}
+
+.podcast-list__list-description {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: $color-Grey-2;
+	margin-bottom: 15px;
+}
+
+.podcast-list__list-button-wrap {
+	margin-top: auto;
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 20px;
+	align-items: center;
+	justify-content: start;
+}
+
+.podcast-list__list-time {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	color: $color-Grey-4;
 }
 
 @media screen and (max-width: 1023px) {
@@ -306,6 +382,33 @@ a.event-page__contact:hover {
 	.event-page__info-wrap {
 		grid-template-columns: 1fr;
 		row-gap: 25px;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.podcast-list__list-body {
+		flex-direction: column;
+	}
+
+	.podcast-list__list-item {
+		padding: 15px;
+	}
+
+	.podcast-list__list-img {
+		margin-right: 0;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	.podcast-list__list-button-wrap {
+		grid-auto-flow: row;
+		grid-row-gap: 10px;
+		justify-items: center;
+		justify-content: stretch;
+	}
+
+	.podcast-list__list-time {
+		grid-row-start: 1;
 	}
 }
 
@@ -434,6 +537,10 @@ a.event-page__contact:hover {
 
 	.video-list__filter-bot {
 		grid-column-gap: 15px;
+	}
+
+	.podcast-list__list {
+		grid-template-columns: 1fr;
 	}
 }
 
