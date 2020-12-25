@@ -290,6 +290,10 @@ main {
 	&:not([href]) {
 		background-color: #e4e4e4;
 	}
+
+	&:hover {
+		background-color: $color-Blue2;
+	}
 }
 
 .pagination__prev svg {
@@ -308,6 +312,14 @@ main {
 
 	&:not([href]) {
 		color: $color-Blue;
+
+		&:hover {
+			color: $color-Blue;
+		}
+	}
+
+	&:hover {
+		color: $color-Grey-4;
 	}
 }
 
