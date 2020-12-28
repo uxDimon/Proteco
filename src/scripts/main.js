@@ -226,3 +226,93 @@ window.onresize = function () {
 
 initCalendar();
 initCalendarPage();
+
+// audio-player
+const playerProgressList = document.querySelectorAll(".audio-player__progres");
+
+function secInPers(now, end, element) {
+	const percent = (now * 100) / end + "%";
+	element.style.setProperty("--progres", percent);
+}
+
+if (playerProgressList) {
+	for (const playerProgress of playerProgressList) {
+		const inputRange = playerProgress.querySelector('input[type="range"]');
+		const mimicProgress = playerProgress.querySelector(".audio-player__progres-mimic");
+
+		inputRange.addEventListener("input", () => {
+			secInPers(inputRange.value, inputRange.max, mimicProgress);
+		});
+	}
+}
+
+const audioPlayerList = document.querySelectorAll(".audio-player");
+// const eventInput = new Event("input");
+function secondsToHms(d) {
+	d = Number(d);
+	const h = Math.floor(d / 3600),
+		m = Math.floor((d % 3600) / 60),
+		s = Math.floor((d % 3600) % 60),
+		hDisplay = h > 0 ? h + ":" : "",
+		mDisplay = m > 0 ? (m <= 9 ? "0" : "") + m + ":" : "0:",
+		sDisplay = s <= 9 ? "0" + s : s;
+	return hDisplay + mDisplay + sDisplay;
+}
+
+if (audioPlayerList) {
+	for (const audioPlayer of audioPlayerList) {
+		const audio = audioPlayer.querySelector("audio"),
+			progres = audioPlayer.querySelector(".audio-player__progres > input"),
+			progresMimic = audioPlayer.querySelector(".audio-player__progres-mimic"),
+			playPause = audioPlayer.querySelector(".audio-player__play-pause"),
+			rewindBack = audioPlayer.querySelector(".audio-player__rewind_back"),
+			rewindForward = audioPlayer.querySelector(".audio-player__rewind_forward"),
+			timeNow = audioPlayer.querySelector(".audio-player__time-now"),
+			timeEnd = audioPlayer.querySelector(".audio-player__time-end");
+
+		let nowSeconds, maxSeconds;
+
+		function setTimeNow() {
+			nowSeconds = Math.floor(audio.currentTime);
+			timeNow.innerHTML = secondsToHms(nowSeconds);
+		}
+
+		// progres
+		progres.addEventListener("input", () => {
+			audio.currentTime = progres.value;
+			setTimeNow();
+		});
+
+		// control
+		playPause.addEventListener("click", () => {
+			if (audio.paused) {
+				audio.play();
+				playPause.classList.add(activeClass);
+			} else {
+				audio.pause();
+				playPause.classList.remove(activeClass);
+			}
+		});
+
+		// Загрузка
+		audio.addEventListener("durationchange", () => {
+			// progres
+			maxSeconds = Math.floor(audio.duration);
+			progres.max = maxSeconds;
+			timeEnd.innerHTML = secondsToHms(maxSeconds);
+			setTimeNow();
+		});
+		// Воспроизведение
+		audio.addEventListener("playing", () => {
+			const tickInterval = 1000;
+			// progres
+			let addTimeNow = setTimeout(function tick() {
+				setTimeNow();
+				secInPers(nowSeconds, maxSeconds, progresMimic);
+				if (!audio.paused) {
+					addTimeNow = setTimeout(tick, tickInterval);
+				}
+			}, tickInterval);
+		});
+	}
+}

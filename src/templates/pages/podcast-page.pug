@@ -1,0 +1,59 @@
+extends ../template
+
+block variables
+    - var title = 'Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»'
+    - var contactForm = true
+
+block content
+    .container-wrap
+        .container-item
+            .breadcrumbs
+                a(href="#").breadcrumbs__item Главная
+                    svg(width="14", height="8")
+                        use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                a(href="#").breadcrumbs__item Видео
+                    svg(width="14", height="8")
+                        use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                a(href="#").breadcrumbs__item Аудиоподкасты
+                    svg(width="14", height="8")
+                        use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                .breadcrumbs__item Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками...
+                    svg(width="14", height="8")
+                        use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+    main
+        section.container-wrap.podcast-page__wrap
+            .container-item.podcast-page
+                h1.podcast-pag__h Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+
+                .podcast-pag__audio-player.audio-player
+                    audio(src="./assets/images/261.mp3", controls)
+                    .audio-player__progres_wrap
+                        .audio-player__progres
+                            input(type="range", name="progres", value="0", min="0", max="100", step="1")
+                            .audio-player__progres-mimic
+                        .audio-player__time-wrap
+                            .audio-player__time-now 0:00
+                            .audio-player__time-end 12:34
+                    .audio-player__control-wrap
+                        .audio-player__control-main-wrap
+                            button.audio-player__rewind.audio-player__rewind_back
+                                span.audio-player__rewind-text 30
+                                svg(width="32", height="32").audio-player__rewind-icon
+                                    use(xlink:href="./assets/images/sprite.svg#icon-button-rewind")
+                                
+                            button(data-player-play="false").audio-player__play-pause
+                                svg(width="15", height="15").audio-player__play
+                                    use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                svg(width="15", height="15").audio-player__play
+                                    use(xlink:href="./assets/images/sprite.svg#icon-button-pause")
+
+                            button.audio-player__rewind.audio-player__rewind_forward
+                                span.audio-player__rewind-text 30
+                                svg(width="32", height="32").audio-player__rewind-icon
+                                    use(xlink:href="./assets/images/sprite.svg#icon-button-rewind")
+                        
+                        label.audio-player__volume
+                            input(type="range", name="volume").audio-player__volume-input
+                            button.audio-player__volume-icon
+                                svg(width="21", height="20")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-volume")

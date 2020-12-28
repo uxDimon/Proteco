@@ -287,23 +287,23 @@ main {
 
 // breadcrumbs
 .breadcrumbs {
-	display: flex;
-	align-items: center;
-	margin: 15px 0 0;
+	// margin: 1px -7px -7px;
 }
 
 .breadcrumbs__item {
 	color: #717171;
 	font-size: 14px;
-	line-height: 17px;
-	display: flex;
-	align-items: center;
-	margin-right: 14px;
+	line-height: 30px;
+	display: inline;
+	margin-right: 8px;
+	padding: 0 1px;
 
 	svg {
+		display: inline;
 		margin-left: 15px;
 		transform: rotate(-90deg);
 		--icon-color: #717171;
+		margin-bottom: 1px;
 	}
 
 	&:last-child svg {
@@ -372,6 +372,85 @@ main {
 
 	&:hover {
 		color: $color-Grey-4;
+	}
+}
+
+// audio-player
+.audio-player {
+	width: 100%;
+	box-shadow: 0px 4px 10px rgba(0, 118, 201, 0.1);
+	border-radius: 10px;
+	background-color: $color-Wheat;
+	padding: 35px;
+}
+
+.audio-player__progres_wrap {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.audio-player__progres {
+	width: 100%;
+	height: 15px;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translateY(-50%);
+		height: 2px;
+		background-color: $color-Grey;
+		z-index: 1;
+	}
+
+	input {
+		position: relative;
+		display: block;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		margin: 0;
+		padding: 0;
+		z-index: 10;
+	}
+
+	.audio-player__progres-mimic {
+		position: absolute;
+		top: 50%;
+		left: 8px;
+		right: 8px;
+		transform: translateY(-50%);
+		height: 2px;
+		z-index: 2;
+		--progres: 0;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			width: calc(var(--progres, 0%) + 8px);
+			bottom: 0;
+			left: -8px;
+			background-color: $color-Blue;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			left: var(--progres, 0%);
+			width: 16px;
+			height: 16px;
+			border-radius: 15px;
+			background-color: $color-Blue;
+		}
 	}
 }
 
