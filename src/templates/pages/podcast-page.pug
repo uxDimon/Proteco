@@ -33,27 +33,30 @@ block content
                             .audio-player__progres-mimic
                         .audio-player__time-wrap
                             .audio-player__time-now 0:00
-                            .audio-player__time-end 12:34
+                            .audio-player__time-end 0:00
                     .audio-player__control-wrap
-                        .audio-player__control-main-wrap
-                            button.audio-player__rewind.audio-player__rewind_back
-                                span.audio-player__rewind-text 30
-                                svg(width="32", height="32").audio-player__rewind-icon
-                                    use(xlink:href="./assets/images/sprite.svg#icon-button-rewind")
-                                
-                            button(data-player-play="false").audio-player__play-pause
-                                svg(width="15", height="15").audio-player__play
-                                    use(xlink:href="./assets/images/sprite.svg#icon-button-play")
-                                svg(width="15", height="15").audio-player__play
-                                    use(xlink:href="./assets/images/sprite.svg#icon-button-pause")
+                        button.audio-player__rewind.audio-player__rewind_back
+                            .audio-player__rewind-text 30
+                            svg(width="32", height="32").audio-player__rewind-icon
+                                use(xlink:href="./assets/images/sprite.svg#icon-button-rewind")
+                            
+                        button(data-player-play="false").audio-player__play-pause
+                            svg(width="16", height="16").audio-player__icon-play
+                                use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                            svg(width="16", height="16").audio-player__icon-pause
+                                use(xlink:href="./assets/images/sprite.svg#icon-button-pause")
 
-                            button.audio-player__rewind.audio-player__rewind_forward
-                                span.audio-player__rewind-text 30
-                                svg(width="32", height="32").audio-player__rewind-icon
-                                    use(xlink:href="./assets/images/sprite.svg#icon-button-rewind")
+                        button.audio-player__rewind.audio-player__rewind_forward
+                            .audio-player__rewind-text 30
+                            svg(width="32", height="32").audio-player__rewind-icon
+                                use(xlink:href="./assets/images/sprite.svg#icon-button-rewind")
                         
                         label.audio-player__volume
-                            input(type="range", name="volume").audio-player__volume-input
-                            button.audio-player__volume-icon
+                            .audio-player__progres.audio-player__volume-progres
+                                input(type="range", name="volume", value="1", min="0", max="1", step="0.01")
+                                .audio-player__progres-mimic
+                            button.audio-player__volume-button
                                 svg(width="21", height="20")
                                     use(xlink:href="./assets/images/sprite.svg#icon-volume")
+
+                h2.podcast-pag__h Спикер

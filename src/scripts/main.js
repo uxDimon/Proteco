@@ -231,8 +231,7 @@ initCalendarPage();
 const playerProgressList = document.querySelectorAll(".audio-player__progres");
 
 function secInPers(now, end, element) {
-	const percent = (now * 100) / end + "%";
-	element.style.setProperty("--progres", percent);
+	element.style.setProperty("--progres", (now * 100) / end + "%");
 }
 
 if (playerProgressList) {
@@ -247,14 +246,13 @@ if (playerProgressList) {
 }
 
 const audioPlayerList = document.querySelectorAll(".audio-player");
-// const eventInput = new Event("input");
 function secondsToHms(d) {
 	d = Number(d);
 	const h = Math.floor(d / 3600),
 		m = Math.floor((d % 3600) / 60),
 		s = Math.floor((d % 3600) % 60),
 		hDisplay = h > 0 ? h + ":" : "",
-		mDisplay = m > 0 ? (m <= 9 ? "0" : "") + m + ":" : "0:",
+		mDisplay = m > 0 ? (m <= 9 ? (h > 0 ? "0" : "") : "") + m + ":" : "0:",
 		sDisplay = s <= 9 ? "0" + s : s;
 	return hDisplay + mDisplay + sDisplay;
 }
@@ -267,6 +265,9 @@ if (audioPlayerList) {
 			playPause = audioPlayer.querySelector(".audio-player__play-pause"),
 			rewindBack = audioPlayer.querySelector(".audio-player__rewind_back"),
 			rewindForward = audioPlayer.querySelector(".audio-player__rewind_forward"),
+			volumebutton = audioPlayer.querySelector(".audio-player__volume-button"),
+			volumeProgresInput = audioPlayer.querySelector(".audio-player__volume-progres > input"),
+			volumeProgresMimic = audioPlayer.querySelector(".audio-player__volume-progres > .audio-player__progres-mimic"),
 			timeNow = audioPlayer.querySelector(".audio-player__time-now"),
 			timeEnd = audioPlayer.querySelector(".audio-player__time-end");
 
@@ -277,30 +278,64 @@ if (audioPlayerList) {
 			timeNow.innerHTML = secondsToHms(nowSeconds);
 		}
 
-		// progres
-		progres.addEventListener("input", () => {
-			audio.currentTime = progres.value;
-			setTimeNow();
-		});
-
-		// control
-		playPause.addEventListener("click", () => {
-			if (audio.paused) {
-				audio.play();
-				playPause.classList.add(activeClass);
-			} else {
-				audio.pause();
-				playPause.classList.remove(activeClass);
-			}
-		});
-
-		// Загрузка
+		// Полная загрузка
 		audio.addEventListener("durationchange", () => {
 			// progres
 			maxSeconds = Math.floor(audio.duration);
 			progres.max = maxSeconds;
 			timeEnd.innerHTML = secondsToHms(maxSeconds);
 			setTimeNow();
+
+			// progres
+			progres.addEventListener("input", () => {
+				audio.currentTime = progres.value;
+				setTimeNow();
+			});
+
+			// control
+			playPause.addEventListener("click", () => {
+				if (audio.paused) {
+					audio.play();
+					playPause.classList.add(activeClass);
+				} else {
+					audio.pause();
+					playPause.classList.remove(activeClass);
+				}
+			});
+			rewindBack.addEventListener("click", () => {
+				audio.currentTime -= 30;
+			});
+			rewindForward.addEventListener("click", () => {
+				audio.currentTime += 30;
+			});
+
+			// volume
+			let volumeNow = audio.volume;
+			volumeProgresMimic.style.setProperty("--progres", volumeNow * 100 + "%");
+			function muteIcon() {
+				let iconOpacity = 1;
+				if (audio.volume == 0) iconOpacity = 0;
+				volumebutton.style.setProperty("--mute", Number(!iconOpacity));
+				volumebutton.style.setProperty("--volume", iconOpacity);
+			}
+
+			volumebutton.addEventListener("click", () => {
+				let mute = volumeNow;
+				if (audio.volume > 0) mute = 0;
+				audio.volume = mute;
+				volumeProgresMimic.style.setProperty("--progres", mute * 100 + "%");
+				muteIcon();
+			});
+
+			volumeProgresInput.addEventListener("input", () => {
+				volumeNow = volumeProgresInput.value;
+				audio.volume = volumeProgresInput.value;
+				volumebutton.style.setProperty("--volume1", audio.volume);
+				volumebutton.style.setProperty("--volume05", audio.volume + 0.33);
+				// volumebutton.style.setProperty("--volume1", audio.volume / 0.5 - 1);
+				// volumebutton.style.setProperty("--volume05", audio.volume / 0.5);
+				muteIcon();
+			});
 		});
 		// Воспроизведение
 		audio.addEventListener("playing", () => {
