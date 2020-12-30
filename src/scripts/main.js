@@ -351,3 +351,10 @@ if (audioPlayerList) {
 		});
 	}
 }
+
+// https://github.com/michu2k/Accordion
+// accordion
+const accordionFaq = ".faq";
+if (document.querySelector(accordionFaq)) {
+	new Accordion(accordionFaq);
+}

@@ -446,6 +446,62 @@ a.event-page__contact:hover {
 	margin-top: 50px;
 }
 
+// faq-page
+.faq-page {
+	margin: 40px 0;
+}
+
+.faq-page__h {
+	margin-bottom: 50px;
+}
+
+.faq {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: minmax(auto, 800px);
+	grid-row-gap: 20px;
+	justify-content: center;
+}
+
+.faq__head {
+	padding: 20px 60px 20px 30px;
+	border: 2px solid #e2e2ef;
+	border-radius: 30px;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	position: relative;
+	cursor: pointer;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		right: 30px;
+		transform: translateY(-50%);
+		display: block;
+		transition: transform 200ms ease-in-out 0ms;
+		--icon-stroke-width: 2;
+	}
+}
+
+.faq__item.is-active .faq__head > svg {
+	transform: translateY(-50%) rotate(-180deg);
+}
+
+.faq__body {
+	padding: 0 30px;
+	overflow: hidden;
+}
+
+.faq__body-text {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 20px 0;
+}
+
 @media screen and (max-width: 1023px) {
 	.event-page__head-title {
 		grid-template-columns: 1fr 1fr;
@@ -617,6 +673,31 @@ a.event-page__contact:hover {
 
 	.podcast-list__list {
 		grid-template-columns: 1fr;
+	}
+
+	.faq {
+		grid-row-gap: 15px;
+	}
+
+	.faq__head {
+		padding: 17px 30px 17px 20px;
+		font-size: 13px;
+		line-height: 15px;
+
+		svg {
+			right: 17px;
+			width: 10px;
+		}
+	}
+
+	.faq__body.ac-panel {
+		padding: 0 20px;
+	}
+
+	.faq__body-text {
+		font-size: 14px;
+		line-height: 1.4;
+		margin: 15px 0;
 	}
 }
 
