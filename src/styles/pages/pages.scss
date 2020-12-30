@@ -594,22 +594,6 @@ h3.article-page__h {
 	text-align: center;
 }
 
-.article-page__linc-back {
-	display: inline-flex;
-	align-items: center;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 20px;
-	color: $color-Blue;
-	text-decoration: none;
-
-	svg {
-		margin-right: 10px;
-		transform: rotate(90deg);
-		--icon-stroke-width: 1.5;
-	}
-}
-
 @media screen and (max-width: 1274px) {
 	.events__list .event-card:nth-of-type(2) {
 		grid-column: auto;

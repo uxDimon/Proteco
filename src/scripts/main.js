@@ -266,8 +266,8 @@ if (audioPlayerList) {
 			rewindBack = audioPlayer.querySelector(".audio-player__rewind_back"),
 			rewindForward = audioPlayer.querySelector(".audio-player__rewind_forward"),
 			volumebutton = audioPlayer.querySelector(".audio-player__volume-button"),
-			volumeProgresInput = audioPlayer.querySelector(".audio-player__volume-progres > input"),
-			volumeProgresMimic = audioPlayer.querySelector(".audio-player__volume-progres > .audio-player__progres-mimic"),
+			volumeProgresInput = audioPlayer.querySelector(".audio-player__volume-progres .audio-player__progres > input"),
+			volumeProgresMimic = audioPlayer.querySelector(".audio-player__volume-progres .audio-player__progres > .audio-player__progres-mimic"),
 			timeNow = audioPlayer.querySelector(".audio-player__time-now"),
 			timeEnd = audioPlayer.querySelector(".audio-player__time-end");
 

@@ -52,11 +52,64 @@ block content
                                 use(xlink:href="./assets/images/sprite.svg#icon-button-rewind")
                         
                         label.audio-player__volume
-                            .audio-player__progres.audio-player__volume-progres
-                                input(type="range", name="volume", value="1", min="0", max="1", step="0.01")
-                                .audio-player__progres-mimic
+                            .audio-player__volume-progres
+                                .audio-player__progres
+                                    input(type="range", name="volume", value="1", min="0", max="1", step="0.01")
+                                    .audio-player__progres-mimic
                             button.audio-player__volume-button
                                 svg(width="21", height="20")
                                     use(xlink:href="./assets/images/sprite.svg#icon-volume")
 
                 h2.podcast-pag__h Спикер
+                .podcast-page__person
+                    img(src="./assets/images/img1.jpg", alt="Вишнякова Марина Александровна (Москва)").podcast-page__person-img
+                    .podcast-page__person-wrap
+                        .podcast-page__person-name Вишнякова Марина Александровна (Москва)
+                        .podcast-page__person-post Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                        a(href="#").linc-arrow.linc-arrow_r
+                            span Мероприятия спикера
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                        a(href="#").linc-arrow.linc-arrow_r
+                            span Материалы спикера
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                h2.podcast-pag__h Описание
+                p.podcast-pag__p Препарироавние – современный взгляд. Контроль достаточности препарирования кариозных и некариозных полостей в концепции минимально-инвазивного подхода.
+                p.podcast-pag__p Препарироавние – современный взгляд. Контроль достаточности препарирования кариозных и некариозных полостей в концепции минимально-инвазивного подхода.
+                p.podcast-pag__p Препарироавние – современный взгляд. Контроль достаточности препарирования кариозных и некариозных полостей в концепции минимально-инвазивного подхода. Препарироавние – современный взгляд. Контроль достаточности препарирования кариозных и некариозных полостей в концепции минимально-инвазивного подхода
+
+                .podcast-pag__h За прослушивание аудиоподкаста начисляется 25 баллов 
+
+                a(href="#").linc-arrow.podcast-pag__beck
+                    svg(width="14", height="8")
+                        use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    span Материалы спикера
+
+        section.container-wrap.podcast-page__podcast-list-wrap
+            .container-item.podcast-list                
+                h1.h1.podcast-list__h Аудиоподкасты
+                
+                ul.podcast-list__list
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
+
+                    li.podcast-list__list-item
+                        h4.podcast-list__list-h Вебинар №4 «Ортопедическая реабилитация пациентов с пародонтитом в анамнезе»
+                        .podcast-list__list-body
+                            img(src="./assets/images/img1.jpg", alt="", width="125", height="175").podcast-list__list-img
+                            .podcast-list__list-info
+                                .podcast-list__list-name Вишнякова Марина Александровна (Москва)
+                                .podcast-list__list-description Ассистент кафедры клинической стоматологии ГБОУ ВПО МГМСУ им. Евдокимова А.И.
+                                .podcast-list__list-button-wrap
+                                    a(href="#").button.podcast-list__list-button Слушать
+                                    span.podcast-list__list-time Длительность: 32 минуты
