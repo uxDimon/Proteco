@@ -1,0 +1,118 @@
+extends ../template
+
+block variables
+    - var title = '404'
+    - var contactForm = true
+
+block content
+    main        
+        section.container-wrap.error-page__wrap
+            .container-item.error-page
+                h1.error-page__h Похоже такой страницы не существует
+                .error-page__item
+                    .error-page__number 4
+                    img(src="./assets/images/404.png").error-page__img
+                    .error-page__number 4
+                a(href="#").button.error-page__button На главную
+        
+        section.container-wrap.event-error__wrap
+            .container-item.event-error
+                h2.event-error__h Наши мероприятия
+                ul.event-page__list 
+                    li.event-card
+                        .event-card__head.event-card__head_master-class
+                            svg(width="45", height="45").event-card__head-icon
+                                use(xlink:href="./assets/images/sprite.svg#icon-master-class")
+                            span.event-card__head-text Мастер-класс
+                            .event-card__head-label 
+                                span Доступно в курсе
+                        .event-card__body
+                            .event-card__time-wrap
+                                .event-card__time
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                    span 01 января 2021
+                                .event-card__time
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                    span с 17:00 до 19:30
+                            h4.event-card__heading Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                            .event-card__person
+                                img(width="80", height="115", src="./assets/images/img1.jpg", alt="Летягина Юлия Александровна").event-card__person-img
+                                .event-card__person-text-wrap
+                                    .event-card__person-name Летягина Юлия Александровна (Санкт-Петербург)
+                                    .event-card__person-text Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                            .event-card__program
+                                .event-card__program-head Программа курса
+                                ol.event-card__program-list
+                                    li.event-card__program-item Основные понятия и определения парафункций жевательных мышц. Определение бруксизма
+                                    li.event-card__program-item Диагностика бруксизма
+                                    li.event-card__program-item Клинические проявления. От абфракций до неинфекционного периодонтита (травматическая окклюзия)
+                                    li.event-card__program-item Общие принципы лечения бруксизма
+                        .event-card__bot
+                            .event-card__bot-pey Регистрационный взнос: 3 000 ₽
+                            a(href="#").button Записаться
+                    
+                    li.event-card
+                        .event-card__head.event-card__head_lecture
+                            svg(width="45", height="45").event-card__head-icon
+                                use(xlink:href="./assets/images/sprite.svg#icon-lecture")
+                            span.event-card__head-text Лекция
+                        .event-card__body
+                            .event-card__time-wrap
+                                .event-card__time
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                    span 01 января 2021
+                                .event-card__time
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                    span с 17:00 до 19:30
+                            h4.event-card__heading Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                            .event-card__person
+                                img(width="80", height="115", src="./assets/images/img1.jpg", alt="Летягина Юлия Александровна").event-card__person-img
+                                .event-card__person-text-wrap
+                                    .event-card__person-name Летягина Юлия Александровна (Санкт-Петербург)
+                                    .event-card__person-text Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                            .event-card__program
+                                .event-card__program-head Программа курса
+                                ol.event-card__program-list
+                                    li.event-card__program-item Основные понятия и определения парафункций жевательных мышц. Определение бруксизма
+                                    li.event-card__program-item Диагностика бруксизма
+                                    li.event-card__program-item Клинические проявления. От абфракций до неинфекционного периодонтита (травматическая окклюзия)
+                                    li.event-card__program-item Общие принципы лечения бруксизма
+                        .event-card__bot
+                            .event-card__bot-pey Регистрационный взнос: 3 000 ₽
+                            a(href="#").button Записаться
+                    
+                    li.event-card
+                        .event-card__head.event-card__head_seminar
+                            svg(width="45", height="45").event-card__head-icon
+                                use(xlink:href="./assets/images/sprite.svg#icon-seminar")
+                            span.event-card__head-text Выставка
+                        .event-card__body
+                            .event-card__time-wrap
+                                .event-card__time
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                    span 01 января 2021
+                                .event-card__time
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                    span с 17:00 до 19:30
+                            h4.event-card__heading Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                            .event-card__person
+                                img(width="80", height="115", src="./assets/images/img1.jpg", alt="Летягина Юлия Александровна").event-card__person-img
+                                .event-card__person-text-wrap
+                                    .event-card__person-name Летягина Юлия Александровна (Санкт-Петербург)
+                                    .event-card__person-text Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                            .event-card__program
+                                .event-card__program-head Программа курса
+                                ol.event-card__program-list
+                                    li.event-card__program-item Основные понятия и определения парафункций жевательных мышц. Определение бруксизма
+                                    li.event-card__program-item Диагностика бруксизма
+                                    li.event-card__program-item Клинические проявления. От абфракций до неинфекционного периодонтита (травматическая окклюзия)
+                                    li.event-card__program-item Общие принципы лечения бруксизма
+                        .event-card__bot
+                            .event-card__bot-pey Регистрационный взнос: 3 000 ₽
+                            a(href="#").button Записаться
