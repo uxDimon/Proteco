@@ -1,0 +1,210 @@
+extends ../template
+
+block variables
+    - var title = 'Курсы'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    .breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Курсы
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+        
+        section.container-wrap.course-list__wrap
+            .container-item.course-list                
+                h1.h1.course-list__h Курсы
+
+                ul.course-list__list
+                    li.course-list__item
+                        .course-list__head Базовый курс
+                        .course-list__body
+                            .course-list__date-wrap
+                                .course-list__date
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                    span с 01.11.2020 по 21.11.2020
+                                .course-list__date
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                    span с 17:00 до 19:30
+
+                            p.course-list__text Психоанализ транслирует параллельный закон, это же положение обосновывал Ж.Польти в книге "Тридцать шесть драматических ситуаций". Герменевтика отражает эриксоновский гипноз. Воспитание изящно усиливает декаданс. Арифметическая прогрессия монотонно притягивает вектор.
+
+                            .course-list__icon-wrap
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-lecture")
+                                    span 7 лекций
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 15 спикеров
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 5 вебинаров 
+                            
+                            .course-list__button-wrap
+                                .course-list__prise Стоимость курса: <br>3 000 ₽
+                                a(href="#").button Подробнее
+                    
+                    li.course-list__item
+                        .course-list__head Базовый курс
+                        .course-list__body
+                            .course-list__date-wrap
+                                .course-list__date
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                    span с 01.11.2020 по 21.11.2020
+                                .course-list__date
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                    span с 17:00 до 19:30
+
+                            p.course-list__text Психоанализ транслирует параллельный закон, это же положение обосновывал Ж.Польти в книге "Тридцать шесть драматических ситуаций". Герменевтика отражает эриксоновский гипноз. Воспитание изящно усиливает декаданс. Арифметическая прогрессия монотонно притягивает вектор.
+
+                            .course-list__icon-wrap
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-lecture")
+                                    span 7 лекций
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 15 спикеров
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 5 вебинаров 
+                            
+                            .course-list__button-wrap
+                                .course-list__prise Стоимость курса: <br>3 000 ₽
+                                a(href="#").button Подробнее
+
+                    li.course-list__item
+                        .course-list__head.course-list__head_dark1 Базовый курс
+                        .course-list__body
+                            .course-list__date-wrap
+                                .course-list__date
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                    span с 01.11.2020 по 21.11.2020
+                                .course-list__date
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                    span с 17:00 до 19:30
+
+                            p.course-list__text Психоанализ транслирует параллельный закон, это же положение обосновывал Ж.Польти в книге "Тридцать шесть драматических ситуаций". Герменевтика отражает эриксоновский гипноз. Воспитание изящно усиливает декаданс. Арифметическая прогрессия монотонно притягивает вектор.
+
+                            .course-list__icon-wrap
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-lecture")
+                                    span 7 лекций
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 15 спикеров
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 5 вебинаров 
+                            
+                            .course-list__button-wrap
+                                .course-list__prise Стоимость курса: <br>3 000 ₽
+                                a(href="#").button Подробнее
+                    
+                    li.course-list__item
+                        .course-list__head.course-list__head_dark1 Базовый курс
+                        .course-list__body
+                            .course-list__date-wrap
+                                .course-list__date
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                    span с 01.11.2020 по 21.11.2020
+                                .course-list__date
+                                    svg(width="17", height="17")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                    span с 17:00 до 19:30
+
+                            p.course-list__text Психоанализ транслирует параллельный закон, это же положение обосновывал Ж.Польти в книге "Тридцать шесть драматических ситуаций". Герменевтика отражает эриксоновский гипноз. Воспитание изящно усиливает декаданс. Арифметическая прогрессия монотонно притягивает вектор.
+
+                            .course-list__icon-wrap
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-lecture")
+                                    span 7 лекций
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 15 спикеров
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 5 вебинаров 
+                            
+                            .course-list__button-wrap
+                                .course-list__prise Стоимость курса: <br>3 000 ₽
+                                a(href="#").button Подробнее
+
+                    li.course-list__item
+                        .course-list__head Консультация онлайн
+                        form.course-list__body
+                            p.course-list__text Психоанализ транслирует параллельный закон, это же положение обосновывал Ж.Польти в книге "Тридцать шесть драматических ситуаций".
+                            .course-list__input-wrap
+                                input(type="text", name="", placeholder="Как к вам обращаться?").input
+                                input(type="tel", name="", placeholder="Ваш телефон").input
+
+                            p.course-list__person-info Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с 
+                                a(href="#") Пользовательским соглашением
+                            button(type="submit").button Записаться на консультацию
+
+
+                    li.course-list__item
+                        .course-list__head Базовый курс
+                        .course-list__body
+                            .course-list__date
+                                svg(width="17", height="17")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                span с 01.11.2020 по 21.11.2020
+
+                            p.course-list__text Психоанализ транслирует параллельный закон, это же положение обосновывал Ж.Польти в книге "Тридцать шесть драматических ситуаций". Герменевтика отражает эриксоновский гипноз. Воспитание изящно усиливает декаданс. Арифметическая прогрессия монотонно притягивает вектор.
+
+                            .course-list__icon-wrap
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-lecture")
+                                    span 7 лекций
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 15 спикеров
+                                .course-list__icon
+                                    svg(width="40", height="40")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span 5 вебинаров 
+                            
+                            .course-list__button-wrap
+                                .course-list__prise Стоимость курса: <br>3 000 ₽
+                                a(href="#").button Подробнее
+
+                .pagination.pagination_ctnter
+                    .pagination__prev
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    .pagination__number 1
+                    a(href="#").pagination__number 2
+                    a(href="#").pagination__number 3
+                    a(href="#").pagination__number 4
+                    a(href="#").pagination__number ...
+                    a(href="#").pagination__next
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+
