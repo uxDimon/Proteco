@@ -671,6 +671,40 @@
         <div class="footer__bot"><span class="footer__bot-linc">2020 © PROTECO</span><a class="footer__bot-linc" href="">Пользовательское соглашение</a><span class="footer__bot-linc">Сайт сделал: <a class="footer__bot-linc-ra" href="">RA-Studio</a></span></div>
       </div>
     </footer>
+    <div class="popups__wrap" data-active-block="popup1">
+      <div class="popups">
+        <button class="popups__close" data-active-control="popup1">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+          </svg>
+        </button>
+        <h3 class="popups__h">Заказать обучение в своей клинике</h3>
+        <p class="popups__text">Заполните и отправьте нам свою заявку и мы свяжемся с вами в ближайшее время.</p>
+        <form class="popups__input-wrap">
+          <input class="input" type="text" name="" placeholder="Ваше имя*" required>
+          <input class="input error" type="text" name="" placeholder="Название организации*" required>
+          <input class="input" type="email" name="" placeholder="E-mail*" required>
+          <input class="input" type="tel" name="" placeholder="Телефон*" required>
+          <label class="input input_file">
+            <input type="file" name="" placeholder="Телефон*" onchange="uploadFile(this)" required>
+            <div class="input_file__icon">
+              <svg width="20" height="20">
+                <use xlink:href="./assets/images/sprite.svg#icon-file"></use>
+              </svg>
+            </div><span>Загрузить файл*</span>
+          </label>
+          <select class="input" name="" required>
+            <option value="" disabled selected hidden>Тип организации*</option>
+            <option value="1">Дистрибьютор</option>
+            <option value="2">Клиника</option>
+          </select>
+          <textarea class="input" name="" placeholder="Комментарий"></textarea>
+          <p class="popups__user-agreement">Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с <a href="#">Пользовательским соглашением</a></p>
+          <button class="button popups__button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="popups__close-area" data-active-control="popup1"></div>
+    </div>
     <script src="assets/scripts/imask.min.js"></script>
     <script src="assets/scripts/accordion.min.js"></script>
     <script src="assets/scripts/swiper-bundle.min.js"></script>
