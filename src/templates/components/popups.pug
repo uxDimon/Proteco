@@ -1,0 +1,36 @@
+.popups__wrap(data-active-block="popup1")
+    .popups
+        button(data-active-control="popup1").popups__close
+            svg(width="15", height="15")
+                use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
+
+        h3.popups__h Заказать обучение в своей клинике
+
+        p.popups__text Заполните и отправьте нам свою заявку и мы свяжемся с вами в ближайшее время.
+
+        form.popups__input-wrap
+            input(type="text", name="", placeholder="Ваше имя*", required).input
+            input(type="text", name="", placeholder="Название организации*", required).input.error 
+            input(type="email", name="", placeholder="E-mail*", required).input
+            input(type="tel", name="", placeholder="Телефон*", required).input
+            label.input.input_file
+                input(type="file", name="", placeholder="Телефон*", onchange='uploadFile(this)', required)
+                
+                .input_file__icon
+                    svg(width="20", height="20")
+                        use(xlink:href="./assets/images/sprite.svg#icon-file")
+                span Загрузить файл*
+            
+            select(name="", required).input
+                option(value="", disabled, selected, hidden) Тип организации*
+                option(value="1") Дистрибьютор
+                option(value="2") Клиника
+            
+            textarea(name="", placeholder="Комментарий").input
+            
+            p.popups__user-agreement Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с 
+                a(href="#") Пользовательским соглашением
+            
+            button(type="submit").button.popups__button Отправить
+
+    .popups__close-area(data-active-control="popup1")

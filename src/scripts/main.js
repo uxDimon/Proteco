@@ -172,9 +172,6 @@ const markDateHtml = function (itemList) {
 
 let calendarConf = {
 	mode: "range",
-	// static: true,
-	// inline: true,
-	// appendTo: null,
 	locale: "ru",
 	onDayCreate: function (dObj, dStr, fp, dayElem) {
 		const itemDate = flatpickr.formatDate(dayElem.dateObj, "Y-m-d");
@@ -357,4 +354,19 @@ if (audioPlayerList) {
 const accordionFaq = ".faq";
 if (document.querySelector(accordionFaq)) {
 	new Accordion(accordionFaq);
+}
+
+// https://imask.js.org
+// Маска для телефона
+document.querySelectorAll(".input[type='tel']").forEach((item) => {
+	let telMask = IMask(item, {
+		mask: "+{7}(000)000-00-00",
+	});
+});
+
+// input file
+function uploadFile(target) {
+	const item = target.parentNode.querySelector("span");
+	item.innerHTML = target.files[0].name;
+	item.classList.add(activeClass);
 }

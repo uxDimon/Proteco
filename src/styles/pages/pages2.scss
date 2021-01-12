@@ -577,6 +577,7 @@ a.event-page__contact:hover {
 	background-color: $color-Wheat;
 	box-shadow: 0px 4px 10px rgba(0, 118, 201, 0.1);
 	border-radius: 10px;
+	order: 1;
 }
 
 .course-list__head {
@@ -932,6 +933,10 @@ a.event-page__contact:hover {
 
 	.course-list__prise {
 		font-size: 12px;
+	}
+
+	.course-list__item_input {
+		order: 2;
 	}
 }
 
