@@ -173,8 +173,10 @@ const markDateHtml = function (itemList) {
 let calendarConf = {
 	mode: "range",
 	locale: "ru",
+	dateFormat: "d.m.Y",
+	altFormat: "d.m.Y",
 	onDayCreate: function (dObj, dStr, fp, dayElem) {
-		const itemDate = flatpickr.formatDate(dayElem.dateObj, "Y-m-d");
+		const itemDate = flatpickr.formatDate(dayElem.dateObj, "d.m.Y");
 
 		if (markDate[itemDate]) {
 			dayElem.insertAdjacentHTML("beforeend", markDateHtml(markDate[itemDate]));
@@ -369,4 +371,57 @@ function uploadFile(target) {
 	const item = target.parentNode.querySelector("span");
 	item.innerHTML = target.files[0].name;
 	item.classList.add(activeClass);
+}
+
+// course-pages
+const coursePagesList = document.querySelectorAll(".course-pages__list");
+if (coursePagesList) {
+	for (const courseList of coursePagesList) {
+		const courseInfo = courseList.querySelectorAll(".course-info");
+		const courseLinc = courseList.querySelectorAll(".course-linc");
+		let courseInfoMaxHeight = 0;
+
+		// Минимальная высота списка
+		window.onload = function () {
+			for (const courseInfoItem of courseInfo) {
+				const courseInfoHeight = courseInfoItem.scrollHeight;
+				if (courseInfoMaxHeight < courseInfoHeight) courseInfoMaxHeight = courseInfoHeight;
+
+				courseInfoItem.parentNode.style.gridRowEnd = "-" + (courseInfo.length + 1);
+			}
+			courseList.style.minHeight = courseInfoMaxHeight + "px";
+		};
+	}
+}
+
+// data-tab-wrap
+const tabWrap = document.querySelectorAll("[data-tab-wrap]");
+if (tabWrap) {
+	for (const tabWrapItem of tabWrap) {
+		const tabControl = tabWrapItem.querySelectorAll("[data-tab-control]");
+		const tabBlock = tabWrapItem.querySelectorAll("[data-tab-block]");
+
+		function tabActive(itme = tabControl[0]) {
+			const itemBlock = tabWrapItem.querySelector(`[data-tab-block=${itme.dataset.tabControl}]`);
+			let itemBlockHeight = itemBlock.querySelector("[data-tab-height]");
+			if (itemBlockHeight === null) itemBlockHeight = tabWrapItem.querySelector(`[data-tab-block=${itme.dataset.tabControl}] [data-tab-height]`);
+			const itemBlockHeightList = tabWrapItem.querySelectorAll("[data-tab-height");
+
+			for (const tabControlItem of tabControl) tabControlItem.classList.remove(activeClass);
+			for (const tabBlockItem of tabBlock) tabBlockItem.classList.remove(activeClass);
+			for (const itemBlockHeightItem of itemBlockHeightList) itemBlockHeightItem.style.height = "0";
+
+			itme.classList.add(activeClass);
+			itemBlock.classList.add(activeClass);
+			if (itemBlockHeight) itemBlockHeight.style.height = itemBlock.scrollHeight + "px";
+		}
+
+		for (const tabControlItem of tabControl) {
+			tabControlItem.addEventListener("click", () => {
+				tabActive(tabControlItem);
+			});
+		}
+
+		tabActive();
+	}
 }
