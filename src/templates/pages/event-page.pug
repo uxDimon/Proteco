@@ -55,12 +55,10 @@ html
                     
                     .event-page__block
                         h3.event-page__block-h За вебинар начисляется:
-                        .event-page__bali
-                            span 25 баллов НМО
-                            button.event-page__bali-wat ?
-                        .event-page__bali
-                            span 10 баллов Протеко
-                            button.event-page__bali-wat ?
+                        .event-page__bali.wat(data-tooltip) 25 баллов НМО
+                            .tooltip 25 баллов НМО ¯\_(ツ)_/¯
+                        .event-page__bali.wat(data-tooltip) 10 баллов Протеко
+                            .tooltip 10 баллов Протеко ¯\_(ツ)_/¯
                         .event-page__block-pay Регистрационный взнос: 3 000 ₽
                         .event-page__head-button-wrap
                             button.button.button_green Записаться
@@ -73,8 +71,6 @@ html
                         .event-page__contact Клецова Ольга Владимировна
                         a(href="tel:+79319621815").event-page__contact +7 (931) 962-18-15
                         a(href="mailto:chumakova@protecodent.ru").event-page__contact chumakova@protecodent.ru
-
-                    div
 
                     .event-page__block
                         h3.event-page__block-h Основные моменты

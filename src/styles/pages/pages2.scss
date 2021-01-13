@@ -97,7 +97,7 @@ $font-primary: "Montserrat", sans-serif;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
 	background-color: $color-Wheat;
-	break-inside: avoid-column;
+	break-inside: avoid;
 	padding: 30px;
 	margin-bottom: 30px;
 	position: relative;
@@ -153,22 +153,6 @@ h3.event-page__block-h {
 	line-height: 22px;
 	display: flex;
 	align-items: center;
-}
-
-.event-page__bali-wat {
-	border: none;
-	padding: 0;
-	margin: 0;
-	background-color: $color-Blue;
-	color: $color-Wheat;
-	width: 15px;
-	height: 15px;
-	border-radius: 15px;
-	margin-left: 8px;
-	font-weight: 500;
-	font-size: 11px;
-	line-height: 15px;
-	text-align: center;
 }
 
 .event-page__block-pay {
@@ -285,12 +269,18 @@ a.event-page__contact:hover {
 	justify-content: start;
 	grid-column-gap: 30px;
 	padding: 0 15px 10px;
+	scroll-snap-type: x proximity;
+	scroll-padding: 15px;
 
 	&::after {
 		content: "";
 		display: block;
 		width: 1px;
 		height: 1px;
+	}
+
+	> .radio-button {
+		scroll-snap-align: start;
 	}
 }
 

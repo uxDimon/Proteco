@@ -781,6 +781,70 @@ select.input:invalid {
 	justify-self: start;
 }
 
+// tooltip
+[data-tooltip] {
+	position: relative;
+	display: inline-block;
+	cursor: help;
+	width: max-content;
+
+	&:hover > .tooltip {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.tooltip {
+	display: inline-block;
+	position: absolute;
+	bottom: calc(100% + 8px);
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: $color-Wheat;
+	width: max-content;
+	max-width: 100vw;
+	border-radius: 4px;
+	padding: 10px;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.62;
+	filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.1));
+	transition: 200ms ease-in-out 0ms;
+	transition-property: visibility, opacity;
+	visibility: hidden;
+	opacity: 0;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		left: 50%;
+		transform: translateX(-50%) rotate(43deg);
+		background-color: inherit;
+		width: 10px;
+		height: 10px;
+	}
+}
+
+.wat {
+	display: inline-flex;
+	align-items: center;
+
+	&::after {
+		content: "?";
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;
+		text-align: center;
+		margin-left: 8px;
+		width: 15px;
+		height: 15px;
+		color: $color-Wheat;
+		background-color: $color-Blue;
+		border-radius: 15px;
+	}
+}
+
 // close-button
 .close-button {
 	position: absolute;

@@ -1,0 +1,155 @@
+extends ../template
+
+block variables
+    - var title = 'Базовый курс'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    a(href="#").breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Курсы
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    .breadcrumbs__item Базовый курс
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+        
+        section.container-wrap.course-pages__wrap
+            .container-item.course-pages                
+                h1.h1.course-pages__h Базовый курс
+
+                .course-pages__info
+                    .course-pages__info-date
+                        svg(width="17", height="17")
+                            use(xlink:href="./assets/images/sprite.svg#icon-date")
+                        span с 01.11.2020 по 21.11.2020
+                    
+                    .course-pages__info-balls.wat(data-tooltip) 25 баллов НМО
+                        .tooltip 25 баллов НМО ¯\_(ツ)_/¯
+                    
+                    .course-pages__info-balls.wat(data-tooltip) 10 баллов Протеко
+                        .tooltip 10 баллов Протеко ¯\_(ツ)_/¯
+                    
+                    .course-pages__info-pay Стоимость курса: 3 000 ₽
+
+                    button.button.course-pages__info-button Записаться
+
+                h2.course-pages__list-h В курс входят следующие мероприятия:
+
+                .course-pages__list(data-tab-wrap)
+                    .course-linc(data-tab-control="courseLinc1")
+                        .course-linc__text Восстановление дистальной группы зубов у пациентов с парафункциями жевательных мышц. Бруксизм. Особенности выбора композитного материала
+                            .button.course-linc__button Подробнее
+                        .course-linc__number
+                            span
+                    
+                    .course-info__wrap(data-tab-block="courseLinc1")
+                        .course-info(data-tab-height)
+                            .course-info__text-wrap
+                                h3.course-info__h Вебинар
+                                p.course-info__text 01.11.2020
+                            .course-info__text-wrap.course-info_05
+                                h4.course-info__text-h Продолжительность
+                                p.course-info__text 2 часа
+                            .course-info__text-wrap.course-info_05
+                                h4.course-info__text-h Место проведения
+                                p.course-info__text On-line
+                            .course-info__text-wrap
+                                h4.course-info__text-h Программа
+                                p.course-info__text Препарироавние – современный взгляд. Контроль достаточности препарирования кариозных и некариозных полостей в концепции минимальноинвазивного подхода
+                                p.course-info__text Подготовка полости – воздушно-абразивная и медикаментозная обработка, прокладки, спирт и последствия для бондинга
+                                p.course-info__text Постоперационнная чувствительность и гиперчувствительность твердых тканей зубов. Механизмы действия десенситайзеров, их эффективность и влияние на адгезию реставраций
+                                p.course-info__text Нюансы работы с самопротравливающими адгезивными системами
+                                p.course-info__text Выбор стоматологических материалов для окклюзионной терапии. Сравнительная характеристика наиболее популярных композитов
+                                p.course-info__text Кейс восстановления жевательной поверхности. Wax-up, силиконовый ключ
+
+                            .course-info__spiker
+                                h4.course-info__spiker-h Спикер
+                                .course-info__spiker-wrap
+                                    img(src="./assets/images/img1.jpg", alt="").course-info__spiker-image
+                                    .course-info__spiker-text
+                                        .course-info__spiker-name Вишнякова Марина Александровна (Москва)
+                                        .course-info__spiker-text
+                                            p Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+
+                    .course-linc(data-tab-control="courseLinc2")
+                        .course-linc__text Алгоритмы пошаговой реставрации фронтальной группы зубов. Демонстрация.
+                            .button.course-linc__button Подробнее
+                        .course-linc__number
+                            span
+                    
+                    .course-info__wrap(data-tab-block="courseLinc2")
+                        .course-info(data-tab-height)
+                            .course-info__text-wrap
+                                h3.course-info__h Вебинар
+                                p.course-info__text 01.11.2020
+                            .course-info__text-wrap.course-info_05
+                                h4.course-info__text-h Продолжительность
+                                p.course-info__text 1 часа
+                            .course-info__text-wrap.course-info_05
+                                h4.course-info__text-h Место проведения
+                                p.course-info__text On-line
+                            .course-info__text-wrap
+                                h4.course-info__text-h Программа
+                                p.course-info__text Препарироавние – современный взгляд. Контроль достаточности препарирования кариозных и некариозных полостей в концепции минимальноинвазивного подхода
+
+                            .course-info__spiker
+                                h4.course-info__spiker-h Спикер
+                                .course-info__spiker-wrap
+                                    img(src="./assets/images/img1.jpg", alt="").course-info__spiker-image
+                                    .course-info__spiker-text
+                                        .course-info__spiker-name Вишнякова Марина Александровна (Москва)
+                                        .course-info__spiker-text
+                                            p Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+
+                    .course-linc(data-tab-control="courseLinc3")
+                        .course-linc__text Блич-реставрация с Estelite
+                            .button.course-linc__button Подробнее
+                        .course-linc__number
+                            span
+                    
+                    .course-info__wrap(data-tab-block="courseLinc3")
+                        .course-info(data-tab-height)
+                            .course-info__text-wrap
+                                h3.course-info__h Вебинар
+                                p.course-info__text 01.11.2020
+                            .course-info__text-wrap.course-info_05
+                                h4.course-info__text-h Продолжительность
+                                p.course-info__text 3 часа
+                            .course-info__text-wrap.course-info_05
+                                h4.course-info__text-h Место проведения
+                                p.course-info__text On-line
+                            .course-info__text-wrap
+                                h4.course-info__text-h Программа
+                                p.course-info__text Препарироавние – современный взгляд. Контроль достаточности препарирования кариозных и некариозных полостей в концепции минимальноинвазивного подхода
+                                p.course-info__text Подготовка полости – воздушно-абразивная и медикаментозная обработка, прокладки, спирт и последствия для бондинга
+                                p.course-info__text Кейс восстановления жевательной поверхности. Wax-up, силиконовый ключ
+
+                            .course-info__spiker
+                                h4.course-info__spiker-h Спикер
+                                .course-info__spiker-wrap
+                                    img(src="./assets/images/img1.jpg", alt="").course-info__spiker-image
+                                    .course-info__spiker-text
+                                        .course-info__spiker-name Вишнякова Марина Александровна (Москва)
+                                        .course-info__spiker-text
+                                            p Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+
+                    .event-page__block.course-pages__ball
+                        h3.event-page__block-h За вебинар начисляется:
+                        .event-page__bali.wat(data-tooltip) 25 баллов НМО
+                            .tooltip 25 баллов НМО ¯\_(ツ)_/¯
+                        .event-page__bali.wat(data-tooltip) 10 баллов Протеко
+                            .tooltip 10 баллов Протеко ¯\_(ツ)_/¯
+                        .event-page__block-pay Регистрационный взнос: 3 000 ₽
+                        .event-page__head-button-wrap
+                            button.button Записаться
+                            button.button.button_ghost-double
+                                .button_ghost__top Пригласить коллегу
+                                .button_ghost__bot +15 баллов
+
+        include ../components/mailing.pug
