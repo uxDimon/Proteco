@@ -528,6 +528,8 @@ $font-primary: "Montserrat", sans-serif;
 
 .datepicker-main__wrap {
 	padding: 30px 20px;
+	grid-column: 3 / 4;
+	grid-row: 1 / 2;
 }
 
 .datepicker-main,

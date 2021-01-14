@@ -425,3 +425,16 @@ if (tabWrap) {
 		tabActive();
 	}
 }
+
+// https://sachinchoolur.github.io/lightgallery.js/docs/
+// https://github.com/sachinchoolur/lightgallery.js
+const listGallery = document.querySelectorAll("[data-list-gallery]");
+for (const listGalleryItem of listGallery) {
+	lightGallery(listGalleryItem, {
+		download: false,
+		getCaptionFromTitleOrAlt: true,
+		selector: "[data-img-gallery]",
+	});
+}
+
+// lightGallery(document.querySelector("[data-list-gallery]"));
