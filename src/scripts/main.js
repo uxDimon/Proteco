@@ -432,7 +432,7 @@ const listGallery = document.querySelectorAll("[data-list-gallery]");
 for (const listGalleryItem of listGallery) {
 	lightGallery(listGalleryItem, {
 		download: false,
-		getCaptionFromTitleOrAlt: true,
+		// getCaptionFromTitleOrAlt: true,
 		selector: "[data-img-gallery]",
 	});
 }
