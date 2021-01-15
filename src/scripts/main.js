@@ -92,6 +92,32 @@ let reviewsSlider = new Swiper(".reviews-slider", {
 	},
 });
 
+let eventSlider = new Swiper(".event-page-slider", {
+	speed: 400,
+	loop: true,
+	pagination: {
+		el: ".reviews-slider__pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".reviews-slider__next",
+		prevEl: ".reviews-slider__prev",
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 22,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		280: {
+			slidesPerView: 1.1,
+			spaceBetween: 15,
+		},
+	},
+});
+
 let articlePageSlider = new Swiper(".article-page__slider", {
 	speed: 300,
 	loop: true,

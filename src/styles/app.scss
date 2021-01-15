@@ -130,6 +130,24 @@ body {
 	}
 }
 
+.button_orange,
+.button_green {
+	svg {
+		--icon-color: #{$color-Wheat};
+	}
+}
+
+.button_orange {
+	background-color: $color-Orange;
+	border-color: $color-Orange;
+	box-shadow: 0px 0px 7px $color-Orange;
+
+	&:hover {
+		background-color: darken($color-Orange, 3%);
+		border-color: darken($color-Orange, 3%);
+	}
+}
+
 .button_green {
 	background-color: #62b766;
 	border-color: #62b766;

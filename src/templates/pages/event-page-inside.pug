@@ -1,0 +1,269 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title 
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+        link(rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon")
+        link(rel="apple-touch-icon" href="assets/images/fav.png")
+
+        link(rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css")
+        link(rel="stylesheet" type="text/css" href="assets/styles/app.css")
+        
+    body
+        .container-wrap.event-page__main
+            .container-item.event-page
+                h1.event-page__h1 Вы записались на мероприятие:
+
+                .event-card-l.event-page__event-card-l
+                    .event-card-l__left
+                        svg(width="45", height="45").event-card-l__left-icon
+                            use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                        span.event-card-l__left-name Вебинар
+                    
+                    .event-card-l__body
+                        .event-card-l__date-wrap
+                            .event-card-l__date-name Вебинар
+                            .event-card-l__date
+                                svg(width="17", height="17")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                span 01 января 2021
+                            .event-card-l__date
+                                svg(width="17", height="17")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                span с 17:00 до 19:30
+                        h3.event-card-l__body-h Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                        .event-card-l__body-name Вишнякова Марина Александровна (Москва)
+                        .event-card-l__body-text
+                            p Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                    .event-card-l__button-wrap
+                        button.button Перейти к оплате
+                        button.button.button_ghost-double
+                            .button_ghost__top Пригласить коллегу
+                            .button_ghost__bot +15 баллов
+                        button.button.button_ghost-double Добавить уведомление <br>в календарь
+                
+                h2.event-page__h2 Другие мероприятия спикера
+
+                .reviews-slider__wrap
+                    .swiper-container.event-page-slider
+                        .swiper-wrapper
+                            .swiper-slide
+                                .event-card
+                                    .event-card__head.event-card__head_master-class
+                                        svg(width="45", height="45").event-card__head-icon
+                                            use(xlink:href="./assets/images/sprite.svg#icon-master-class")
+                                        span.event-card__head-text Мастер-класс
+                                        .event-card__head-label 
+                                            span Доступно в курсе
+                                    .event-card__body
+                                        .event-card__time-wrap
+                                            .event-card__time
+                                                svg(width="17", height="17")
+                                                    use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                                span 01 января 2021
+                                            .event-card__time
+                                                svg(width="17", height="17")
+                                                    use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                                span с 17:00 до 19:30
+                                        h4.event-card__heading Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                                        .event-card__person
+                                            img(width="80", height="115", src="./assets/images/img1.jpg", alt="Летягина Юлия Александровна").event-card__person-img
+                                            .event-card__person-text-wrap
+                                                .event-card__person-name Летягина Юлия Александровна (Санкт-Петербург)
+                                                .event-card__person-text Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                                        .event-card__program
+                                            .event-card__program-head Программа курса
+                                            ol.event-card__program-list
+                                                li.event-card__program-item Основные понятия и определения парафункций жевательных мышц. Определение бруксизма
+                                                li.event-card__program-item Диагностика бруксизма
+                                                li.event-card__program-item Клинические проявления. От абфракций до неинфекционного периодонтита (травматическая окклюзия)
+                                                li.event-card__program-item Общие принципы лечения бруксизма
+                                    .event-card__bot
+                                        .event-card__bot-pey Регистрационный взнос: 3 000 ₽
+                                        a(href="#").button Записаться
+                            .swiper-slide
+                                .event-card
+                                    .event-card__head.event-card__head_lecture
+                                        svg(width="45", height="45").event-card__head-icon
+                                            use(xlink:href="./assets/images/sprite.svg#icon-lecture")
+                                        span.event-card__head-text Лекция
+                                    .event-card__body
+                                        .event-card__time-wrap
+                                            .event-card__time
+                                                svg(width="17", height="17")
+                                                    use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                                span 01 января 2021
+                                            .event-card__time
+                                                svg(width="17", height="17")
+                                                    use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                                span с 17:00 до 19:30
+                                        h4.event-card__heading Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                                        .event-card__person
+                                            img(width="80", height="115", src="./assets/images/img1.jpg", alt="Летягина Юлия Александровна").event-card__person-img
+                                            .event-card__person-text-wrap
+                                                .event-card__person-name Летягина Юлия Александровна (Санкт-Петербург)
+                                                .event-card__person-text Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                                        .event-card__program
+                                            .event-card__program-head Программа курса
+                                            ol.event-card__program-list
+                                                li.event-card__program-item Основные понятия и определения парафункций жевательных мышц. Определение бруксизма
+                                                li.event-card__program-item Диагностика бруксизма
+                                                li.event-card__program-item Клинические проявления. От абфракций до неинфекционного периодонтита (травматическая окклюзия)
+                                                li.event-card__program-item Общие принципы лечения бруксизма
+                                    .event-card__bot
+                                        .event-card__bot-pey Регистрационный взнос: 3 000 ₽
+                                        a(href="#").button Записаться
+                            .swiper-slide
+                                .event-card
+                                    .event-card__head.event-card__head_seminar
+                                        svg(width="45", height="45").event-card__head-icon
+                                            use(xlink:href="./assets/images/sprite.svg#icon-seminar")
+                                        span.event-card__head-text Выставка
+                                    .event-card__body
+                                        .event-card__time-wrap
+                                            .event-card__time
+                                                svg(width="17", height="17")
+                                                    use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                                span 01 января 2021
+                                            .event-card__time
+                                                svg(width="17", height="17")
+                                                    use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                                span с 17:00 до 19:30
+                                        h4.event-card__heading Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                                        .event-card__person
+                                            img(width="80", height="115", src="./assets/images/img1.jpg", alt="Летягина Юлия Александровна").event-card__person-img
+                                            .event-card__person-text-wrap
+                                                .event-card__person-name Летягина Юлия Александровна (Санкт-Петербург)
+                                                .event-card__person-text Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
+                                        .event-card__program
+                                            .event-card__program-head Программа курса
+                                            ol.event-card__program-list
+                                                li.event-card__program-item Основные понятия и определения парафункций жевательных мышц. Определение бруксизма
+                                                li.event-card__program-item Диагностика бруксизма
+                                                li.event-card__program-item Клинические проявления. От абфракций до неинфекционного периодонтита (травматическая окклюзия)
+                                                li.event-card__program-item Общие принципы лечения бруксизма
+                                    .event-card__bot
+                                        .event-card__bot-pey Регистрационный взнос: 3 000 ₽
+                                        a(href="#").button Записаться
+                    
+
+                    .reviews-slider__pagination    
+
+                    .reviews-slider__prev
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                    .reviews-slider__next
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+        .container-wrap.event-page__main2
+            .container-item.event-page                
+                h2.event-page__h3 Видео по схожим темам
+
+                ul.event-page__video-list
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                    li.video-main__item
+                        a(href="").video-main__linc
+                            .video-main__linc-body
+                                .video-main__linc-play
+                                    svg(width="22", height="22")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                img(src="./assets/images/img1.jpg", alt="").video-main__linc-img
+
+                            .video-main__linc-bot
+                                p.video-main__linc-text Вебинар №3 «Хирургическое лечение воспалительных заболеваний пародонта»
+                                span.button.video-main__linc-button Смотреть
+
+                .mailing
+                    .mailing__text-wrrap
+                        h2.mailing__h Подпишитесь на нашу рассылку, чтобы получить:
+                        ul.mailing__advantages
+                            li.mailing__advantages-item
+                                .mailing__advantages-icon
+                                    svg(width="16", height="13")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ok")
+                                span.mailing__advantages-text Уведомления о мероприятиях
+                            li.mailing__advantages-item
+                                .mailing__advantages-icon
+                                    svg(width="16", height="13")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ok")
+                                span.mailing__advantages-text Полезные статьи
+                            li.mailing__advantages-item 
+                                .mailing__advantages-icon
+                                    svg(width="16", height="13")
+                                        use(xlink:href="./assets/images/sprite.svg#icon-ok")
+                                span.mailing__advantages-text Ссылки на трансляции
+                    
+                    form.mailing__form 
+                        input(type="email", name="", placeholder="Ваш E-mail").input.mailing__form-input
+                        span.mailing__form-text Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с 
+                            a(href="#") Пользовательским соглашением
+                        button(type="submit").button Подписаться
+
+
+                a(href="#").linc-arrow 
+                    svg(width="14", height="8")
+                        use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    span Вернуться назад
+
+    
+
+
+
+    //- https://imask.js.org
+    script(src="assets/scripts/imask.min.js")
+    
+    //- https://github.com/michu2k/Accordion
+    script(src="assets/scripts/accordion.min.js")
+
+    //- https://swiperjs.com/
+    script(src="assets/scripts/swiper-bundle.min.js")
+
+    //- https://github.com/francoischalifour/medium-zoom
+    script(src="assets/scripts/medium-zoom.min.js")
+
+    //- https://github.com/WICG/focus-visible
+    script(src="assets/scripts/focus-visible.min.js")
+    
+    script(src="assets/scripts/main.js")

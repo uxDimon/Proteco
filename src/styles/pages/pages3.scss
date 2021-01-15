@@ -619,14 +619,18 @@ $font-primary: "Montserrat", sans-serif;
 
 .t-dental-form__img {
 	flex-basis: 400px;
+	position: relative;
 	border-top-left-radius: inherit;
 	border-bottom-left-radius: inherit;
 
 	img {
-		display: block;
-		object-fit: cover;
+		position: absolute;
+		top: 0;
+		right: 0;
 		width: 100%;
 		height: 100%;
+		display: block;
+		object-fit: cover;
 		border-top-left-radius: inherit;
 		border-bottom-left-radius: inherit;
 	}
