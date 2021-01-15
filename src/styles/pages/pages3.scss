@@ -551,6 +551,117 @@ $font-primary: "Montserrat", sans-serif;
 	}
 }
 
+// t-dental
+.t-dental {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	max-width: 770px;
+}
+
+.t-dental__h {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 34px;
+	margin-bottom: 35px;
+}
+
+.t-dental__img {
+	display: block;
+	width: 100%;
+	height: 430px;
+	object-fit: cover;
+	margin: 30px 0;
+	border-radius: 10px;
+}
+
+.t-dental__text {
+	margin: 40px 0;
+
+	p {
+		font-size: 16px;
+		line-height: 1.62;
+		margin: 20px 0;
+	}
+}
+
+.slider_nav__img {
+	display: block;
+	width: 100%;
+	height: 430px;
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+}
+
+.slider_nav__el {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.t-dental-form-page {
+	margin-bottom: 120px;
+}
+
+.t-dental-form {
+	background-color: $color-Wheat;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	display: flex;
+	align-items: stretch;
+}
+
+.t-dental-form__img {
+	flex-basis: 400px;
+	border-top-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+
+	img {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		border-top-left-radius: inherit;
+		border-bottom-left-radius: inherit;
+	}
+}
+
+.t-dental-form__body {
+	padding: 35px 30px;
+	flex-basis: 770px;
+}
+
+.t-dental-form__h {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 34px;
+	margin: 0 0 30px;
+}
+
+.t-dental-form__form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 15px;
+
+	> * {
+		grid-column-end: span 2;
+	}
+}
+
+.t-dental-form__form-item_05 {
+	grid-column-end: span 1;
+}
+
+.t-dental-form__form-button {
+	justify-self: start;
+}
+
 @media screen and (max-width: 1100px) {
 	.course-linc {
 		grid-template-columns: 1fr 90px;
@@ -744,11 +855,57 @@ $font-primary: "Montserrat", sans-serif;
 			font-size: 14px;
 		}
 	}
+
+	.t-dental__h {
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 20px;
+	}
+
+	.t-dental__img {
+		height: 260px;
+		margin: 20px 0;
+	}
+
+	.slider_nav__img {
+		height: 260px;
+	}
+
+	.t-dental__text {
+		margin: 30px 0;
+
+		p {
+			font-size: 14px;
+			margin: 10px 0;
+		}
+	}
+
+	.t-dental-form__img {
+		display: none;
+	}
+
+	.t-dental-form__body {
+		flex-basis: 100%;
+		padding: 25px 15px;
+	}
+
+	.t-dental-form__h {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.t-dental-form-page {
+		margin-bottom: 60px;
+	}
 }
 
 @media screen and (max-width: 630px) {
 	.gallery-page__gallery {
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.t-dental-form__form-item_05 {
+		grid-column-end: span 2;
 	}
 }
 

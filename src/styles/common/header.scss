@@ -341,6 +341,7 @@ $font-primary: "Montserrat", sans-serif;
 	text-decoration: none;
 	color: $color-Blue3;
 	flex-shrink: 0;
+	min-width: 50%;
 
 	&:hover {
 		color: $color-Blue;

@@ -52,6 +52,20 @@ if (document.querySelectorAll(".main-slider .swiper-slide").length > 1) {
 	});
 }
 
+let navSlider = new Swiper(".slider_nav", {
+	speed: 300,
+	pagination: {
+		el: ".slider_nav__el",
+		type: "fraction",
+	},
+	spaceBetween: 30,
+	// loop: true,
+	navigation: {
+		nextEl: ".reviews-slider__next",
+		prevEl: ".reviews-slider__prev",
+	},
+});
+
 let reviewsSlider = new Swiper(".reviews-slider", {
 	speed: 400,
 	loop: true,

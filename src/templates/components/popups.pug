@@ -34,3 +34,16 @@
             button(type="submit").button.popups__button Отправить
 
     .popups__close-area(data-active-control="popup1")
+
+.popups__wrap(data-active-block="popup2").active
+    <!-- popup для страницы tokuyama-dental.html чтобы активировать добавь к ".popups__wrap" класс ".active" -->
+    .popups.popups_ok
+        button(data-active-control="popup2").popups__close
+            svg(width="15", height="15")
+                use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
+
+        h3.popups__h Заявка успешно отправлена!
+
+        p.popups__text Мы свяжемся с Вами в ближайшее время.
+
+    .popups__close-area(data-active-control="popup2")
