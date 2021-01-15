@@ -1,0 +1,27 @@
+extends ../template
+
+block variables
+    - var title = 'Регистрация'
+    - var contactForm = true
+
+block content
+    main
+        section.container-wrap.regist__wrap
+            .container-item.regist
+                svg(width="550", height="550").regist__icon
+                    use(xlink:href="./assets/images/sprite.svg#logo-min")
+
+                .regist__body-wrap
+                    .regist__body
+                        svg(width="80", height="80").regist__body-icon
+                            use(xlink:href="./assets/images/sprite.svg#icon-regist")
+                        
+                        h1.h1.regist__h Вы успешно зарегистрировались
+                        
+                        .regist__text
+                            p Осталось подтвердить регистрацию. Письмо с ссылкой на подтверждение придет на ваш e-mail в течение 5 минут. Просто перейдите по ссылке и завершите регистрацию.
+
+                        .regist__login-linc
+                            span У вас уже есть аккаунт?
+                            a(href="#") Войти
+

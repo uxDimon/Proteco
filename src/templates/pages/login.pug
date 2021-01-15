@@ -1,0 +1,26 @@
+extends ../template
+
+block variables
+    - var title = 'Регистрация'
+    - var contactForm = true
+
+block content
+    main
+        section.container-wrap.regist__wrap
+            .container-item.regist
+                svg(width="550", height="550").regist__icon
+                    use(xlink:href="./assets/images/sprite.svg#logo-min")
+
+                .regist__body-wrap
+                    .regist__body
+                        h1.h1.regist__h Войти
+                        
+                        form.regist__form
+                            input(type="email", name="", placeholder="E-mail", required).input
+                            input(type="password", name="", placeholder="Пароль", required).input
+                            
+                            button(type="submit").button.login__form-button Зарегистрироваться
+
+                        .regist__login-linc
+                            a(href="#") Забыли пароль?
+
