@@ -52,7 +52,47 @@ if (document.querySelectorAll(".main-slider .swiper-slide").length > 1) {
 	});
 }
 
+let navSlider = new Swiper(".slider_nav", {
+	speed: 300,
+	pagination: {
+		el: ".slider_nav__el",
+		type: "fraction",
+	},
+	spaceBetween: 30,
+	// loop: true,
+	navigation: {
+		nextEl: ".reviews-slider__next",
+		prevEl: ".reviews-slider__prev",
+	},
+});
+
 let reviewsSlider = new Swiper(".reviews-slider", {
+	speed: 400,
+	loop: true,
+	pagination: {
+		el: ".reviews-slider__pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".reviews-slider__next",
+		prevEl: ".reviews-slider__prev",
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 22,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		280: {
+			slidesPerView: 1.1,
+			spaceBetween: 15,
+		},
+	},
+});
+
+let eventSlider = new Swiper(".event-page-slider", {
 	speed: 400,
 	loop: true,
 	pagination: {
@@ -425,3 +465,16 @@ if (tabWrap) {
 		tabActive();
 	}
 }
+
+// https://sachinchoolur.github.io/lightgallery.js/docs/
+// https://github.com/sachinchoolur/lightgallery.js
+const listGallery = document.querySelectorAll("[data-list-gallery]");
+for (const listGalleryItem of listGallery) {
+	lightGallery(listGalleryItem, {
+		download: false,
+		// getCaptionFromTitleOrAlt: true,
+		selector: "[data-img-gallery]",
+	});
+}
+
+// lightGallery(document.querySelector("[data-list-gallery]"));
