@@ -1,0 +1,37 @@
+extends ../template
+
+block variables
+    - var title = 'Регистрация'
+    - var contactForm = true
+
+block content
+    main
+        section.container-wrap.regist__wrap
+            .container-item.regist
+                svg(width="550", height="550").regist__icon
+                    use(xlink:href="./assets/images/sprite.svg#logo-min")
+
+                .regist__body-wrap
+                    .regist__body
+                        h1.h1.regist__h Регистрация
+                        
+                        form.regist__form
+                            input(type="text", name="", placeholder="Ваше имя*", required).input
+                            input(type="text", name="", placeholder="Название организации*", required).input
+                            input(type="email", name="", placeholder="E-mail*", required).input
+                            input(type="tel", name="", placeholder="Телефон*", required).input
+                            select(name="", required).input
+                                option(value="", disabled, selected, hidden) Тип организации*
+                                option(value="1") Дистрибьютор
+                                option(value="2") Клиника
+                            input(type="password", name="", placeholder="Пароль*", required).input
+                            input(type="password", name="", placeholder="Пароль еще раз*", required).input
+                            p.popups__user-agreement Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с 
+                                a(href="#") Пользовательским соглашением
+                            
+                            button(type="submit").button.regist__form-button Зарегистрироваться
+
+                        .regist__login-linc
+                            span У вас уже есть аккаунт?
+                            a(href="#") Войти
+

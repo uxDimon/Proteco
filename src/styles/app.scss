@@ -53,6 +53,15 @@ body {
 	position: relative;
 }
 
+a {
+	color: $color-Blue;
+	// text-decoration: none;
+
+	// &:hover {
+	// 	text-decoration: underline;
+	// }
+}
+
 .h1 {
 	font-weight: 500;
 	font-size: 44px;
@@ -300,6 +309,14 @@ textarea.input {
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+}
+
+select.input,
+.event-select {
+	background-image: url("../images/sprite.svg#icon-arrow");
+	background-repeat: no-repeat;
+	background-size: 15px;
+	background-position: calc(100% - 15px) center;
 }
 
 select.input:invalid {
@@ -896,6 +913,7 @@ select.input:invalid {
 @import "./pages/pages.scss";
 @import "./pages/pages2.scss";
 @import "./pages/pages3.scss";
+@import "./pages/pages4.scss";
 @import "./common/component.scss";
 @import "./common/footer.scss";
 

@@ -1,0 +1,122 @@
+// Цвета
+$color-Black: #333333;
+$color-Wheat: #ffffff;
+$color-Blue: #0fa9da;
+$color-Blue2: #6aafc6;
+$color-Blue3: #00769c;
+$color-Blue4: #9ddff4;
+$color-Dark-blue: #006484;
+$color-Grey: #c4c4c4;
+$color-Grey-2: #a1a1a1;
+$color-Grey-3: #efefef;
+$color-Grey-4: #727272;
+$color-Orange: #f87803;
+// Шрифт
+$font-primary: "Montserrat", sans-serif;
+
+// regist
+.regist__wrap {
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 50%;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(105.98deg, #0e90ce 0%, #22b4d4 61.13%);
+		z-index: 1;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 50%;
+		color: $color-Wheat;
+		z-index: 2;
+	}
+}
+
+.regist {
+	position: relative;
+	overflow: hidden;
+}
+
+.regist__icon {
+	position: absolute;
+	top: 50%;
+	left: 38%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+}
+
+.regist__body-wrap {
+	position: relative;
+	max-width: 700px;
+	width: 100%;
+	min-height: 660px;
+	padding: 50px 0 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-Wheat;
+	margin-left: auto;
+	z-index: 10;
+}
+
+.regist__body {
+	max-width: 400px;
+	width: 100%;
+}
+
+.regist__h {
+	margin: 0 0 30px;
+}
+
+.regist__form {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 10px;
+
+	.popups__user-agreement {
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+}
+
+.regist__login-linc {
+	display: grid;
+	grid-auto-flow: column;
+	align-items: baseline;
+	justify-content: start;
+	grid-gap: 15px;
+	margin-top: 30px;
+}
+
+.regist__form-button {
+	justify-self: start;
+}
+
+@media screen and (max-width: 768px) {
+	.regist__wrap::before {
+		content: none;
+	}
+
+	.regist__wrap::after {
+		left: 0;
+	}
+
+	.regist__body-wrap {
+		padding: 30px 0;
+	}
+
+	.regist__icon {
+		display: none;
+	}
+}
