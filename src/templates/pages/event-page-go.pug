@@ -38,7 +38,7 @@ html
                                     use(xlink:href="./assets/images/sprite.svg#icon-button-play")
                                 span Присоединиться
                             
-                            button.button.button_ghost-double
+                            button(data-active-control="popup4").button.button_ghost-double
                                 .button_ghost__top Пригласить коллегу
                                 .button_ghost__bot +15 баллов
                     
@@ -69,7 +69,7 @@ html
                                 svg(width="10", height="10")
                                     use(xlink:href="./assets/images/sprite.svg#icon-button-play")
                                 span Присоединиться
-                            button.button.button_ghost-double
+                            button(data-active-control="popup4").button.button_ghost-double
                                 .button_ghost__top Пригласить коллегу
                                 .button_ghost__bot +15 баллов
 
@@ -104,7 +104,7 @@ html
 
     
 
-
+        include ../components/popups.pug
 
     //- https://imask.js.org
     script(src="assets/scripts/imask.min.js")

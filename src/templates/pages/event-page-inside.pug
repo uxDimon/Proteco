@@ -42,7 +42,7 @@ html
                             p Ведущий врач-стоматолог-терапевт, главный врач стоматологической клиники «Феникс». Особая специализация: пациенты, имеющие парафункции жевательных мышц и заболевания ВНЧС
                     .event-card-l__button-wrap
                         button.button Перейти к оплате
-                        button.button.button_ghost-double
+                        button(data-active-control="popup4").button.button_ghost-double
                             .button_ghost__top Пригласить коллегу
                             .button_ghost__bot +15 баллов
                         button.button.button_ghost-double Добавить уведомление <br>в календарь
@@ -248,7 +248,7 @@ html
                     span Вернуться назад
 
     
-
+        include ../components/popups.pug
 
 
     //- https://imask.js.org

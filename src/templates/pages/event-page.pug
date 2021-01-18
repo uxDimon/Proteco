@@ -34,7 +34,7 @@ html
                         .event-page__head-pay Регистрационный взнос: 3 000 ₽
                         .event-page__head-button-wrap
                             button.button.button_green Записаться
-                            button.button.button_ghost-double
+                            button(data-active-control="popup4").button.button_ghost-double
                                 .button_ghost__top Пригласить коллегу
                                 .button_ghost__bot +15 баллов
                     
@@ -62,7 +62,7 @@ html
                         .event-page__block-pay Регистрационный взнос: 3 000 ₽
                         .event-page__head-button-wrap
                             button.button.button_green Записаться
-                            button.button.button_ghost-double
+                            button(data-active-control="popup4").button.button_ghost-double
                                 .button_ghost__top Пригласить коллегу
                                 .button_ghost__bot +15 баллов
 
@@ -97,7 +97,7 @@ html
 
     
 
-
+        include ../components/popups.pug
 
     //- https://imask.js.org
     script(src="assets/scripts/imask.min.js")

@@ -47,3 +47,53 @@
         p.popups__text Мы свяжемся с Вами в ближайшее время.
 
     .popups__close-area(data-active-control="popup2")
+
+.popups__wrap(data-active-block="popup3")
+    <!-- popup для записаться на мероприятие чтобы активировать добавь к ".popups__wrap" класс ".active" -->
+    .popups.popups_ok
+        button(data-active-control="popup3").popups__close
+            svg(width="15", height="15")
+                use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
+
+        h3.popups__h Зарегистрируйтесь
+
+        p.popups__text Для того, чтобы записаться на мероприятие, необходимо зарегистрироваться.
+
+        a(href="$").button.popups__button-login Зарегистрироваться
+
+        .popups__login У вас уже есть аккаунт?
+            a(href="#") Войти
+
+    .popups__close-area(data-active-control="popup3")
+
+.popups__wrap(data-active-block="popup4")
+    .popups.popups_ok
+        button(data-active-control="popup4").popups__close
+            svg(width="15", height="15")
+                use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
+
+        h3.popups__h.text-left Пригласить коллегу
+
+        p.popups__text.text-left После приглашения коллеги вы получите 15 баллов Протеко. Узнать колличество накопленных баллов вы можете в личном кабинете.
+
+        form.popups__input-wrap.popups_inv-form
+            input(type="email", name="", placeholder="E-mail*", required).input        
+            
+            p.popups__user-agreement Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с 
+                a(href="#") Пользовательским соглашением
+            
+            button(type="submit").button.popups__button Отправить
+
+    .popups__close-area(data-active-control="popup4")
+
+.popups__wrap(data-active-block="popup5").active
+    .popups.popups_ok
+        button(data-active-control="popup5").popups__close
+            svg(width="15", height="15")
+                use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
+
+        h3.popups__h Ваше приглашение успешно отправлено
+
+    .popups__close-area(data-active-control="popup5")
+
+//- (data-active-control="popup4")
