@@ -1,0 +1,52 @@
+extends ../template
+
+block variables
+    - var title = 'Мои рассылки'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    .breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Личный кабинет
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+        
+        section.container-wrap.lk__wrap
+            .container-item.lk                
+                h1.h1.lk__h Личный кабинет
+
+                .lk__content-wrap
+                    nav.lk__nav
+                        button(data-collapse-control="lk1", data-collapse="true", data-collapse-name=".active > a").lk__nav-collapse-controll.collapse-on-768
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                        ul.lk__nav-list(data-collapse-block="lk1")
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои мероприятия
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc История мероприятий
+                            li.lk__nav-item.active
+                                a(href="#").lk__nav-linc Мои рассылки
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои баллы
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Личные данные
+                        
+                        a(href="#").lk__nav-logout Выйти из личного кабинета
+
+                    
+                    .lk__content
+                        h2.lk__content-h Вы подписаны на рассылки:
+                        ul.lk-mailing-list
+                            li.lk-mailing-list__list
+                                .lk-mailing-list__text Рассылка на новости, статьи и трансляции
+                                button.button.button_ghost Отменить рассылку
+                            li.lk-mailing-list__list
+                                .lk-mailing-list__text Рассылка на новости, статьи и трансляции
+                                button.button.button_ghost Отменить рассылку
