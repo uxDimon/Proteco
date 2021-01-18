@@ -287,9 +287,76 @@ $font-primary: "Montserrat", sans-serif;
 	line-height: 22px;
 }
 
+.lk-ball-total__wrap {
+	margin-bottom: 60px;
+}
+
+.lk-ball-total__text {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	margin-right: 15px;
+	color: $color-Grey-2;
+}
+
+.lk-ball-total__number {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	font-feature-settings: "tnum" on, "lnum" on;
+}
+
+.lk-ball-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 10px;
+}
+
+.lk-ball-list__item {
+	display: grid;
+	grid-template-columns: 1fr 120px auto;
+	grid-column-gap: 40px;
+	align-items: center;
+	padding: 15px 20px;
+	background: #ebebf4;
+	border-radius: 10px;
+}
+
+.lk-ball-list__text {
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.lk-ball-list__number {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+}
+
 @media screen and (max-width: 980px) {
 	.lk__content-wrap {
 		grid-template-columns: 240px 1fr;
+	}
+
+	.lk-ball-list__item {
+		grid-template-columns: 1fr;
+		grid-row-gap: 30px;
+	}
+
+	.lk-ball-list__button {
+		justify-self: start;
+	}
+
+	.lk-ball-total__wrap {
+		margin-bottom: 30px;
+	}
+
+	.lk-ball-total__number {
+		font-size: 18px;
+		line-height: 22px;
 	}
 }
 
