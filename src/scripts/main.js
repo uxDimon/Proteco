@@ -21,6 +21,8 @@ const collapseControlAll = document.querySelectorAll("[data-collapse-control]");
 if (collapseControlAll) {
 	for (const collapseControl of collapseControlAll) {
 		const collapseBlock = document.querySelector(`[data-collapse-block="${collapseControl.dataset.collapseControl}"]`);
+		const collapseName = collapseControl.dataset.collapseName;
+
 		function collapse() {
 			if (collapseControl.dataset.collapse === "true") {
 				collapseBlock.style.height = collapseBlock.scrollHeight + "px";
@@ -35,11 +37,22 @@ if (collapseControlAll) {
 			}
 		}
 
+		if (collapseName) {
+			collapseControl.insertAdjacentText("afterbegin", collapseBlock.querySelector(collapseName).innerHTML);
+		}
+
 		collapse();
 
 		collapseControl.addEventListener("click", () => {
 			collapse();
 		});
+	}
+}
+
+const lkNavButtonList = document.querySelectorAll(".collapse-on-768");
+if (lkNavButtonList && document.documentElement.clientWidth <= 768) {
+	for (const lkNavButton of lkNavButtonList) {
+		lkNavButton.click();
 	}
 }
 

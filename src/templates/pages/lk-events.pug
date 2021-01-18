@@ -1,0 +1,132 @@
+extends ../template
+
+block variables
+    - var title = 'Мои мероприятия'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    .breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Личный кабинет
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+        
+        section.container-wrap.lk__wrap
+            .container-item.lk                
+                h1.h1.lk__h Личный кабинет
+
+                .lk__content-wrap
+                    nav.lk__nav
+                        button(data-collapse-control="lk1", data-collapse="true", data-collapse-name=".active > a").lk__nav-collapse-controll.collapse-on-768
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                        ul.lk__nav-list(data-collapse-block="lk1")
+                            li.lk__nav-item.active
+                                a(href="#").lk__nav-linc Мои мероприятия
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc История мероприятий
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои рассылки
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои баллы
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Личные данные
+                        
+                        a(href="#").lk__nav-logout Выйти из личного кабинета
+
+                    
+                    .lk__content
+                        ul.lk__evnt-list
+                            li.event-card-l
+                                .event-card-l__left.event-card__head_seminar
+                                    svg(width="45", height="45").event-card-l__left-icon
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span.event-card-l__left-name Вебинар
+                                
+                                .event-card-l__body
+                                    .event-card-l__date-wrap
+                                        .event-card-l__date-name Вебинар
+                                        .event-card-l__date
+                                            svg(width="17", height="17")
+                                                use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                            span 01 января 2021
+                                        .event-card-l__date
+                                            svg(width="17", height="17")
+                                                use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                            span с 17:00 до 19:30
+                                    h3.event-card-l__body-h Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                                    .event-card-l__body-text
+                                        p Семинар из базового курса по стоматологии
+                                .event-card-l__button-wrap-bot
+                                    a(href="#").button.button_orange
+                                        svg(width="10", height="10")
+                                            use(xlink:href="./assets/images/sprite.svg#icon-button-play")
+                                        span Присоединиться
+                                    .event-card-l__button-now Семинар идет
+                            
+                            li.event-card-l
+                                .event-card-l__left
+                                    svg(width="45", height="45").event-card-l__left-icon
+                                        use(xlink:href="./assets/images/sprite.svg#icon-webinar")
+                                    span.event-card-l__left-name Вебинар
+                                
+                                .event-card-l__body
+                                    .event-card-l__date-wrap
+                                        .event-card-l__date-name Вебинар
+                                        .event-card-l__date
+                                            svg(width="17", height="17")
+                                                use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                            span 01 января 2021
+                                        .event-card-l__date
+                                            svg(width="17", height="17")
+                                                use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                            span с 17:00 до 19:30
+                                    h3.event-card-l__body-h Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                                    .event-card-l__body-text
+                                        p Семинар из базового курса по стоматологии
+                                .event-card-l__button-wrap-bot
+                                    button.button Подробнее
+                            
+                            li.event-card-l
+                                .event-card-l__left.event-card__head_master-class
+                                    svg(width="45", height="45").event-card-l__left-icon
+                                        use(xlink:href="./assets/images/sprite.svg#icon-master-class")
+                                    span.event-card-l__left-name Мастер-класс
+                                
+                                .event-card-l__body
+                                    .event-card-l__date-wrap
+                                        .event-card-l__date-name Мастер-класс
+                                        .event-card-l__date
+                                            svg(width="17", height="17")
+                                                use(xlink:href="./assets/images/sprite.svg#icon-date")
+                                            span 01 января 2021
+                                        .event-card-l__date
+                                            svg(width="17", height="17")
+                                                use(xlink:href="./assets/images/sprite.svg#icon-time")
+                                            span с 17:00 до 19:30
+                                    h3.event-card-l__body-h Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+                                    .event-card-l__body-text
+                                        p Семинар из базового курса по стоматологии
+                                .event-card-l__button-wrap-bot
+                                    button.button Подробнее
+                            
+                        .pagination.pagination_ctnter
+                            .pagination__prev
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                            .pagination__number 1
+                            a(href="#").pagination__number 2
+                            a(href="#").pagination__number 3
+                            a(href="#").pagination__number 4
+                            a(href="#").pagination__number ...
+                            a(href="#").pagination__next
+                                svg(width="14", height="8")
+                                    use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+
