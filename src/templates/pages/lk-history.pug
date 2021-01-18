@@ -1,7 +1,7 @@
 extends ../template
 
 block variables
-    - var title = 'Мои мероприятия'
+    - var title = 'История мероприятий'
     - var contactForm = true
 
 block content
@@ -27,9 +27,9 @@ block content
                                 use(xlink:href="./assets/images/sprite.svg#icon-arrow")
 
                         ul.lk__nav-list(data-collapse-block="lk1")
-                            li.lk__nav-item.active
-                                a(href="#").lk__nav-linc Мои мероприятия
                             li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои мероприятия
+                            li.lk__nav-item.active
                                 a(href="#").lk__nav-linc История мероприятий
                             li.lk__nav-item
                                 a(href="#").lk__nav-linc Мои рассылки
@@ -64,11 +64,7 @@ block content
                                     .event-card-l__body-text
                                         p Семинар из базового курса по стоматологии
                                 .event-card-l__button-wrap-bot
-                                    a(href="#").button.button_orange
-                                        svg(width="10", height="10")
-                                            use(xlink:href="./assets/images/sprite.svg#icon-button-play")
-                                        span Присоединиться
-                                    .event-card-l__button-now Семинар идет
+                                    button.button Подробнее
                             
                             li.event-card-l
                                 .event-card-l__left

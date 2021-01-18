@@ -214,6 +214,13 @@ $font-primary: "Montserrat", sans-serif;
 	margin-bottom: 30px;
 }
 
+.lk__none-text {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	color: $color-Grey-2;
+}
+
 @media screen and (max-width: 980px) {
 	.lk__content-wrap {
 		grid-template-columns: 240px 1fr;
