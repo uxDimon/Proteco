@@ -1,0 +1,64 @@
+extends ../template
+
+block variables
+    - var title = 'Личные данные'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    .breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Личный кабинет
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+        
+        section.container-wrap.lk__wrap
+            .container-item.lk                
+                h1.h1.lk__h Личный кабинет
+
+                .lk__content-wrap
+                    nav.lk__nav
+                        button(data-collapse-control="lk1", data-collapse="true", data-collapse-name=".active > a").lk__nav-collapse-controll.collapse-on-768
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                        ul.lk__nav-list(data-collapse-block="lk1")
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои мероприятия
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc История мероприятий
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои рассылки
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои баллы
+                            li.lk__nav-item.active
+                                a(href="#").lk__nav-linc Личные данные
+                        
+                        a(href="#").lk__nav-logout Выйти из личного кабинета
+
+                    
+                    .lk__content
+                        h2.lk__content-h Личные данные
+                        ul.personal-data
+                            li.personal-data__item
+                                .personal-data__name Имя
+                                .personal-data__value Иван Петров
+                            li.personal-data__item
+                                .personal-data__name Название организации
+                                .personal-data__value ООО «Стоматология»
+                            li.personal-data__item
+                                .personal-data__name E-mail
+                                .personal-data__value example@mail.ru
+                            li.personal-data__item
+                                .personal-data__name Телефон
+                                .personal-data__value +7 921 222 33 11
+                            li.personal-data__item
+                                .personal-data__name Тип организации
+                                .personal-data__value Клиника
+                        .lk__content-button-wrap
+                            a(href="#").button Изменить
+                            a(href="#").button.button_ghost Изменить пароль

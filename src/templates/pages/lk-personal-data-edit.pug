@@ -1,0 +1,56 @@
+extends ../template
+
+block variables
+    - var title = 'Личные данные'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    .breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Личный кабинет
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+        
+        section.container-wrap.lk__wrap
+            .container-item.lk                
+                h1.h1.lk__h Личный кабинет
+
+                .lk__content-wrap
+                    nav.lk__nav
+                        button(data-collapse-control="lk1", data-collapse="true", data-collapse-name=".active > a").lk__nav-collapse-controll.collapse-on-768
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                        ul.lk__nav-list(data-collapse-block="lk1")
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои мероприятия
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc История мероприятий
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои рассылки
+                            li.lk__nav-item
+                                a(href="#").lk__nav-linc Мои баллы
+                            li.lk__nav-item.active
+                                a(href="#").lk__nav-linc Личные данные
+                        
+                        a(href="#").lk__nav-logout Выйти из личного кабинета
+
+                    
+                    .lk__content
+                        h2.lk__content-h Личные данные
+                        form.personal-dat-edit
+                            input(type="text", name="", placeholder="Ваше имя*", required, value="Иван Петров").input
+                            input(type="text", name="", placeholder="Название организации*", required, value="ООО «Стоматология»").input
+                            input(type="email", name="", placeholder="E-mail*", required, value="example@mail.ru").input
+                            input(type="tel", name="", placeholder="Телефон*", required, value="+7 921 222 33 11").input
+                            select(name="", required).input
+                                option(value="", disabled, hidden) Тип организации*
+                                option(value="1") Дистрибьютор
+                                option(value="2", selected) Клиника
+
+                            button(type="submit").button.personal-dat-edit__button Сохранить
