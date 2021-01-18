@@ -290,6 +290,47 @@
       </div>
       <div class="popups__close-area" data-active-control="popup2"></div>
     </div>
+    <div class="popups__wrap" data-active-block="popup3"><!-- popup для записаться на мероприятие чтобы активировать добавь к ".popups__wrap" класс ".active" -->
+      <div class="popups popups_ok">
+        <button class="popups__close" data-active-control="popup3">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+          </svg>
+        </button>
+        <h3 class="popups__h">Зарегистрируйтесь</h3>
+        <p class="popups__text">Для того, чтобы записаться на мероприятие, необходимо зарегистрироваться.</p><a class="button popups__button-login" href="$">Зарегистрироваться</a>
+        <div class="popups__login">У вас уже есть аккаунт?<a href="#">Войти</a></div>
+      </div>
+      <div class="popups__close-area" data-active-control="popup3"></div>
+    </div>
+    <div class="popups__wrap" data-active-block="popup4">
+      <div class="popups popups_ok">
+        <button class="popups__close" data-active-control="popup4">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+          </svg>
+        </button>
+        <h3 class="popups__h text-left">Пригласить коллегу</h3>
+        <p class="popups__text text-left">После приглашения коллеги вы получите 15 баллов Протеко. Узнать колличество накопленных баллов вы можете в личном кабинете.</p>
+        <form class="popups__input-wrap popups_inv-form">
+          <input class="input" type="email" name="" placeholder="E-mail*" required>
+          <p class="popups__user-agreement">Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с <a href="#">Пользовательским соглашением</a></p>
+          <button class="button popups__button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="popups__close-area" data-active-control="popup4"></div>
+    </div>
+    <div class="popups__wrap" data-active-block="popup5">
+      <div class="popups popups_ok">
+        <button class="popups__close" data-active-control="popup5">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+          </svg>
+        </button>
+        <h3 class="popups__h">Ваше приглашение успешно отправлено</h3>
+      </div>
+      <div class="popups__close-area" data-active-control="popup5"></div>
+    </div>
     <script src="assets/scripts/imask.min.js"></script>
     <script src="assets/scripts/accordion.min.js"></script>
     <script src="assets/scripts/swiper-bundle.min.js"></script>

@@ -648,7 +648,8 @@ select.input:invalid {
   line-height: 29px;
   font-feature-settings: "tnum" on, "lnum" on;
   color: #0fa9da;
-  margin: 0 0 10px; }
+  margin: 0 0 10px;
+  width: 100%; }
 
 .popups__text {
   margin: 10px 0; }
@@ -670,6 +671,19 @@ select.input:invalid {
 .popups__button {
   min-width: 215px;
   justify-self: start; }
+
+.popups__login {
+  font-size: 14px;
+  line-height: 22px; }
+  .popups__login a {
+    margin-left: 15px; }
+
+.popups__button-login {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.popups_inv-form {
+  margin-top: 20px; }
 
 [data-tooltip] {
   position: relative;
@@ -4902,6 +4916,15 @@ a.event-page__contact:hover {
 
 .event-card__head_congress {
   background: linear-gradient(99.12deg, #e36054 0%, #ff9e80 100%); }
+
+.text-left {
+  text-align: left; }
+
+.item-left {
+  justify-self: start; }
+
+.item-left-fc {
+  align-self: flex-start; }
 
 @media screen and (max-width: 768px) {
   .h1 {

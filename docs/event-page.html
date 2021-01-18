@@ -35,7 +35,7 @@
             <div class="event-page__head-pay">Регистрационный взнос: 3 000 ₽</div>
             <div class="event-page__head-button-wrap">
               <button class="button button_green">Записаться</button>
-              <button class="button button_ghost-double">
+              <button class="button button_ghost-double" data-active-control="popup4">
                 <div class="button_ghost__top">Пригласить коллегу</div>
                 <div class="button_ghost__bot">+15 баллов</div>
               </button>
@@ -70,7 +70,7 @@
             <div class="event-page__block-pay">Регистрационный взнос: 3 000 ₽</div>
             <div class="event-page__head-button-wrap">
               <button class="button button_green">Записаться</button>
-              <button class="button button_ghost-double">
+              <button class="button button_ghost-double" data-active-control="popup4">
                 <div class="button_ghost__top">Пригласить коллегу</div>
                 <div class="button_ghost__bot">+15 баллов</div>
               </button>
@@ -108,6 +108,93 @@
           </svg><span>Вернуться назад</span></a>
       </div>
     </main>
+    <div class="popups__wrap" data-active-block="popup1">
+      <div class="popups">
+        <button class="popups__close" data-active-control="popup1">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+          </svg>
+        </button>
+        <h3 class="popups__h">Заказать обучение в своей клинике</h3>
+        <p class="popups__text">Заполните и отправьте нам свою заявку и мы свяжемся с вами в ближайшее время.</p>
+        <form class="popups__input-wrap">
+          <input class="input" type="text" name="" placeholder="Ваше имя*" required>
+          <input class="input error" type="text" name="" placeholder="Название организации*" required>
+          <input class="input" type="email" name="" placeholder="E-mail*" required>
+          <input class="input" type="tel" name="" placeholder="Телефон*" required>
+          <label class="input input_file">
+            <input type="file" name="" placeholder="Телефон*" onchange="uploadFile(this)" required>
+            <div class="input_file__icon">
+              <svg width="20" height="20">
+                <use xlink:href="./assets/images/sprite.svg#icon-file"></use>
+              </svg>
+            </div><span>Загрузить файл*</span>
+          </label>
+          <select class="input" name="" required>
+            <option value="" disabled selected hidden>Тип организации*</option>
+            <option value="1">Дистрибьютор</option>
+            <option value="2">Клиника</option>
+          </select>
+          <textarea class="input" name="" placeholder="Комментарий"></textarea>
+          <p class="popups__user-agreement">Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с <a href="#">Пользовательским соглашением</a></p>
+          <button class="button popups__button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="popups__close-area" data-active-control="popup1"></div>
+    </div>
+    <div class="popups__wrap" data-active-block="popup2"><!-- popup для страницы tokuyama-dental.html чтобы активировать добавь к ".popups__wrap" класс ".active" -->
+      <div class="popups popups_ok">
+        <button class="popups__close" data-active-control="popup2">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+          </svg>
+        </button>
+        <h3 class="popups__h">Заявка успешно отправлена!</h3>
+        <p class="popups__text">Мы свяжемся с Вами в ближайшее время.</p>
+      </div>
+      <div class="popups__close-area" data-active-control="popup2"></div>
+    </div>
+    <div class="popups__wrap" data-active-block="popup3"><!-- popup для записаться на мероприятие чтобы активировать добавь к ".popups__wrap" класс ".active" -->
+      <div class="popups popups_ok">
+        <button class="popups__close" data-active-control="popup3">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+          </svg>
+        </button>
+        <h3 class="popups__h">Зарегистрируйтесь</h3>
+        <p class="popups__text">Для того, чтобы записаться на мероприятие, необходимо зарегистрироваться.</p><a class="button popups__button-login" href="$">Зарегистрироваться</a>
+        <div class="popups__login">У вас уже есть аккаунт?<a href="#">Войти</a></div>
+      </div>
+      <div class="popups__close-area" data-active-control="popup3"></div>
+    </div>
+    <div class="popups__wrap" data-active-block="popup4">
+      <div class="popups popups_ok">
+        <button class="popups__close" data-active-control="popup4">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+          </svg>
+        </button>
+        <h3 class="popups__h text-left">Пригласить коллегу</h3>
+        <p class="popups__text text-left">После приглашения коллеги вы получите 15 баллов Протеко. Узнать колличество накопленных баллов вы можете в личном кабинете.</p>
+        <form class="popups__input-wrap popups_inv-form">
+          <input class="input" type="email" name="" placeholder="E-mail*" required>
+          <p class="popups__user-agreement">Нажимая на кнопку, я подтверждаю, что согласен на обработку моих персональных данных, а также с <a href="#">Пользовательским соглашением</a></p>
+          <button class="button popups__button" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="popups__close-area" data-active-control="popup4"></div>
+    </div>
+    <div class="popups__wrap" data-active-block="popup5">
+      <div class="popups popups_ok">
+        <button class="popups__close" data-active-control="popup5">
+          <svg width="15" height="15">
+            <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+          </svg>
+        </button>
+        <h3 class="popups__h">Ваше приглашение успешно отправлено</h3>
+      </div>
+      <div class="popups__close-area" data-active-control="popup5"></div>
+    </div>
   </body>
   <script src="assets/scripts/imask.min.js"></script>
   <script src="assets/scripts/accordion.min.js"></script>
