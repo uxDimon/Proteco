@@ -2117,6 +2117,8 @@ select.input:invalid {
   text-decoration: none;
   color: #333333;
   height: 100%; }
+  .articles__linc:hover .articles__h {
+    color: #0fa9da; }
 
 .articles__img {
   width: 100%;
@@ -2151,7 +2153,8 @@ select.input:invalid {
   font-weight: bold;
   font-size: 18px;
   line-height: 1.22;
-  margin: 0 0 15px 0; }
+  margin: 0 0 15px 0;
+  transition: color 150ms ease-in-out 0ms; }
 
 .articles__text {
   font-size: 14px;
@@ -2563,7 +2566,10 @@ h3.article-page__h {
   .event-page__list {
     grid-template-columns: repeat(2, 1fr); }
   .events__list .event-card:nth-of-type(2) .event-card__person-text {
-    display: none; } }
+    display: none; }
+  .datepicker-main__wrap {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2; } }
 
 @media screen and (max-width: 960px) {
   .articles__linc {
@@ -3630,7 +3636,12 @@ a.event-page__contact:hover {
     line-height: 22px; }
   .event-page__h3 {
     font-size: 18px;
-    line-height: 22px; } }
+    line-height: 22px; }
+  .podcast-list__list-name,
+  .podcast-list__list-description {
+    text-align: center; }
+  .video-list__filter {
+    margin-top: 20px; } }
 
 @media screen and (max-width: 425px) {
   .event-page__video {

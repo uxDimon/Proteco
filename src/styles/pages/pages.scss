@@ -32,6 +32,10 @@ $font-primary: "Montserrat", sans-serif;
 	text-decoration: none;
 	color: $color-Black;
 	height: 100%;
+
+	&:hover .articles__h {
+		color: $color-Blue;
+	}
 }
 
 .articles__img {
@@ -73,6 +77,8 @@ $font-primary: "Montserrat", sans-serif;
 	font-size: 18px;
 	line-height: 1.22;
 	margin: 0 0 15px 0;
+
+	transition: color 150ms ease-in-out 0ms;
 }
 
 .articles__text {
@@ -581,6 +587,11 @@ h3.article-page__h {
 
 	.events__list .event-card:nth-of-type(2) .event-card__person-text {
 		display: none;
+	}
+
+	.datepicker-main__wrap {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
 	}
 }
 

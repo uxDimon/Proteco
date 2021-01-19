@@ -1185,6 +1185,15 @@ a.event-page__contact:hover {
 		font-size: 18px;
 		line-height: 22px;
 	}
+
+	.podcast-list__list-name,
+	.podcast-list__list-description {
+		text-align: center;
+	}
+
+	.video-list__filter {
+		margin-top: 20px;
+	}
 }
 
 @media screen and (max-width: 425px) {
