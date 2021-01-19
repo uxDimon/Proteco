@@ -16,7 +16,12 @@ $font-primary: "Montserrat", sans-serif;
 
 // header-event
 .header-event__wrap {
+	display: none;
 	background: linear-gradient(90deg, #e2641d 0%, #f3901c 100%);
+
+	&.active {
+		display: flex;
+	}
 }
 
 .header-event {
@@ -24,6 +29,22 @@ $font-primary: "Montserrat", sans-serif;
 	grid-template-columns: 1fr auto;
 	grid-column-gap: 15px;
 	padding: 18px 0;
+	position: relative;
+}
+
+.header-event__close {
+	position: absolute;
+	top: 4px;
+	right: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+
+	svg {
+		--icon-color: #{$color-Wheat};
+	}
 }
 
 .header-event__text-wrap {

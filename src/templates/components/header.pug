@@ -1,5 +1,9 @@
-.container-wrap.header-event__wrap
+.container-wrap.header-event__wrap.active(data-active-block="header1")
     .container-item.header-event
+        button(data-active-control="header1").header-event__close
+            svg(width="15", height="15")
+                use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
+
         .header-event__text-wrap
             .header-event__heading Началась трансляция вебинара
             .header-event__text Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
