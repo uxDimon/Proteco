@@ -3978,7 +3978,7 @@ a.event-page__contact:hover {
   margin: 0 0 30px; }
 
 .gallery-list__list {
-  margin: 0;
+  margin: 0 0 40px;
   padding: 0;
   list-style: none;
   display: grid;
