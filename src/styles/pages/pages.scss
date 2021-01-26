@@ -115,6 +115,9 @@ $font-primary: "Montserrat", sans-serif;
 	background-color: $color-Wheat;
 	box-shadow: 0px 4px 10px rgba(0, 118, 201, 0.1);
 	border-radius: 10px;
+	position: relative;
+	display: grid;
+	grid-template-rows: auto 1fr;
 
 	&:hover {
 		.event-card__program {
@@ -152,6 +155,27 @@ $font-primary: "Montserrat", sans-serif;
 
 		.event-card__head-label {
 			right: 70px;
+		}
+
+		&:hover {
+			.event-card__person-img {
+				grid-row-end: span 1;
+			}
+
+			.event-card__bot {
+				grid-column-start: 1;
+			}
+		}
+
+		.event-card__person-img {
+			grid-row-end: span 2;
+			width: 125px;
+			height: auto;
+			align-self: stretch;
+		}
+
+		.event-card__bot {
+			grid-column-start: 2;
 		}
 	}
 }
@@ -214,14 +238,19 @@ $font-primary: "Montserrat", sans-serif;
 .event-card__body {
 	padding: 20px;
 	position: relative;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: repeat(3, auto) 1fr;
+	grid-column-gap: 20px;
 }
 
 .event-card__program {
 	position: absolute;
+	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 15px;
-	height: calc(100% + 45px);
+	height: calc(100% - 84px);
 	background-color: $color-Blue;
 	color: $color-Wheat;
 	padding: 25px 15px;
@@ -231,7 +260,7 @@ $font-primary: "Montserrat", sans-serif;
 	flex-direction: column;
 	justify-content: center;
 
-	transition: 250ms ease-in-out 0ms;
+	transition: 150ms ease-in-out 0ms;
 	transition-property: visibility, opacity;
 	visibility: hidden;
 	opacity: 0;
@@ -296,6 +325,7 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 .event-card__time-wrap {
+	grid-column: 1/ -1;
 	display: grid;
 	grid-auto-flow: column;
 	grid-column-gap: 40px;
@@ -317,20 +347,15 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 .event-card__heading {
+	grid-column: 1/ -1;
 	margin: 0 0 25px;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 22px;
 }
 
-.event-card__person {
-	display: flex;
-	align-items: center;
-}
-
 .event-card__person-img {
 	object-fit: cover;
-	margin-right: 20px;
 	border-radius: 10px;
 }
 
@@ -350,7 +375,9 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 .event-card__bot {
-	padding: 0 20px 25px;
+	align-self: end;
+	grid-column: 1/ -1;
+	margin-top: 23px;
 	display: grid;
 	grid-auto-flow: column;
 	grid-column-gap: 30px;
@@ -577,6 +604,20 @@ h3.article-page__h {
 @media screen and (max-width: 1274px) {
 	.events__list .event-card:nth-of-type(2) {
 		grid-column: auto;
+
+		.event-card__time-wrap {
+			justify-content: space-between;
+		}
+
+		.event-card__person-img {
+			grid-row-end: span 1;
+			width: 80px;
+			height: 115px;
+		}
+
+		.event-card__bot {
+			grid-column-start: 1;
+		}
 	}
 	.udoli1 {
 		grid-column: auto;
@@ -681,13 +722,6 @@ h3.article-page__h {
 	}
 	.event-card__bot-pey {
 		font-size: 12px;
-	}
-	.event-card__bot {
-		padding: 0 15px 29px;
-
-		.button {
-			padding: 11px 22px 12px;
-		}
 	}
 	.articles {
 		grid-template-columns: 100%;

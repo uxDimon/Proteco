@@ -37,10 +37,12 @@ header.container-wrap.header__wrap
         button.button.button_ghost.header_button Прислать свой кейс
 
         form.header__search
-            label.header__search-wrap
+            input#header-search(type="search", name="", placeholder="Найти").header__search-input
+            label(for="header-search").header__search-wrap
                 svg(width="20", height="20").header__search-icon
                     use(xlink:href="./assets/images/sprite.svg#icon-search")
-                input(type="search", name="", placeholder="Найти").header__search-input
+            svg(width="20", height="20").header__search-icon-cancel
+                use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
 
         button.header__login
             svg(width="20", height="20").header__login-icon

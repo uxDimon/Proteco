@@ -227,6 +227,9 @@ $font-primary: "Montserrat", sans-serif;
 .header__search {
 	width: 20px;
 	height: 20px;
+	position: relative;
+
+	--transition-duration: 150ms;
 }
 
 .header__search-wrap {
@@ -239,6 +242,23 @@ $font-primary: "Montserrat", sans-serif;
 	position: relative;
 	z-index: 2;
 	cursor: pointer;
+
+	transition: var(--transition-duration, 100ms) ease-in-out 0ms;
+	transition-property: visibility, opacity;
+}
+
+.header__search-icon-cancel {
+	--icon-color: #{$color-Black};
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 3;
+
+	transition: var(--transition-duration, 100ms) ease-in-out 0ms;
+	transition-property: visibility, opacity;
 }
 
 .header__search-input {
@@ -261,13 +281,13 @@ $font-primary: "Montserrat", sans-serif;
 	opacity: 0;
 
 	&::-webkit-search-cancel-button {
-		width: 18px;
-		height: 18px;
-		background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.92896 2.92871L17.0711 17.0708' stroke=' %23333333' stroke-width='1'/%3E%3Cpath d='M17.071 2.92871L2.92891 17.0708' stroke=' %23333333' stroke-width='1'/%3E%3C/svg%3E");
-		background-size: cover;
-		background-repeat: no-repeat;
-		-webkit-appearance: none;
-		cursor: pointer;
+		// width: 18px;
+		// height: 18px;
+		// background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.92896 2.92871L17.0711 17.0708' stroke=' %23333333' stroke-width='1'/%3E%3Cpath d='M17.071 2.92871L2.92891 17.0708' stroke=' %23333333' stroke-width='1'/%3E%3C/svg%3E");
+		// background-size: cover;
+		// background-repeat: no-repeat;
+		appearance: none;
+		// cursor: pointer;
 	}
 
 	&:focus {
@@ -278,11 +298,21 @@ $font-primary: "Montserrat", sans-serif;
 		color: $color-Grey-2;
 	}
 
-	&:not(:placeholder-shown),
+	// &:not(:placeholder-shown),
 	&:focus {
 		width: 760px;
 		opacity: 1;
 		padding: 0 40px 0 20px;
+
+		& ~ .header__search-icon-cancel {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		& ~ .header__search-wrap .header__search-icon {
+			visibility: hidden;
+			opacity: 0;
+		}
 	}
 }
 
