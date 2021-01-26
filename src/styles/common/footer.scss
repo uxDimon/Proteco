@@ -54,7 +54,7 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 .footer-menu__linc {
-	display: inline-block;
+	display: block;
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 17px;
@@ -183,12 +183,12 @@ $font-primary: "Montserrat", sans-serif;
 		padding-top: 25px;
 		&::before {
 			position: absolute;
-			content: '';
+			content: "";
 			top: 0;
 			left: -15px;
 			width: 105%;
 			height: 1px;
-			background: #458EA6;
+			background: #458ea6;
 		}
 	}
 	.footer__contact-tell {

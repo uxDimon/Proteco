@@ -113,12 +113,18 @@ $font-primary: "Montserrat", sans-serif;
 	}
 }
 
-h3.event-page__block-h {
+.event-page__block-h {
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 29px;
 	margin: 0 0 20px;
 	color: $color-Blue;
+}
+
+.event-page__block-h-contact {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
 }
 
 .event-page__spicer {
@@ -417,6 +423,10 @@ a.event-page__contact:hover {
 	justify-content: end;
 	margin-bottom: 20px;
 	padding: 0 15px;
+
+	.switch {
+		transform: translateY(-60px);
+	}
 }
 
 .video-list__filter-bot {
@@ -545,15 +555,20 @@ a.event-page__contact:hover {
 }
 
 .podcast-page__person {
-	display: flex;
 	margin-bottom: 50px;
+
+	display: grid;
+	grid-template-columns: auto 1fr;
+	justify-items: start;
 }
 
 .podcast-page__person-img {
 	display: block;
 	border-radius: 10px;
 	width: 100px;
-	height: 150px;
+	min-height: 150px;
+	max-height: 220px;
+	align-self: stretch;
 	object-fit: cover;
 	margin-right: 20px;
 }
@@ -1066,6 +1081,10 @@ a.event-page__contact:hover {
 		grid-auto-flow: row;
 		grid-row-gap: 10px;
 		justify-content: start;
+
+		.switch {
+			transform: none;
+		}
 	}
 
 	.video-list__filter-bot {

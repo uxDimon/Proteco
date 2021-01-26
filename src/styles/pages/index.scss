@@ -66,6 +66,7 @@ $font-primary: "Montserrat", sans-serif;
 	grid-auto-flow: column;
 	grid-column-gap: 30px;
 	margin-left: 40px;
+	margin-top: 7px;
 }
 
 .video-main__body {
@@ -187,6 +188,7 @@ $font-primary: "Montserrat", sans-serif;
 
 .video-main__button {
 	align-self: center;
+	min-width: 270px;
 }
 
 // articles-main
@@ -203,6 +205,7 @@ $font-primary: "Montserrat", sans-serif;
 .articles-main__button {
 	margin-top: 60px;
 	align-self: center;
+	min-width: 270px;
 }
 
 // training-centers
@@ -390,7 +393,7 @@ $font-primary: "Montserrat", sans-serif;
 .reviews-slider__pagination {
 	display: grid;
 	grid-auto-flow: column;
-	grid-column-gap: 10px;
+	grid-column-gap: 20px;
 	justify-content: center;
 	margin-top: 22px;
 
@@ -504,6 +507,10 @@ $font-primary: "Montserrat", sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+
+	.switch {
+		transform: translateY(-40px);
+	}
 }
 
 .events__filter-button {
@@ -524,6 +531,7 @@ $font-primary: "Montserrat", sans-serif;
 
 .events__button {
 	align-self: center;
+	min-width: 270px;
 }
 
 .datepicker-main__wrap {
@@ -1061,6 +1069,10 @@ $font-primary: "Montserrat", sans-serif;
 
 	.events__filter-switch {
 		justify-self: flex-start;
+
+		.switch {
+			transform: none;
+		}
 	}
 
 	.flatpickr-wrapper {
