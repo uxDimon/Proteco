@@ -89,9 +89,10 @@ $font-primary: "Montserrat", sans-serif;
 }
 
 .event-page__body {
-	column-count: 2;
-	column-gap: 30px;
-	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: -15px -15px 25px -15px;
 }
 
 .event-page__block {
@@ -102,15 +103,8 @@ $font-primary: "Montserrat", sans-serif;
 	padding: 30px;
 	margin-bottom: 30px;
 	position: relative;
-
-	&::before {
-		content: "";
-		position: absolute;
-		width: 50%;
-		height: 1px;
-		background: transparent;
-		bottom: -14px;
-	}
+	margin: 15px;
+	width: calc(50% - 30px);
 }
 
 .event-page__block-h {

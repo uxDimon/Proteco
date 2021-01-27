@@ -490,4 +490,23 @@ for (const listGalleryItem of listGallery) {
 	});
 }
 
-// lightGallery(document.querySelector("[data-list-gallery]"));
+// masonry 2column
+const masonryList = document.querySelectorAll(".event-page__body");
+if (masonryList) {
+	for (const masonry of masonryList) {
+		const masonryItemList = masonry.querySelectorAll(".event-page__block"),
+			masonryHeight02 = masonry.scrollHeight / 2;
+		let masonryHeight = 0;
+
+		for (const masonryItem of masonryItemList) {
+			const masonryItemHeight = masonryItem.scrollHeight + 30;
+			if (masonryHeight02 > masonryItemHeight && masonryHeight02 >= masonryHeight) {
+				masonryHeight += masonryItemHeight;
+			} else {
+				break;
+			}
+		}
+
+		masonry.style = `max-height: ${masonryHeight}px`;
+	}
+}
