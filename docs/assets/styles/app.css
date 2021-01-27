@@ -2841,11 +2841,10 @@ h3.article-page__h {
   justify-content: start; }
 
 .event-page__body {
-  -moz-column-count: 2;
-       column-count: 2;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-  margin-bottom: 40px; }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: -15px -15px 25px -15px; }
 
 .event-page__block {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -2855,14 +2854,9 @@ h3.article-page__h {
        break-inside: avoid;
   padding: 30px;
   margin-bottom: 30px;
-  position: relative; }
-  .event-page__block::before {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 1px;
-    background: transparent;
-    bottom: -14px; }
+  position: relative;
+  margin: 15px;
+  width: calc(50% - 30px); }
 
 .event-page__block-h {
   font-weight: 600;
