@@ -491,22 +491,70 @@ for (const listGalleryItem of listGallery) {
 }
 
 // masonry 2column
-const masonryList = document.querySelectorAll(".event-page__body");
-if (masonryList) {
-	for (const masonry of masonryList) {
-		const masonryItemList = masonry.querySelectorAll(".event-page__block"),
-			masonryHeight02 = masonry.scrollHeight / 2;
-		let masonryHeight = 0;
+// for (const masonryItem of document.querySelectorAll(".event-page__body")) {
+// 	function masonryEventPage(masonryItem) {
+// 		masonryItem.style = `height: auto`;
 
-		for (const masonryItem of masonryItemList) {
-			const masonryItemHeight = masonryItem.scrollHeight + 30;
-			if (masonryHeight02 > masonryItemHeight && masonryHeight02 >= masonryHeight) {
-				masonryHeight += masonryItemHeight;
-			} else {
-				break;
+// 		let masonry = {
+// 			itemList: masonryItem.querySelectorAll(".event-page__block"),
+// 			height02: masonryItem.scrollHeight / 2,
+// 			heightL: 0,
+// 			heightR1: 0,
+// 			heightR2: 0,
+// 			height: 0,
+// 			itemNumber: 0,
+// 		};
+
+// 		for (const masonryItem of masonry.itemList) {
+// 			const masonryItemHeight = masonryItem.scrollHeight + 30;
+// 			if (masonry.height02 > masonryItemHeight && masonry.height02 > masonry.heightL) {
+// 				masonry.heightL += masonryItemHeight;
+// 				masonry.itemNumber++;
+// 			} else {
+// 				break;
+// 			}
+// 		}
+
+// 		for (let index = masonry.itemNumber; index < masonry.itemList.length; index++) {
+// 			masonry.heightR1 += masonry.itemList[index].scrollHeight + 30;
+// 		}
+// 		for (let index = masonry.itemNumber - 1; index < masonry.itemList.length; index++) {
+// 			masonry.heightR2 += masonry.itemList[index].scrollHeight + 30;
+// 		}
+
+// 		if (masonry.heightR1 < masonry.heightR2) masonry.heightR1 = masonry.heightR2;
+// 		masonry.heightL < masonry.heightR1 ? (masonry.height = masonry.heightL) : (masonry.height = masonry.heightR1);
+
+// 		masonryItem.style = `height: ${masonry.height}px`;
+// 	}
+
+// 	masonryEventPage(masonryItem);
+
+// 	window.addEventListener("resize", () => {
+// 		masonryEventPage(masonryItem);
+// 	});
+// }
+
+ymaps.ready(init);
+
+const eventPageMapX = document.querySelector("#event-page-map").dataset.mapX;
+const eventPageMapY = document.querySelector("#event-page-map").dataset.mapY;
+
+function init() {
+	var myMap = new ymaps.Map("event-page-map", {
+		center: [eventPageMapX, eventPageMapY],
+		zoom: 10,
+	});
+	myMap.geoObjects.add(
+		new ymaps.Placemark(
+			[eventPageMapX, eventPageMapY],
+			{
+				balloonContent: "<strong>серобуромалиновый</strong> цвет",
+			},
+			{
+				preset: "islands#dotIcon",
+				iconColor: "#0fa9da",
 			}
-		}
-
-		masonry.style = `max-height: ${masonryHeight}px`;
-	}
+		)
+	);
 }
