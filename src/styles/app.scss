@@ -471,7 +471,8 @@ select.input:invalid {
 	color: $color-Blue;
 	text-decoration: none;
 
-	svg {
+	> svg {
+		order: 1;
 		margin-right: 10px;
 		transform: rotate(90deg);
 		--icon-stroke-width: 1.5;
@@ -484,12 +485,29 @@ select.input:invalid {
 			--icon-color: #{$color-Blue3};
 		}
 	}
+
+	> span {
+		order: 2;
+	}
 }
 
 .linc-arrow_r svg {
 	margin-right: 0;
 	margin-left: 10px;
 	transform: rotate(-90deg);
+}
+
+.linc-arrow_back {
+	> svg {
+		order: 2;
+		margin-right: 0;
+		margin-left: 10px;
+		transform: rotate(-90deg);
+	}
+
+	> span {
+		order: 1;
+	}
 }
 
 // audio-player

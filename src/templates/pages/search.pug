@@ -1,0 +1,68 @@
+extends ../template
+
+block variables
+    - var title = 'Курсы'
+    - var contactForm = true
+
+block content
+    main
+        .container-wrap
+            .container-item
+                .breadcrumbs
+                    .breadcrumbs__item Главная
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    a(href="#").breadcrumbs__item Результаты поиска
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+        
+        section.container-wrap.search-page__wrap
+            .container-item.search-page
+                form.search-page-input
+                    input(type="search", name="").search-page-input__input
+                    button(type="submit").button.search-page-input__button Найти
+
+                h1.search-page__h Результаты поиска по запросу «Композитная реставрация»
+
+                ul.search-page-list
+                    li.earch-page-list__item
+                        .earch-page-list__category
+                            a(href="") Статья
+                            span Статья
+                        .earch-page-list__name Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+
+                        a(href="#").linc-arrow.linc-arrow_back.earch-page-list__linc
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                            span Подробнее
+                    li.earch-page-list__item
+                        .earch-page-list__category
+                            span Статья
+                        .earch-page-list__name Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+
+                        a(href="#").linc-arrow.linc-arrow_back.earch-page-list__linc
+                            span Подробнее
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    li.earch-page-list__item
+                        .earch-page-list__category
+                            a(href="") Статья
+                        .earch-page-list__name Круглый стол с врачом консультантом Е.Мендоса «Работа над ошибками в прямой композитной реставрации. Нюансы использования Estelite»
+
+                        a(href="#").linc-arrow.linc-arrow_back.earch-page-list__linc
+                            span Подробнее
+                            svg(width="14", height="8")
+                                use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+
+                .pagination.pagination_ctnter
+                    .pagination__prev
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")
+                    .pagination__number 1
+                    a(href="#").pagination__number 2
+                    a(href="#").pagination__number 3
+                    a(href="#").pagination__number 4
+                    a(href="#").pagination__number ...
+                    a(href="#").pagination__next
+                        svg(width="14", height="8")
+                            use(xlink:href="./assets/images/sprite.svg#icon-arrow")

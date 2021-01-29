@@ -544,6 +544,7 @@ function init() {
 	var myMap = new ymaps.Map("event-page-map", {
 		center: [eventPageMapX, eventPageMapY],
 		zoom: 10,
+		controls: ["zoomControl"],
 	});
 	myMap.geoObjects.add(
 		new ymaps.Placemark(
