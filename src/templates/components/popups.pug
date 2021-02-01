@@ -96,4 +96,12 @@
 
     .popups__close-area(data-active-control="popup5")
 
+.popups__wrap(data-active-block="video1").active
+    .popups.popups_video
+        <iframe src="https://www.youtube.com/embed/4ksebdL_oYI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    button(data-active-control="video1").popups__close.popups__close_video
+        svg(width="15", height="15")
+            use(xlink:href="./assets/images/sprite.svg#icon-cancel-button")
+    .popups__close-area.popups__close-area_video(data-active-control="video1")
+
 //- (data-active-control="popup4")
