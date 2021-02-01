@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/images/fav.png">
     <link rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/styles/accordion.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
   </head>
   <body>
@@ -41,7 +41,7 @@
               </button>
             </div>
           </div>
-          <div class="video-main__linc-body event-page__video">
+          <div class="video-main__linc-body event-page__video" data-active-control="video1">
             <div class="video-main__linc-play">
               <svg width="22" height="22">
                 <use xlink:href="./assets/images/sprite.svg#icon-button-play"></use>
@@ -196,11 +196,21 @@
       </div>
       <div class="popups__close-area" data-active-control="popup5"></div>
     </div>
+    <div class="popups__wrap" data-active-block="video1">
+      <div class="popups popups_video"><iframe src="https://www.youtube.com/embed/4ksebdL_oYI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <button class="popups__close popups__close_video" data-active-control="video1">
+        <svg width="15" height="15">
+          <use xlink:href="./assets/images/sprite.svg#icon-cancel-button"></use>
+        </svg>
+      </button>
+      <div class="popups__close-area popups__close-area_video" data-active-control="video1"></div>
+    </div>
+    <script src="assets/scripts/imask.min.js"></script>
+    <script src="assets/scripts/accordion.min.js"></script>
+    <script src="assets/scripts/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/medium-zoom.min.js"></script>
+    <script src="assets/scripts/focus-visible.min.js"></script>
+    <script src="assets/scripts/lightgallery.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
   </body>
-  <script src="assets/scripts/imask.min.js"></script>
-  <script src="assets/scripts/accordion.min.js"></script>
-  <script src="assets/scripts/swiper-bundle.min.js"></script>
-  <script src="assets/scripts/medium-zoom.min.js"></script>
-  <script src="assets/scripts/focus-visible.min.js"></script>
-  <script src="assets/scripts/main.js"></script>
 </html>
